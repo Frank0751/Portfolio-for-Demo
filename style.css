@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.Nav-Items {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 20;
+    color: black;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    list-style: none;
+}
+
+.Nav-logo {
+    color: #4caf50;
+}
+
+.Btn {
+    color: white;
+}
+
+.awf-btn {
+    color: #4caf50;
+    border-radius: 10px;
+    border-color: #4caf50;
+    font-size: 20px;
+}
+
+.AboutMe {
+    color: #4caf50;
+    border-radius: 10px;
+    border-color: #4caf50;
+    font-size: 20px;
+}
+
+.awf-buttons {
+    border-radius: 20px;
+    background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
+    border-style: outset;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.hero-text {
+    font-size: 100px;
+    text-align: left;
+    line-height: 100px;
+    letter-spacing: normal;
+    color: d6d6d6;
+    background: f9f9f9;
+    max-width: 55vw;
+    padding: 20px;
+    font-weight: bold;
+    margin-left: 70px;
+
+
+}
+
+.ht {
+    text-align: justify
+}
+
+.ht span {
+    text-align: right;
+    margin-left: 50px;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    text-align: justify;
+    padding: 20px; 
+
+}
+
+.hero-image {
+    width: 45vw;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
