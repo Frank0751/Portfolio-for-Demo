@@ -14,20 +14,24 @@
     padding: 10px 20px;
     position: fixed;
     width: 100vw;
-    height: 70px;
+    height: 60px;
 
-  }
+}
 
-  .available-btn, .about-me {
-    color: #4caf50; /* Green text */
-    background-color: transparent; /* No background */
-    border: 2px solid #4caf50; /* Green border */
+.available-btn,
+.about-me {
+    color: #4caf50;
+    /* Green text */
+    background-color: transparent;
+    /* No background */
+    border: 2px solid #4caf50;
+    /* Green border */
     padding: 10px 20px;
     border-radius: 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-color: #4caf50;
-  }
+}
 
 
 /* Styling for Buttons (No Background, Only Border) */
@@ -47,10 +51,12 @@
 }
 
 /* Hover Effects: Green background, white text */
-.available-btn:hover, .about-me:hover {
+.available-btn:hover,
+.about-me:hover {
     background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
-    color: white; /* White text */
-  }
+    color: white;
+    /* White text */
+}
 
 .nav-center .name-link {
     color: #4caf50;
@@ -100,139 +106,153 @@
 /* Styling for the Hero Section */
 .hero {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding: 20;
     background: white;
-    height: 100vh; /* Full viewport height */
-  }
-  
-  /* Styling for the Text Content */
-  .hero-content {
+    height: 100vh;
+    /* Full viewport height */
+}
+
+/* Styling for the Text Content */
+.hero-content {
     /* flex: 1; */
     padding-right: 30px;
-  }
-  
-  .intro-text {
+}
+
+.intro-text {
     font-size: 3rem;
-    color: black; /* Green for the introductory text */
+    color: black;
+    /* Green for the introductory text */
     margin-bottom: 10px;
     animation: fadeInDown 1s ease-in-out;
-  }
+}
 
-    .name-text {
+.name-text {
     font-size: 4rem;
     font-weight: bold;
     color: #4caf50;
     margin-bottom: 20px;
     animation: fadeInUp 1.2s ease-in-out;
-  }
-  
-  .role-text {
+}
+
+.role-text {
     font-size: 2rem;
-    color: #555; /* Softer grey for the role */
+    color: #555;
+    /* Softer grey for the role */
     margin-bottom: 30px;
     animation: fadeInLeft 1.5s ease-in-out;
-  }
-  
-  .hire-btn {
+}
+
+.hire-btn {
     background-color: transparent;
-    border: 2px solid #4caf50; /* Green border */
-    color: #4caf50; /* Green text */
+    border: 2px solid #4caf50;
+    /* Green border */
+    color: #4caf50;
+    /* Green text */
     padding: 10px 30px;
     border-radius: 16px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .hire-btn:hover {
+}
+
+.hire-btn:hover {
     background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
-    color: white; /* Invert on hover */
+    color: white;
+    /* Invert on hover */
     transition: background-color 0.3s ease;
-  }
-  
-  /* Styling for the Hero Image */
-  .hero-image {
+}
+
+/* Styling for the Hero Image */
+.hero-image {
     /* flex: 1; */
     text-align: center;
-    
-  }
-  
-  .hero-image img {
-    max-width: 1000px; /* Adjust image size */
-    box-shadow: 12 20px 40px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
-    border-radius: 20px; /* Soft rounded corners */
+}
+
+.hero-image img {
+    max-width: 900px;
+    /* Adjust image size */
+    box-shadow: 12 20px 40px rgba(0, 0, 0, 0.3);
+    /* Add shadow for depth */
+    border-radius: 20px;
+    /* Soft rounded corners */
     animation: zoomIn 1.4s ease-in-out;
     background-color: #fffbfb;
-  }
-  
-  /* Animations */
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes zoomIn {
-    0% {
-      transform: scale(0.8);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .hero-content {
-      padding-right: 0;
-    }
-  
-    .hero-image img {
-      max-width: 250px;
-    }
-  }
+    border: 2px solid #4caf50;
 
-  /* About Section Styling */
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    .hero-image img {
+        max-width: 250px;
+    }
+}
+
+/* About Section Styling */
 .about-section {
     padding: 100px 0;
     background-color: #f4f4f4;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -240,41 +260,42 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  .about-content {
+}
+
+.about-content {
     display: flex;
     align-items: center;
     gap: 50px;
-  }
-  
-  .about-image img {
+}
+
+.about-image img {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 10%;
     object-fit: contain;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about-text {
+    border-color: #4caf50;
+}
+
+.about-text {
     max-width: 600px;
     text-align: justify;
-  }
-  
-  .about-text h2 {
+}
+
+.about-text h2 {
     font-size: 36px;
-    color: #333;
+    color:#4caf50;
     margin-bottom: 20px;
-  }
-  
-  .about-text p {
+}
+
+.about-text p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
     margin-bottom: 30px;
-  }
-  
-  .about-text .btn {
+}
+
+.about-text .btn {
     display: inline-block;
     padding: 12px 30px;
     background: transparent;
@@ -284,31 +305,31 @@
     border-radius: 20px;
     transition: background-color 0.3s ease;
     text-decoration: none;
-  }
-  
-  .about-text .btn:hover {
+}
+
+.about-text .btn:hover {
     background: linear-gradient(75.7deg, rgb(34, 126, 34) 3.8%, rgb(99, 162, 17) 87.1%);
     color: white;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .about-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        text-align: center;
     }
-  
+
     .about-image img {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
     }
-  
+
     .about-text h2 {
-      font-size: 30px;
+        font-size: 30px;
     }
-  
+
     .about-text p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
+}
