@@ -1,4 +1,5 @@
 // Loading Screen
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.querySelector('.loading');
 
@@ -13,6 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
             loadingScreen.remove();
         }
     });
+=======
+window.addEventListener('load', () => {
+    const loading = document.querySelector('.loading');
+    loading.style.opacity = '0';
+    setTimeout(() => {
+        loading.style.display = 'none';
+    }, 500);
+>>>>>>> 07aca12dd8b9d2639b278976a95246eaff8af9cd
 });
 
 // Scroll Animations
@@ -44,6 +53,7 @@ const handleScrollAnimation = () => {
     });
 };
 
+<<<<<<< HEAD
 // Throttle scroll event
 let throttleTimer;
 const throttle = (callback, time) => {
@@ -95,18 +105,37 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
+=======
+window.addEventListener('scroll', () => {
+    handleScrollAnimation();
+});
+
+// Mobile Menu
+const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+>>>>>>> 07aca12dd8b9d2639b278976a95246eaff8af9cd
 });
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
+<<<<<<< HEAD
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth'
             });
         }
+=======
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+>>>>>>> 07aca12dd8b9d2639b278976a95246eaff8af9cd
     });
 });
 
@@ -160,5 +189,31 @@ const updateTheme = (e) => {
 prefersDarkScheme.addListener(updateTheme);
 updateTheme(prefersDarkScheme);
 
+<<<<<<< HEAD
 // Initialize scroll animations on page load
 handleScrollAnimation(); 
+=======
+// Dropdown Menu Toggle
+const navToggle = document.querySelector('.nav-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (navToggle && dropdownMenu) {
+    navToggle.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.classList.remove('active');
+        }
+    });
+
+    // Close dropdown when clicking a link
+    dropdownMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            dropdownMenu.classList.remove('active');
+        });
+    });
+} 
+>>>>>>> 07aca12dd8b9d2639b278976a95246eaff8af9cd
