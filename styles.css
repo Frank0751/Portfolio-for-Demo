@@ -1,0 +1,79 @@
+/* Awards Section */
+// ... existing code ...
+
+/* Certificates Section */
+.certificates {
+    padding: 5rem 0;
+    background: var(--bg-color);
+}
+
+.certificates h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.certificate-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+}
+
+.certificate-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.certificate-content h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.certificate-date {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.certificate-description {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.certificate-card .btn {
+    margin-top: auto;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.certificate-card .btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Projects Section */
+// ... existing code ... 

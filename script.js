@@ -1,10 +1,18 @@
 // Loading Screen
-window.addEventListener('load', () => {
-    const loading = document.querySelector('.loading');
-    loading.style.opacity = '0';
+document.addEventListener('DOMContentLoaded', () => {
+    const loadingScreen = document.querySelector('.loading');
+
+    // Hide loading screen after 1 second
     setTimeout(() => {
-        loading.style.display = 'none';
-    }, 500);
+        loadingScreen.classList.add('hidden');
+    }, 1000);
+
+    // Remove loading screen from DOM after animation completes
+    loadingScreen.addEventListener('transitionend', () => {
+        if (loadingScreen.classList.contains('hidden')) {
+            loadingScreen.remove();
+        }
+    });
 });
 
 // Scroll Animations
@@ -36,26 +44,69 @@ const handleScrollAnimation = () => {
     });
 };
 
+// Throttle scroll event
+let throttleTimer;
+const throttle = (callback, time) => {
+    if (throttleTimer) return;
+    throttleTimer = true;
+    setTimeout(() => {
+        callback();
+        throttleTimer = false;
+    }, time);
+};
+
 window.addEventListener('scroll', () => {
-    handleScrollAnimation();
+    throttle(handleScrollAnimation, 250);
 });
 
-// Mobile Menu
-const mobileMenu = document.querySelector('.mobile-menu');
+// Navigation
+const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
+// Mobile Navigation Toggle
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    }
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    });
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });
 
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
@@ -109,26 +160,5 @@ const updateTheme = (e) => {
 prefersDarkScheme.addListener(updateTheme);
 updateTheme(prefersDarkScheme);
 
-// Dropdown Menu Toggle
-const navToggle = document.querySelector('.nav-toggle');
-const dropdownMenu = document.querySelector('.dropdown-menu');
-
-if (navToggle && dropdownMenu) {
-    navToggle.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('active');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-            dropdownMenu.classList.remove('active');
-        }
-    });
-
-    // Close dropdown when clicking a link
-    dropdownMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            dropdownMenu.classList.remove('active');
-        });
-    });
-} 
+// Initialize scroll animations on page load
+handleScrollAnimation(); 
