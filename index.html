@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,65 +25,45 @@
         <div class="loading-spinner"></div>
     </div>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">F.Koomson</div>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">F.Koomson</a></div>
             <div class="nav-links">
+                <div class="nav-item"><a href="about.html">About</a></div>
                 <div class="nav-item">
-                    <a href="#about">About</a>
+                    <a href="#">Writeups <i class="fas fa-caret-down"></i></a>
                     <div class="submenu">
-                        <a href="#mission">Mission & Vision</a>
-                        <a href="#values">Core Values</a>
-                        <a href="#stats">Statistics</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="articles.html">Articles</a>
+                        <a href="speaking.html">Speaking</a>
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="#experience">Professional Journey</a>
+                    <a href="#">Achievements <i class="fas fa-caret-down"></i></a>
                     <div class="submenu">
-                        <a href="#timeline">Timeline</a>
-                        <a href="#achievements">Achievements</a>
-                        <a href="#skills">Skills</a>
+                        <a href="achievements_academic.html">Academic</a>
+                        <a href="achievements_youth.html">Youth Development</a>
+                        <a href="achievements_environmental.html">Environmental Sustainability</a>
+                        <a href="achievements_tech.html">Technology</a>
                     </div>
                 </div>
                 <div class="nav-item">
-                    <a href="#projects">Projects</a>
+                    <a href="#">Qualifications <i class="fas fa-caret-down"></i></a>
                     <div class="submenu">
-                        <a href="#sustainability">Sustainability</a>
-                        <a href="#web-dev">Web Development</a>
-                        <a href="#advocacy">Advocacy</a>
+                        <a href="certifications.html">Certifications</a>
+                        <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit?usp=sharing" target="_blank">CV</a>
+                        <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view?usp=sharing" target="_blank">Resume</a>
                     </div>
                 </div>
-                <div class="nav-item">
-                    <a href="#articles">Blogs & Articles</a>
-                    <div class="submenu">
-                        <a href="#sustainability-articles">Sustainability</a>
-                        <a href="#tech-articles">Technology</a>
-                        <a href="#youth-articles">Youth Development</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="#impact">Impact</a>
-                    <div class="submenu">
-                        <a href="#youth-impact">Youth Impact</a>
-                        <a href="#community-impact">Community Impact</a>
-                        <a href="#environmental-impact">Environmental Impact</a>
-                    </div>
-                </div>
-                <div class="nav-item">
-                    <a href="#contact">Contact</a>
-                    <div class="submenu">
-                        <a href="#connect">Connect</a>
-                        <a href="#collaborate">Collaborate</a>
-                        <a href="#social">Social Media</a>
-                    </div>
-                </div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
             </div>
-            <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit?usp=sharing"
-                target="_blank" class="resume-btn">View CV</a>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
         </div>
-        <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view?usp=sharing" target="_blank"
-            class="resume-btn">View Resume</a>
     </nav>
 
     <!-- Hero Section -->
@@ -94,302 +73,13 @@
             <h2 class="hero-subtitle">Sustainability Advocate | Web Developer | Youth Empowerment Leader</h2>
             <p class="hero-tagline">"Catalyzing change through innovation, storytelling, and leadership."</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Let's Collaborate</a>
+                <a href="projects.html" class="btn primary">View My Work</a>
+                <a href="contact.html" class="btn secondary">Let's Collaborate</a>
             </div>
         </div>
         <div class="hero-image">
             <img src="./images/Hero.png" alt="Frank Koomson" data-scroll>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="./images/about....png" alt="Frank Koomson" data-scroll>
-            </div>
-            <div class="about-content">
-                <h2>About Me</h2>
-                <div class="mission-vision">
-                    <div class="mission">
-                        <h3><i class="fas fa-bullseye"></i> Mission Statement</h3>
-                        <p>To empower youth and drive sustainable development through technology, education, and
-                            community engagement.</p>
-                    </div>
-                    <div class="vision">
-                        <h3><i class="fas fa-eye"></i> Vision Statement</h3>
-                        <p>To create a world where young people are equipped with the skills and opportunities to lead
-                            sustainable transformation.</p>
-                    </div>
-                </div>
-                <div class="core-values">
-                    <h3>Core Values</h3>
-                    <div class="values-grid">
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-users"></i>
-                            <h4>Leadership</h4>
-                            <p class="value-description">Inspiring and guiding others towards positive change through
-                                vision, integrity, and collaboration.</p>
-                        </div>
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Integrity</h4>
-                            <p class="value-description">Upholding ethical standards and transparency in all actions and
-                                decisions.</p>
-                        </div>
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-graduation-cap"></i>
-                            <h4>Lifelong Learning</h4>
-                            <p class="value-description">Continuously seeking knowledge and growth to adapt and innovate
-                                in a changing world.</p>
-                        </div>
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-handshake"></i>
-                            <h4>Service</h4>
-                            <p class="value-description">Dedication to community development and making a positive
-                                impact in society.</p>
-                        </div>
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>Innovation</h4>
-                            <p class="value-description">Creating novel solutions to complex challenges through
-                                creativity and technology.</p>
-                        </div>
-                        <div class="value-card" data-scroll>
-                            <i class="fas fa-leaf"></i>
-                            <h4>Sustainability</h4>
-                            <p class="value-description">Promoting environmental stewardship and responsible resource
-                                management for future generations.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100+</span>
-                        <span class="stat-label">Youth Impacted</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <h2>Professional Journey</h2>
-        <div class="experience-timeline">
-            <!-- Row 1 -->
-            <div class="timeline-item" data-scroll>
-                <div class="timeline-content">
-                    <div class="timeline-date">September 2024 - Present</div>
-                    <div class="timeline-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="timeline-details">
-                        <h3>Web Developer Program</h3>
-                        <h4>MEST Africa</h4>
-                        <p>Participating in an intensive web development training program, recognized for dedication and
-                            commitment.</p>
-                        <ul class="timeline-achievements">
-                            <li><i class="fas fa-check-circle"></i> Learning full-stack development with MERN stack</li>
-                            <li><i class="fas fa-check-circle"></i> Developing practical web applications</li>
-                            <li><i class="fas fa-check-circle"></i> Collaborating on team projects</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Web Development</span>
-                            <span>MERN Stack</span>
-                            <span>Team Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">September 2024</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Web Development Job Simulation</h3>
-                            <h4>Moreton Bay Regional Council</h4>
-                            <p>Completed a job simulation involving website planning and creation through Forage
-                                platform.
-                            </p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Created sitemap and user flow diagrams</li>
-                                <li><i class="fas fa-check-circle"></i> Developed landing page using HTML & CSS</li>
-                                <li><i class="fas fa-check-circle"></i> Applied web development best practices</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Web Development</span>
-                                <span>UI/UX</span>
-                                <span>Project Planning</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">March 2024 - Present</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-leaf"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Founder</h3>
-                            <h4>Sustainability with Koomson (SWK)</h4>
-                            <p>Leading a youth-focused non-profit organization dedicated to promoting sustainable youth
-                                development and community empowerment.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Developing educational programs for
-                                    environmental
-                                    awareness</li>
-                                <li><i class="fas fa-check-circle"></i> Implementing sustainable agriculture initiatives
-                                </li>
-                                <li><i class="fas fa-check-circle"></i> Fostering leadership and personal growth</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Sustainability</span>
-                                <span>Youth Development</span>
-                                <span>Community Engagement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">August 2023 - Present</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Youth Sounding Board Member</h3>
-                            <h4>UNDP Ghana</h4>
-                            <p>Advising on youth engagement and program effectiveness in sustainable development
-                                initiatives.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Contributing to policy development</li>
-                                <li><i class="fas fa-check-circle"></i> Shaping youth empowerment programs</li>
-                                <li><i class="fas fa-check-circle"></i> Advocating for youth participation</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Policy Advocacy</span>
-                                <span>Youth Development</span>
-                                <span>Stakeholder Engagement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row 2 -->
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">January 2022 - February 2023</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>President</h3>
-                            <h4>Ghana National Service Personnel Association (NASPA)</h4>
-                            <p>Leading and collaborating with diverse young people to empower service personnel and
-                                create
-                                opportunities for their success.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Organized Financial Literacy and Microsoft Excel
-                                    training programs</li>
-                                <li><i class="fas fa-check-circle"></i> Led community impact initiatives</li>
-                                <li><i class="fas fa-check-circle"></i> Partnered with local organizations</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Leadership</span>
-                                <span>Community Development</span>
-                                <span>Program Management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2022</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-recycle"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Stakeholder Engagement Officer</h3>
-                            <h4>Waste Gobbler Project</h4>
-                            <p>Led stakeholder engagement for an innovative waste management solution.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Won 3rd place at ACAIC 2022</li>
-                                <li><i class="fas fa-check-circle"></i> Engaged EPA on project permits</li>
-                                <li><i class="fas fa-check-circle"></i> Mobilized community participation</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Waste Management</span>
-                                <span>Community Engagement</span>
-                                <span>Environmental Advocacy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-solar-panel"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Research Enumerator</h3>
-                            <h4>GAYO - Solar IntellSol Project</h4>
-                            <p>Conducted research for a model solar system feasibility study in Ghana.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> Collected and analyzed field data</li>
-                                <li><i class="fas fa-check-circle"></i> Conducted community surveys</li>
-                                <li><i class="fas fa-check-circle"></i> Prepared research reports</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Research</span>
-                                <span>Data Analysis</span>
-                                <span>Renewable Energy</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-scroll>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2017 - 2021</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="timeline-details">
-                            <h3>Bachelor of Arts</h3>
-                            <h4>University of Ghana</h4>
-                            <p>Graduated with Honors in Geography and Resource Development with Political Science.</p>
-                            <ul class="timeline-achievements">
-                                <li><i class="fas fa-check-circle"></i> GPA: 3.63 / 4.00</li>
-                                <li><i class="fas fa-check-circle"></i> Focus on sustainable development</li>
-                                <li><i class="fas fa-check-circle"></i> Research and analysis skills</li>
-                            </ul>
-                            <div class="timeline-tags">
-                                <span>Geography</span>
-                                <span>Resource Development</span>
-                                <span>Political Science</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </section>
 
     <!-- Awards Section -->
@@ -441,13 +131,13 @@
                         <span>Youth Leadership</span>
                         <span>Policy Advocacy</span>
                         <span>Sustainable Development</span>
-                    </div>
-                </div>
+            </div>
+            </div>
             </div>
             <div class="award-card" data-scroll>
                 <div class="award-icon">
                     <i class="fas fa-medal"></i>
-                </div>
+            </div>
                 <div class="award-content">
                     <h3>Aequitas Foundation</h3>
                     <p class="award-date">February 2024 - May 2024</p>
@@ -457,8 +147,8 @@
                         <span>Leadership</span>
                         <span>Community Development</span>
                         <span>Youth Empowerment</span>
-                    </div>
-                </div>
+            </div>
+            </div>
             </div>
         </div>
     </section>
@@ -489,6 +179,7 @@
                             <div class="project-details">
                                 <p><strong>Role:</strong> Project Lead & Developer</p>
                                 <p><strong>Impact:</strong> 500+ community members engaged</p>
+                                <p><strong>Achievement:</strong> 3rd place at ACAIC 2022</p>
                             </div>
                             <a href="https://wastegobbler.org" target="_blank" class="btn">View Project</a>
                         </div>
@@ -510,8 +201,57 @@
                             <div class="project-details">
                                 <p><strong>Role:</strong> Program Coordinator</p>
                                 <p><strong>Impact:</strong> 1000+ youth reached</p>
+                                <p><strong>Focus:</strong> Sustainable agriculture and leadership development</p>
                             </div>
-                            <a href="#" class="btn">View Project</a>
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_communityengagement-youthempowerment-sustainability-activity-7188182754528792576-GY6m"
+                                target="_blank" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-scroll>
+                        <div class="project-image">
+                            <img src="./images/Advocacy.jpg" alt="Climate Action Advocacy">
+                            <div class="project-overlay">
+                                <div class="project-tags">
+                                    <span>Climate Action</span>
+                                    <span>Policy Advocacy</span>
+                                    <span>Youth Leadership</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Climate Action Advocacy</h4>
+                            <p>Leading youth engagement in climate action and policy advocacy initiatives.</p>
+                            <div class="project-details">
+                                <p><strong>Role:</strong> Youth Advocate</p>
+                                <p><strong>Impact:</strong> Policy Influence</p>
+                                <p><strong>Platform:</strong> LCOY 2022</p>
+                            </div>
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_climateaction-youthleadership-sustainability-activity-7188182754528792576-GY6m"
+                                target="_blank" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-scroll>
+                        <div class="project-image">
+                            <img src="./images/BFFP.jpg" alt="Break Free From Plastic">
+                            <div class="project-overlay">
+                                <div class="project-tags">
+                                    <span>Environmental Advocacy</span>
+                                    <span>Plastic Pollution</span>
+                                    <span>Community Action</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Break Free From Plastic</h4>
+                            <p>Community-driven initiative to reduce plastic pollution and promote sustainable
+                                alternatives.</p>
+                            <div class="project-details">
+                                <p><strong>Role:</strong> Campaign Coordinator</p>
+                                <p><strong>Impact:</strong> Community Awareness</p>
+                                <p><strong>Focus:</strong> Plastic waste reduction</p>
+                            </div>
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_plasticpollution-environmentaladvocacy-communityaction-activity-7188182754528792576-GY6m"
+                                target="_blank" class="btn">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -647,8 +387,10 @@
                             <div class="project-details">
                                 <p><strong>Role:</strong> Youth Advocate</p>
                                 <p><strong>Impact:</strong> Policy Influence</p>
+                                <p><strong>Platform:</strong> LCOY 2022</p>
                             </div>
-                            <a href="#" class="btn">View Project</a>
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_climateaction-youthleadership-sustainability-activity-7188182754528792576-GY6m"
+                                target="_blank" class="btn">View Project</a>
                         </div>
                     </div>
                     <div class="project-card" data-scroll>
@@ -669,8 +411,10 @@
                             <div class="project-details">
                                 <p><strong>Role:</strong> Campaign Coordinator</p>
                                 <p><strong>Impact:</strong> Community Awareness</p>
+                                <p><strong>Focus:</strong> Plastic waste reduction</p>
                             </div>
-                            <a href="#" class="btn">View Project</a>
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_plasticpollution-environmentaladvocacy-communityaction-activity-7188182754528792576-GY6m"
+                                target="_blank" class="btn">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -794,7 +538,7 @@
                                 break the cycle of "take-make-dispose" and build a more sustainable future. The article
                                 highlights key strategies including designing for reuse, recycling and upcycling, and
                                 sharing platforms to combat plastic pollution.</p>
-                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_earthday2024-earthday-circulareconomy-activity-7188182754528792576-GY6m?utm_source=share&utm_medium=member_desktop&rcm=ACoAADMEU0oBmuEVSF2d1alirU9DNgVQXVqOKWc"
+                            <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_earthday2024-earthday-circulareconomy-activity-7188182754528792576-GY6m"
                                 target="_blank" class="btn">Read Article</a>
                         </div>
                     </div>
@@ -940,86 +684,6 @@
                                 target="_blank" class="btn">Read Article</a>
                         </div>
                     </div>
-                    =======
-                    >>>>>>> 07aca12dd8b9d2639b278976a95246eaff8af9cd
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Skills & Expertise</h2>
-        <div class="skills-container">
-            <div class="skill-category" data-scroll>
-                <h3><i class="fas fa-code"></i> Technical Skills</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <span>Web Development</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                        <div class="skill-tags">
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                            <span>MERN</span>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>AI Tools</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Research & Data Analysis</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Content Creation</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-category" data-scroll>
-                <h3><i class="fas fa-users"></i> Leadership & Soft Skills</h3>
-                <div class="skill-items">
-                    <div class="skill-item">
-                        <span>Youth Empowerment</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Stakeholder Engagement</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Program Coordination</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Advocacy</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span>Strategic Planning</span>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1125,7 +789,7 @@
                     <a href="https://x.com/FrankKoomson20" target="_blank" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://frank0751.github.io/Portfolio-for-Demo/" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/Frank0751" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="https://wastegobbler.org" target="_blank" aria-label="Waste Gobbler">

@@ -74,17 +74,31 @@ if (navToggle) {
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
+    // Check if the click is outside both navToggle (if it exists) and navLinks
+    let clickedOutsideNavToggle = navToggle ? !navToggle.contains(e.target) : true;
+    // navLinks is expected to exist, but a check doesn't hurt for robustness.
+    // If navLinks is null, treat as clicked outside.
+    let clickedOutsideNavLinks = navLinks ? !navLinks.contains(e.target) : true;
+
+    if (clickedOutsideNavToggle && clickedOutsideNavLinks) {
+        if (navLinks) {
+            navLinks.classList.remove('active');
+        }
+        if (navToggle) { // Only try to access classList if navToggle exists
+            navToggle.classList.remove('active');
+        }
     }
 });
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        navToggle.classList.remove('active');
+        if (navLinks) { // navLinks is expected to exist
+            navLinks.classList.remove('active');
+        }
+        if (navToggle) { // Only try to access classList if navToggle exists
+            navToggle.classList.remove('active');
+        }
     });
 });
 
@@ -137,19 +151,58 @@ tooltips.forEach(tooltip => {
 });
 
 // Dark Mode Toggle
-const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+const themeToggle = document.getElementById('theme-toggle');
 const root = document.documentElement;
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-const updateTheme = (e) => {
-    if (e.matches) {
+// Function to apply the theme (visuals and checkbox state)
+function applyThemeVisuals(isDark) {
+    if (isDark) {
         root.classList.add('dark-mode');
+        if (themeToggle) themeToggle.checked = true;
     } else {
         root.classList.remove('dark-mode');
+        if (themeToggle) themeToggle.checked = false;
     }
-};
+}
 
-prefersDarkScheme.addListener(updateTheme);
-updateTheme(prefersDarkScheme);
+// Function to set the theme and store it in localStorage
+function setThemePreference(isDark) {
+    applyThemeVisuals(isDark);
+    try {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    } catch (e) {
+        console.warn('LocalStorage not available for theme saving.');
+    }
+}
+
+// Event listener for the manual toggle switch
+if (themeToggle) {
+    themeToggle.addEventListener('change', () => {
+        setThemePreference(themeToggle.checked);
+    });
+}
+
+// Listener for OS theme changes
+// This will apply OS preference only if no manual theme has been saved by the user.
+prefersDarkScheme.addEventListener('change', (e) => {
+    const savedTheme = localStorage.getItem('theme');
+    if (!savedTheme) { // Only apply OS preference if no manual theme is saved
+        applyThemeVisuals(e.matches);
+    }
+});
+
+// Initial theme setup on page load
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        applyThemeVisuals(savedTheme === 'dark');
+    } else {
+        applyThemeVisuals(prefersDarkScheme.matches); // Default to OS preference if nothing saved
+    }
+}
+
+initializeTheme(); // Set the initial theme when the script loads
 
 // Initialize scroll animations on page load
 handleScrollAnimation();

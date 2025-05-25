@@ -3,104 +3,352 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio for Demo</title>
-    <link rel="stylesheet" href="./experience.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Experience & Skills - Frank Koomson</title>
+    <meta name="description"
+        content="Explore Frank Koomson's professional journey, achievements, and skills in sustainability, web development, and youth empowerment.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    
-<section class="experience-section">
-    <h2>My Experiences</h2>
-    <div class="experience-grid">
-        <!-- Experience 1 -->
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/Mest.jpg" alt="Experience 1">
-                <div class="overlay">
-                    <h3>Junior Web Developer, <h3>MEST Africa</h3></h3>
-                    <p>leading initiatives for sustainability,<p>youth empowerment, and technology.</p></p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <!-- Experience 2 -->
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/Storytelling.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Digital Storytelling, <h3>SWK</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/UNDP.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Youth Sounding Board, <h3>UNDP Ghana</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/Waste Gobb.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>ACAIC, <h3>Waste Gobbler Project</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/Advocacy.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Climate Action Advocacy, 
-                        <h3>LCOY 2022</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/NSS.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Leadership Experience, 
-                        <h3>NSS Ga West</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/Community Engagement.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Stakeholders Engagement, 
-                        <h3>SWK</h3></h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
-        <div class="experience-card">
-            <div class="image-overlay">
-                <img src="./images/CRL.jpg" alt="Experience 2">
-                <div class="overlay">
-                    <h3>Climate Reality Leadership</h3>
-                    <p>Empowering Ghanaian youth in sustainability and development.</p>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- Add more experience cards as needed -->
+<body>
+    <!-- Loading Screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
     </div>
-</section>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">F.Koomson</a></div>
+            <div class="nav-links">
+                <div class="nav-item"><a href="about.html">About</a></div>
+                <div class="nav-item">
+                    <a href="#">Writeups <i class="fas fa-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="blog.html">Blog</a>
+                        <a href="articles.html">Articles</a>
+                        <a href="speaking.html">Speaking</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Achievements <i class="fas fa-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="achievements_academic.html">Academic</a>
+                        <a href="achievements_youth.html">Youth Development</a>
+                        <a href="achievements_environmental.html">Environmental Sustainability</a>
+                        <a href="achievements_tech.html">Technology</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Qualifications <i class="fas fa-caret-down"></i></a>
+                    <div class="submenu">
+                        <a href="certifications.html">Certifications</a>
+                        <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit?usp=sharing" target="_blank">CV</a>
+                        <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view?usp=sharing" target="_blank">Resume</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="contact.html">Contact</a></div>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section (Professional Journey) -->
+    <section id="achievements" class="experience"> 
+        <h2>Professional Journey</h2>
+        <div id="timeline" class="experience-timeline"> 
+            <!-- Row 1 -->
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">September 2024 - Present</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Web Developer Program</h3>
+                        <h4>MEST Africa</h4>
+                        <p>Participating in an intensive web development training program, recognized for dedication and
+                            commitment.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Learning full-stack development with MERN stack</li>
+                            <li><i class="fas fa-check-circle"></i> Developing practical web applications</li>
+                            <li><i class="fas fa-check-circle"></i> Collaborating on team projects</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Web Development</span>
+                            <span>MERN Stack</span>
+                            <span>Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">September 2024</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Web Development Job Simulation</h3>
+                        <h4>Moreton Bay Regional Council</h4>
+                        <p>Completed a job simulation involving website planning and creation through Forage
+                            platform.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Created sitemap and user flow diagrams</li>
+                            <li><i class="fas fa-check-circle"></i> Developed landing page using HTML & CSS</li>
+                            <li><i class="fas fa-check-circle"></i> Applied web development best practices</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Web Development</span>
+                            <span>UI/UX</span>
+                            <span>Project Planning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">March 2024 - Present</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Founder</h3>
+                        <h4>Sustainability with Koomson (SWK)</h4>
+                        <p>Leading a youth-focused non-profit organization dedicated to promoting sustainable youth
+                            development and community empowerment.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Developing educational programs for
+                                environmental
+                                awareness</li>
+                            <li><i class="fas fa-check-circle"></i> Implementing sustainable agriculture initiatives
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Fostering leadership and personal growth</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Sustainability</span>
+                            <span>Youth Development</span>
+                            <span>Community Engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">August 2023 - Present</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Youth Sounding Board Member</h3>
+                        <h4>UNDP Ghana</h4>
+                        <p>Advising on youth engagement and program effectiveness in sustainable development
+                            initiatives.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Contributing to policy development</li>
+                            <li><i class="fas fa-check-circle"></i> Shaping youth empowerment programs</li>
+                            <li><i class="fas fa-check-circle"></i> Advocating for youth participation</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Policy Advocacy</span>
+                            <span>Youth Development</span>
+                            <span>Stakeholder Engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">January 2022 - February 2023</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>President</h3>
+                        <h4>Ghana National Service Personnel Association (NASPA)</h4>
+                        <p>Leading and collaborating with diverse young people to empower service personnel and
+                            create
+                            opportunities for their success.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Organized Financial Literacy and Microsoft Excel
+                                training programs</li>
+                            <li><i class="fas fa-check-circle"></i> Led community impact initiatives</li>
+                            <li><i class="fas fa-check-circle"></i> Partnered with local organizations</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Leadership</span>
+                            <span>Community Development</span>
+                            <span>Program Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Stakeholder Engagement Officer</h3>
+                        <h4>Waste Gobbler Project</h4>
+                        <p>Led stakeholder engagement for an innovative waste management solution.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Won 3rd place at ACAIC 2022</li>
+                            <li><i class="fas fa-check-circle"></i> Engaged EPA on project permits</li>
+                            <li><i class="fas fa-check-circle"></i> Mobilized community participation</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Waste Management</span>
+                            <span>Community Engagement</span>
+                            <span>Environmental Advocacy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Research Enumerator</h3>
+                        <h4>GAYO - Solar IntellSol Project</h4>
+                        <p>Conducted research for a model solar system feasibility study in Ghana.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> Collected and analyzed field data</li>
+                            <li><i class="fas fa-check-circle"></i> Conducted community surveys</li>
+                            <li><i class="fas fa-check-circle"></i> Prepared research reports</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Research</span>
+                            <span>Data Analysis</span>
+                            <span>Renewable Energy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-scroll>
+                <div class="timeline-content">
+                    <div class="timeline-date">2017 - 2021</div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-details">
+                        <h3>Bachelor of Arts</h3>
+                        <h4>University of Ghana</h4>
+                        <p>Graduated with Honors in Geography and Resource Development with Political Science.</p>
+                        <ul class="timeline-achievements">
+                            <li><i class="fas fa-check-circle"></i> GPA: 3.63 / 4.00</li>
+                            <li><i class="fas fa-check-circle"></i> Focus on sustainable development</li>
+                            <li><i class="fas fa-check-circle"></i> Research and analysis skills</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Academia</span>
+                            <span>Research</span>
+                            <span>Sustainability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills"> 
+        <h2>Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category" data-scroll>
+                <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span>Web Development</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                        <div class="skill-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>MERN</span>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>AI Tools</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Research & Data Analysis</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Content Creation</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category" data-scroll>
+                <h3><i class="fas fa-users"></i> Leadership & Soft Skills</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span>Youth Empowerment</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Stakeholder Engagement</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Program Coordination</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Advocacy</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span>Strategic Planning</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
