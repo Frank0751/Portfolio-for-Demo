@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Contact Me - Frank Koomson</title>
+    <meta name="description" content="Get in touch with Frank Koomson - Sustainability Advocate & Digital Innovator">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+    <!-- Loading Screen -->
     <div class="loading">
         <div class="loading-spinner"></div>
     </div>
@@ -17,6 +30,7 @@
         <div class="nav-container">
             <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">F.Koomson</a></div>
             <div class="nav-links">
+                <div class="nav-item"><a href="index.html">Home</a></div>
                 <div class="nav-item"><a href="about.html">About</a></div>
                 <div class="nav-item">
                     <a href="#">Writeups <i class="fas fa-caret-down"></i></a>
@@ -39,8 +53,10 @@
                     <a href="#">Qualifications <i class="fas fa-caret-down"></i></a>
                     <div class="submenu">
                         <a href="certifications.html">Certifications</a>
-                        <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit?usp=sharing" target="_blank">CV</a>
-                        <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view?usp=sharing" target="_blank">Resume</a>
+                        <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit?usp=sharing"
+                            target="_blank">CV</a>
+                        <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view?usp=sharing"
+                            target="_blank">Resume</a>
                     </div>
                 </div>
                 <div class="nav-item"><a href="contact.html">Contact</a></div>
@@ -54,12 +70,215 @@
         </div>
     </nav>
 
-    <main style="padding: 20px; text-align: center;">
-        <h1>Contact Me</h1>
-        <p>Content coming soon. Find ways to get in touch with me here.</p>
-        <!-- Placeholder for contact form or details -->
-    </main>
+    <div class="contact-page">
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <h1>Get In Touch</h1>
+            <p>Ready to collaborate on sustainability initiatives, web development projects, or youth empowerment
+                programs? I'd love to hear from you!</p>
+        </section>
+
+        <!-- Contact Content -->
+        <div class="contact-content">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info" data-scroll>
+                    <h2>Contact Information</h2>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>frankkoomson1@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+233 (0) 206634459</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Accra, Ghana</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Response Time</h3>
+                            <p>Usually within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-section">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/frank-koomson-b227901ba/" target="_blank"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/FrankKoomson20" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://github.com/Frank0751" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://wastegobbler.org" target="_blank" aria-label="Waste Gobbler">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-section" data-scroll>
+                    <h2>Send Me a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="web-development">Web Development Project</option>
+                                <option value="sustainability">Sustainability Initiative</option>
+                                <option value="youth-empowerment">Youth Empowerment Program</option>
+                                <option value="speaking">Speaking Engagement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message"
+                                placeholder="Tell me about your project or how I can help..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Methods -->
+            <div class="contact-methods" data-scroll>
+                <h2>Preferred Contact Methods</h2>
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>For detailed project discussions, collaboration proposals, and formal inquiries.</p>
+                        <a href="mailto:frankkoomson1@gmail.com">Send Email</a>
+                    </div>
+
+                    <div class="method-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Connect professionally and stay updated with my latest projects and achievements.</p>
+                        <a href="https://www.linkedin.com/in/frank-koomson-b227901ba/" target="_blank">Connect on
+                            LinkedIn</a>
+                    </div>
+
+                    <div class="method-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone Call</h3>
+                        <p>For urgent matters or when you prefer a direct conversation.</p>
+                        <a href="tel:+233206634459">Call Now</a>
+                    </div>
+
+                    <div class="method-card">
+                        <i class="fab fa-twitter"></i>
+                        <h3>Twitter</h3>
+                        <p>Quick updates, sustainability discussions, and casual conversations.</p>
+                        <a href="https://x.com/FrankKoomson20" target="_blank">Follow on Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-quote">"Equipping youth to lead sustainable transformation."</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/frank-koomson-b227901ba/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Frank0751" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/FrankKoomson20" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://wastegobbler.org" target="_blank" aria-label="Waste Gobbler">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2024 Frank Koomson. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Simple validation
+            if (!data.firstName || !data.lastName || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Simulate form submission
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                alert('Thank you for your message! I will get back to you within 24 hours.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+    </script>
 </body>
+
 </html>

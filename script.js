@@ -172,7 +172,7 @@ function setThemePreference(isDark) {
     try {
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     } catch (e) {
-        console.warn('LocalStorage not available for theme saving.');
+        console.warn('LocalStorage not available for theme saving:', e.message);
     }
 }
 
@@ -194,11 +194,16 @@ prefersDarkScheme.addEventListener('change', (e) => {
 
 // Initial theme setup on page load
 function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        applyThemeVisuals(savedTheme === 'dark');
-    } else {
-        applyThemeVisuals(prefersDarkScheme.matches); // Default to OS preference if nothing saved
+    try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyThemeVisuals(savedTheme === 'dark');
+        } else {
+            applyThemeVisuals(prefersDarkScheme.matches); // Default to OS preference if nothing saved
+        }
+    } catch (e) {
+        console.warn('Error initializing theme:', e.message);
+        applyThemeVisuals(false); // Default to light theme
     }
 }
 
@@ -206,3 +211,50 @@ initializeTheme(); // Set the initial theme when the script loads
 
 // Initialize scroll animations on page load
 handleScrollAnimation();
+
+// Floating Action Button functionality
+const fabContainer = document.querySelector('.fab-container');
+const fabMain = document.querySelector('.fab-main');
+
+if (fabContainer && fabMain) {
+    fabMain.addEventListener('click', () => {
+        fabContainer.classList.toggle('active');
+    });
+
+    // Close FAB menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!fabContainer.contains(e.target)) {
+            fabContainer.classList.remove('active');
+        }
+    });
+}
+
+// Scroll indicator functionality
+const scrollArrow = document.querySelector('.scroll-arrow');
+if (scrollArrow) {
+    scrollArrow.addEventListener('click', () => {
+        const awardsSection = document.querySelector('#awards');
+        if (awardsSection) {
+            awardsSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+}
+
+// Hide scroll indicator when scrolling
+let lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+
+    if (scrollIndicator) {
+        if (scrollTop > 100) {
+            scrollIndicator.style.opacity = '0';
+        } else {
+            scrollIndicator.style.opacity = '1';
+        }
+    }
+
+    lastScrollTop = scrollTop;
+});
