@@ -1,1433 +1,2503 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frank Koomson — Sustainability Leader, GreenTech Innovator & Youth Development Expert</title>
-<meta name="description" content="Frank Koomson — Sustainability entrepreneur, GreenTech innovator, nonprofit founder, global operations leader, web developer, and youth empowerment advocate based in Accra, Ghana.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frank Koomson — Sustainability Leader, GreenTech Innovator & Youth Development Expert</title>
+  <meta name="description"
+    content="Frank Koomson — Sustainability entrepreneur, GreenTech innovator, nonprofit founder, global operations leader, web developer, and youth empowerment advocate based in Accra, Ghana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<style>
-/* ─── RESET & BASE ─────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-weight: 400;
-  background: #FFFFFF;
-  color: #111111;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ─── DESIGN TOKENS ────────────────────────────────── */
-:root {
-  --teal: #0D9B7E;
-  --teal-dark: #077A63;
-  --teal-light: #E6F7F4;
-  --teal-mid: #B2E4DA;
-  --dark: #111111;
-  --dark-2: #1E1E1E;
-  --gray-7: #333333;
-  --gray-5: #666666;
-  --gray-3: #AAAAAA;
-  --gray-1: #F4F4F4;
-  --white: #FFFFFF;
-  --border: rgba(17,17,17,0.09);
-  --border-md: rgba(17,17,17,0.16);
-  --radius: 4px;
-  --radius-lg: 10px;
-  --nav-h: 64px;
-  --max: 1200px;
-}
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
 
-/* ─── TYPOGRAPHY ───────────────────────────────────── */
-.h-display {
-  font-family: 'Nunito Sans', 'Futura', 'Century Gothic', sans-serif;
-  font-weight: 900;
-  letter-spacing: -0.035em;
-  line-height: 1.0;
-}
-.h-section {
-  font-family: 'Nunito Sans', 'Futura', 'Century Gothic', sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-}
-.label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--teal);
-}
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 400;
+      background: #FFFFFF;
+      color: #111111;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-/* ─── LAYOUT HELPERS ───────────────────────────────── */
-.container { max-width: var(--max); margin: 0 auto; padding: 0 3rem; }
-section { padding: 6rem 0; }
-.divider { width: 100%; height: 1px; background: var(--border); }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* ─── NAV ──────────────────────────────────────────── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: var(--nav-h);
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  display: flex; align-items: center;
-}
-.nav-inner {
-  width: 100%; max-width: var(--max); margin: 0 auto;
-  padding: 0 3rem;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.nav-logo {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
-  font-size: 1.15rem;
-  letter-spacing: -0.03em;
-  color: var(--dark);
-}
-.nav-logo span { color: var(--teal); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  font-size: 0.83rem;
-  font-weight: 500;
-  color: var(--gray-5);
-  transition: color 0.2s;
-}
-.nav-links a:hover, .nav-links a.active { color: var(--teal); }
-.nav-right { display: flex; gap: 0.75rem; align-items: center; }
-.nav-btn {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--radius);
-  transition: all 0.2s;
-}
-.nav-btn.outline {
-  border: 1.5px solid var(--border-md);
-  color: var(--gray-7);
-}
-.nav-btn.outline:hover { border-color: var(--teal); color: var(--teal); }
-.nav-btn.filled {
-  background: var(--teal);
-  color: var(--white);
-}
-.nav-btn.filled:hover { background: var(--teal-dark); }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* hamburger — mobile */
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
+    /* ─── DESIGN TOKENS ────────────────────────────────── */
+    :root {
+      --teal: #0D9B7E;
+      --teal-dark: #077A63;
+      --teal-light: #E6F7F4;
+      --teal-mid: #B2E4DA;
+      --dark: #111111;
+      --dark-2: #1E1E1E;
+      --gray-7: #333333;
+      --gray-5: #666666;
+      --gray-3: #AAAAAA;
+      --gray-1: #F4F4F4;
+      --white: #FFFFFF;
+      --border: rgba(17, 17, 17, 0.09);
+      --border-md: rgba(17, 17, 17, 0.16);
+      --radius: 4px;
+      --radius-lg: 10px;
+      --nav-h: 64px;
+      --max: 1200px;
+    }
 
-/* ─── HERO ─────────────────────────────────────────── */
-#hero {
-  padding-top: calc(var(--nav-h) + 5rem);
-  padding-bottom: 5rem;
-  background: var(--white);
-  overflow: hidden;
-  position: relative;
-}
-#hero::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 45%;
-  height: 100%;
-  background: var(--teal-light);
-  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
-  z-index: 0;
-}
-.hero-inner {
-  position: relative; z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-.hero-label { margin-bottom: 1.25rem; }
-.hero-name {
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-.hero-name .accent { color: var(--teal); }
-.hero-roles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1.75rem;
-}
-.role-chip {
-  font-size: 0.78rem;
-  font-weight: 500;
-  padding: 0.3rem 0.85rem;
-  border-radius: 20px;
-  border: 1.5px solid var(--border-md);
-  color: var(--gray-7);
-  background: var(--white);
-  white-space: nowrap;
-}
-.role-chip.teal {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: var(--white);
-}
-.hero-bio {
-  font-size: 1.05rem;
-  color: var(--gray-5);
-  max-width: 44ch;
-  margin-bottom: 2.25rem;
-  font-weight: 400;
-  line-height: 1.7;
-}
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.85rem; font-weight: 600;
-  padding: 0.75rem 1.75rem;
-  border-radius: var(--radius);
-  transition: all 0.2s;
-  cursor: pointer; border: none;
-}
-.btn-teal { background: var(--teal); color: var(--white); }
-.btn-teal:hover { background: var(--teal-dark); }
-.btn-outline { border: 1.5px solid var(--border-md); color: var(--gray-7); }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
-.hero-photo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.photo-frame {
-  width: 420px;
-  height: 500px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--teal-mid);
-  position: relative;
-}
-/* ── PHOTO PLACEHOLDER — remove when real photo added ── */
-.photo-placeholder {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  gap: 0.75rem;
-  background: linear-gradient(135deg, var(--teal-mid) 0%, var(--teal-light) 100%);
-}
-.photo-placeholder i { font-size: 4rem; color: var(--teal); opacity: 0.5; }
-.photo-placeholder p { font-size: 0.8rem; color: var(--teal-dark); font-weight: 500; letter-spacing: 0.06em; text-align: center; padding: 0 1rem; }
-/* ── Actual photo ── */
-.photo-frame img {
-  width: 100%; height: 100%; object-fit: cover; object-position: top;
-}
-.photo-badge {
-  position: absolute;
-  bottom: -1rem; left: -1.5rem;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 0.9rem 1.25rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  display: flex; flex-direction: column; gap: 0.2rem;
-}
-.badge-num {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
-  font-size: 1.6rem;
-  color: var(--teal);
-  line-height: 1;
-}
-.badge-label { font-size: 0.72rem; color: var(--gray-5); font-weight: 500; }
-.photo-badge-2 {
-  position: absolute;
-  top: 1.5rem; right: -1.5rem;
-  background: var(--dark);
-  border-radius: var(--radius-lg);
-  padding: 0.9rem 1.25rem;
-  display: flex; flex-direction: column; gap: 0.2rem;
-}
-.photo-badge-2 .badge-num { color: var(--teal); }
-.photo-badge-2 .badge-label { color: rgba(255,255,255,0.55); }
+    /* ─── TYPOGRAPHY ───────────────────────────────────── */
+    .h-display {
+      font-family: 'Nunito Sans', 'Futura', 'Century Gothic', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      line-height: 1.0;
+    }
 
-/* hero stats strip */
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  margin-top: 4rem;
-}
-.hero-stat {
-  padding: 1.75rem 2rem;
-  text-align: center;
-  border-right: 1px solid var(--border);
-}
-.hero-stat:last-child { border-right: none; }
-.stat-n {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 900;
-  font-size: 2rem;
-  color: var(--dark);
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-.stat-n span { color: var(--teal); }
-.stat-l { font-size: 0.78rem; color: var(--gray-5); font-weight: 500; }
+    .h-section {
+      font-family: 'Nunito Sans', 'Futura', 'Century Gothic', sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
 
-/* ─── ABOUT ────────────────────────────────────────── */
-#about { background: var(--dark-2); color: var(--white); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 5rem;
-  align-items: start;
-}
-#about .label { color: var(--teal); }
-#about .h-section { color: var(--white); }
-.about-headline { font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--white); margin: 1rem 0 1.5rem; }
-.about-intro { font-size: 1.05rem; color: rgba(255,255,255,0.65); font-weight: 300; line-height: 1.8; margin-bottom: 1.25rem; }
-.about-intro strong { color: var(--white); font-weight: 600; }
-.about-intro a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
-.what-i-do {
-  margin-top: 2.5rem;
-}
-.what-i-do-title {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-.pillar {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 0.85rem 1rem;
-  transition: border-color 0.2s;
-}
-.pillar:hover { border-color: var(--teal); }
-.pillar-icon { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--teal); }
-.pillar-name { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
-.pillar-desc { font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+    .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
 
-.about-sidebar {
-  display: flex; flex-direction: column; gap: 1.5rem;
-}
-.info-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-}
-.info-card-title {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-.info-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-.info-list li {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.6);
-  padding-left: 0.9rem;
-  position: relative;
-  line-height: 1.4;
-}
-.info-list li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0.55em;
-  width: 4px; height: 4px;
-  border-radius: 50%;
-  background: var(--teal);
-}
-.info-list li strong { color: rgba(255,255,255,0.85); font-weight: 500; }
-.info-list li a { color: var(--teal); }
-.connect-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.connect-pill {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.78rem; font-weight: 500;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.12);
-  color: rgba(255,255,255,0.7);
-  transition: all 0.2s;
-}
-.connect-pill:hover { border-color: var(--teal); color: var(--teal); }
-.connect-pill i { font-size: 0.85rem; }
+    /* ─── LAYOUT HELPERS ───────────────────────────────── */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
 
-/* ─── PROJECTS ─────────────────────────────────────── */
-#projects { background: var(--white); }
-.section-header {
-  display: flex; justify-content: space-between; align-items: flex-end;
-  margin-bottom: 3rem;
-}
-.section-header-text { max-width: 50ch; }
-.section-subtitle { font-size: 1rem; color: var(--gray-5); font-weight: 400; margin-top: 0.75rem; line-height: 1.6; }
+    section {
+      padding: 6rem 0;
+    }
 
-.projects-featured {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.projects-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.proj-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  display: flex; flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
-  background: var(--white);
-}
-.proj-card:hover {
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-  transform: translateY(-2px);
-}
-.proj-img {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background: var(--teal-light);
-  position: relative;
-}
-.proj-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-.proj-card:hover .proj-img img { transform: scale(1.04); }
-/* placeholder when no image */
-.proj-img-placeholder {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem;
-  background: var(--teal-light);
-  color: var(--teal);
-}
-.proj-img-placeholder i { font-size: 2.5rem; opacity: 0.5; }
-.proj-img-placeholder span { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
 
-.proj-card.featured .proj-img { height: 280px; }
-.proj-badge {
-  position: absolute; top: 0.9rem; left: 0.9rem;
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  background: var(--teal); color: var(--white);
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-}
-.proj-badge.award { background: #B8860B; }
-.proj-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
-.proj-type { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; }
-.proj-title {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.15rem;
-  color: var(--dark);
-  line-height: 1.25;
-  margin-bottom: 0.6rem;
-}
-.proj-card.featured .proj-title { font-size: 1.4rem; }
-.proj-desc { font-size: 0.88rem; color: var(--gray-5); line-height: 1.65; flex: 1; }
-.proj-footer {
-  margin-top: 1.25rem; padding-top: 1rem;
-  border-top: 1px solid var(--border);
-  display: flex; justify-content: space-between; align-items: center;
-}
-.proj-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
-.proj-tag {
-  font-size: 0.65rem; font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-  background: var(--gray-1);
-  color: var(--gray-5);
-}
-.proj-link {
-  font-size: 0.78rem; font-weight: 600;
-  color: var(--teal);
-  display: flex; align-items: center; gap: 0.3rem;
-  white-space: nowrap;
-}
-.proj-link:hover { text-decoration: underline; }
-.proj-award-strip {
-  margin: 0.75rem 0 0;
-  padding: 0.6rem 0.9rem;
-  background: var(--teal-light);
-  border-left: 3px solid var(--teal);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  font-size: 0.78rem; font-weight: 600; color: var(--teal-dark);
-}
+    /* ─── NAV ──────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
 
-/* ─── EXPERIENCE ───────────────────────────────────── */
-#experience { background: var(--gray-1); }
-.exp-grid {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 5rem;
-  align-items: start;
-}
-.exp-sticky { position: sticky; top: calc(var(--nav-h) + 2rem); }
-.exp-sticky .section-subtitle { margin-top: 0.75rem; }
-.exp-actions { margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .nav-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.timeline { display: flex; flex-direction: column; }
-.tl-item {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 1.5rem;
-  padding-bottom: 2.5rem;
-  position: relative;
-}
-.tl-item:last-child { padding-bottom: 0; }
-.tl-item::after {
-  content: '';
-  position: absolute;
-  left: calc(90px + 1.5rem + 6px);
-  top: 14px; bottom: 0;
-  width: 1px;
-  background: var(--border-md);
-}
-.tl-item:last-child::after { display: none; }
-.tl-date {
-  font-size: 0.72rem; font-weight: 600;
-  color: var(--gray-3);
-  text-align: right;
-  padding-top: 3px;
-  line-height: 1.4;
-}
-.tl-dot {
-  position: absolute;
-  left: calc(90px + 1.5rem);
-  top: 6px;
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 2px solid var(--border-md);
-  z-index: 1;
-  transition: border-color 0.2s, background 0.2s;
-}
-.tl-item:hover .tl-dot { border-color: var(--teal); background: var(--teal-light); }
-.tl-content { padding-left: 1.75rem; }
-.tl-role { font-weight: 600; font-size: 0.97rem; color: var(--dark); margin-bottom: 0.2rem; line-height: 1.3; }
-.tl-org { font-size: 0.82rem; color: var(--teal); font-weight: 600; margin-bottom: 0.6rem; }
-.tl-desc { font-size: 0.85rem; color: var(--gray-5); line-height: 1.65; }
-.tl-pill {
-  display: inline-block; margin-top: 0.5rem;
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 0.2rem 0.65rem;
-  border-radius: 20px;
-  background: var(--teal-light);
-  color: var(--teal-dark);
-}
-.tl-pill.gold { background: #FFF3CD; color: #856404; }
+    .nav-logo {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+    }
 
-/* ─── AWARDS ───────────────────────────────────────── */
-#awards { background: var(--white); }
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  margin-top: 2.5rem;
-}
-.award-cell {
-  background: var(--white);
-  padding: 2rem;
-  transition: background 0.2s;
-}
-.award-cell:hover { background: var(--teal-light); }
-.award-year { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); margin-bottom: 0.5rem; }
-.award-name {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 800; font-size: 1rem;
-  color: var(--dark); line-height: 1.3; margin-bottom: 0.4rem;
-}
-.award-by { font-size: 0.82rem; color: var(--gray-5); line-height: 1.5; }
+    .nav-logo span {
+      color: var(--teal);
+    }
 
-.certs-wrap { margin-top: 4rem; }
-.certs-label {
-  font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gray-5); margin-bottom: 1.25rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border);
-}
-.certs-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.cert-tag {
-  font-size: 0.78rem; font-weight: 500;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  border: 1.5px solid var(--border-md);
-  color: var(--gray-7);
-  background: var(--white);
-  transition: all 0.2s;
-  text-decoration: none;
-}
-.cert-tag:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-/* ─── THESIS SUBSECTION ────────────────────────────── */
-.thesis-block {
-  margin-top: 2.5rem;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .thesis-block .thesis-inner-grid { grid-template-columns: 1fr !important; }
-}
-.thesis-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 1.5rem;
-  background: rgba(13,155,126,0.12);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-.thesis-icon {
-  width: 40px; height: 40px;
-  border-radius: 8px;
-  background: var(--teal);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.thesis-icon i { color: var(--white); font-size: 1rem; }
-.thesis-header-text {}
-.thesis-tag {
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 0.2rem;
-}
-.thesis-title-short {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 800; font-size: 0.95rem;
-  color: var(--white); line-height: 1.3;
-}
-.thesis-body { padding: 1.5rem; }
-.thesis-full-title {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 800; font-size: 1.05rem;
-  color: var(--white); line-height: 1.4;
-  margin-bottom: 1rem;
-}
-.thesis-meta-row {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
-  margin-bottom: 1.25rem;
-}
-.thesis-meta-chip {
-  font-size: 0.7rem; font-weight: 600;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.55);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.thesis-meta-chip.gold {
-  background: rgba(184,134,11,0.15);
-  color: #D4A820;
-  border-color: rgba(184,134,11,0.25);
-}
-.thesis-abstract-label {
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 0.6rem;
-}
-.thesis-abstract {
-  font-size: 0.85rem; color: rgba(255,255,255,0.55);
-  line-height: 1.75; margin-bottom: 1.25rem;
-}
-.thesis-findings {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0.6rem; margin-bottom: 1.5rem;
-}
-.finding-item {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius);
-  padding: 0.75rem 1rem;
-}
-.finding-label {
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 0.3rem;
-}
-.finding-val {
-  font-size: 0.82rem; color: rgba(255,255,255,0.65);
-  line-height: 1.45;
-}
-.thesis-footer {
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(255,255,255,0.07);
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; flex-wrap: wrap;
-}
-.thesis-uni {
-  display: flex; align-items: center; gap: 0.6rem;
-}
-.thesis-uni-icon { font-size: 1.1rem; color: var(--teal); }
-.thesis-uni-name { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
-.thesis-uni-name strong { color: rgba(255,255,255,0.8); font-weight: 500; }
-.thesis-download {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 0.78rem; font-weight: 600;
-  padding: 0.5rem 1.1rem;
-  border-radius: var(--radius);
-  background: var(--teal); color: var(--white);
-  transition: background 0.2s;
-}
-.thesis-download:hover { background: var(--teal-dark); }
+    .nav-links a {
+      font-size: 0.83rem;
+      font-weight: 500;
+      color: var(--gray-5);
+      transition: color 0.2s;
+    }
 
-/* ─── WRITING ──────────────────────────────────────── */
-#writing { background: var(--dark-2); color: var(--white); }
-#writing .label { color: var(--teal); }
-#writing .h-section { color: var(--white); }
-#writing .section-subtitle { color: rgba(255,255,255,0.5); }
-.writing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  margin-top: 2.5rem;
-}
-.write-card {
-  background: var(--dark-2);
-  padding: 2rem;
-  display: flex; flex-direction: column;
-  text-decoration: none;
-  transition: background 0.2s;
-  border-bottom: 3px solid transparent;
-}
-.write-card:hover { background: rgba(255,255,255,0.04); border-bottom-color: var(--teal); }
-.write-cat { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.6rem; }
-.write-title {
-  font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 1rem;
-  color: var(--white); line-height: 1.35; margin-bottom: 0.6rem;
-}
-.write-excerpt { font-size: 0.83rem; color: rgba(255,255,255,0.45); line-height: 1.6; flex: 1; }
-.write-meta {
-  margin-top: 1rem;
-  font-size: 0.72rem; color: rgba(255,255,255,0.3);
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.write-meta::before { content: ''; display: block; width: 1rem; height: 1px; background: var(--teal); }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--teal);
+    }
 
-.speaking-wrap { margin-top: 3rem; }
-.speaking-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.speaking-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.speak-pill {
-  font-size: 0.78rem; font-weight: 500;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.6);
-  transition: all 0.2s;
-}
-.speak-pill:hover { border-color: var(--teal); color: var(--teal); }
+    .nav-right {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
 
-/* ─── SKILLS ───────────────────────────────────────── */
-#skills { background: var(--white); }
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 2.5rem; }
-.skill-col {}
-.skill-col-title {
-  font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 0.88rem;
-  color: var(--dark);
-  padding: 0.6rem 0; margin-bottom: 1rem;
-  border-bottom: 2px solid var(--teal);
-  display: flex; align-items: center; gap: 0.5rem;
-}
-.skill-col-title i { color: var(--teal); font-size: 0.9rem; }
-.skill-items { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.skill-items li { font-size: 0.85rem; color: var(--gray-5); padding-left: 0.85rem; position: relative; line-height: 1.4; }
-.skill-items li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 4px; height: 4px; border-radius: 50%; background: var(--teal); }
+    .nav-btn {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
 
-/* ─── CONTACT ──────────────────────────────────────── */
-#contact { background: var(--gray-1); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-.contact-links { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 2rem; }
-.contact-link-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.15rem 1.5rem;
-  background: var(--white);
-  text-decoration: none;
-  transition: background 0.2s;
-}
-.contact-link-row:hover { background: var(--teal-light); }
-.cl-left { display: flex; flex-direction: column; gap: 0.15rem; }
-.cl-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-3); }
-.cl-val { font-size: 0.92rem; font-weight: 500; color: var(--dark); }
-.cl-arrow { color: var(--teal); font-size: 0.85rem; }
+    .nav-btn.outline {
+      border: 1.5px solid var(--border-md);
+      color: var(--gray-7);
+    }
 
-.contact-right {}
-.services-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin-top: 1.5rem; }
-.service-row {
-  background: var(--white);
-  padding: 1rem 1.5rem;
-  display: flex; align-items: center; gap: 1rem;
-}
-.service-icon { width: 32px; height: 32px; border-radius: 6px; background: var(--teal-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.service-icon i { font-size: 0.85rem; color: var(--teal); }
-.service-name { font-size: 0.88rem; font-weight: 500; color: var(--dark); }
+    .nav-btn.outline:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
 
-.contact-note { font-size: 0.85rem; color: var(--gray-5); margin-top: 1.5rem; line-height: 1.7; }
+    .nav-btn.filled {
+      background: var(--teal);
+      color: var(--white);
+    }
 
-/* ─── AWARDS PHOTO ROW ─────────────────────────────── */
-.awards-photos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  margin-bottom: 1.5rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.awards-photos img {
-  width: 100%; height: 220px;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 0.4s;
-}
-.awards-photos img:hover { transform: scale(1.02); }
+    .nav-btn.filled:hover {
+      background: var(--teal-dark);
+    }
 
-/* ─── WRITING PHOTO STRIP ──────────────────────────── */
-.writing-photo-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  margin-bottom: 4px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  overflow: hidden;
-}
-.writing-photo-strip img {
-  width: 100%; height: 200px;
-  object-fit: cover;
-  filter: brightness(0.7) saturate(0.8);
-  transition: filter 0.3s;
-}
-.writing-photo-strip img:hover { filter: brightness(0.9) saturate(1); }
+    /* hamburger — mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
 
-/* ─── TIMELINE PHOTO ───────────────────────────────── */
-.tl-photo {
-  width: 100%; height: 160px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin-top: 0.85rem;
-}
-.tl-photo img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 0.4s;
-}
-.tl-item:hover .tl-photo img { transform: scale(1.03); }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--dark);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
 
-/* ─── YOUTUBE EMBED ────────────────────────────────── */
-.yt-wrap {
-  position: relative;
-  width: 100%; padding-top: 56.25%;
-  border-radius: var(--radius) var(--radius) 0 0;
-  overflow: hidden;
-  background: #000;
-}
-.yt-wrap iframe {
-  position: absolute;
-  inset: 0; width: 100%; height: 100%;
-  border: none;
-}
-.yt-badge {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.68rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  background: #FF0000; color: #fff;
-  padding: 0.28rem 0.7rem;
-  border-radius: 20px;
-  margin-bottom: 0.5rem;
-}
+    /* ─── HERO ─────────────────────────────────────────── */
+    #hero {
+      padding-top: calc(var(--nav-h) + 5rem);
+      padding-bottom: 5rem;
+      background: var(--white);
+      overflow: hidden;
+      position: relative;
+    }
 
-/* ─── RECENT ACTIVITIES SLIDESHOW ─────────────────── */
-.slideshow-section {
-  background: var(--dark);
-  padding: 2.5rem 0 2rem;
-  overflow: hidden;
-}
-.slideshow-header {
-  max-width: var(--max); margin: 0 auto;
-  padding: 0 3rem 1.5rem;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.slideshow-controls {
-  display: flex; align-items: center; gap: 0.75rem;
-}
-.sl-btn {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: transparent;
-  color: rgba(255,255,255,0.6);
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.75rem;
-  transition: all 0.2s;
-}
-.sl-btn:hover { border-color: var(--teal); color: var(--teal); }
-.sl-counter { font-size: 0.78rem; color: rgba(255,255,255,0.35); min-width: 40px; text-align: center; }
-.slideshow-track-wrap {
-  overflow: hidden;
-  padding: 0 3rem;
-  max-width: calc(var(--max) + 6rem);
-  margin: 0 auto;
-}
-.slideshow-track {
-  display: flex;
-  gap: 1.25rem;
-  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
-}
-.slide-card {
-  flex: 0 0 calc(33.333% - 0.85rem);
-  min-width: 0;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  display: flex; flex-direction: column;
-  transition: border-color 0.2s;
-}
-.slide-card:hover { border-color: var(--teal); }
-.slide-img {
-  width: 100%; height: 200px; overflow: hidden; flex-shrink: 0;
-}
-.slide-img img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center top;
-  transition: transform 0.4s;
-}
-.slide-card:hover .slide-img img { transform: scale(1.04); }
-.slide-info {
-  padding: 1.25rem 1.5rem 1.5rem;
-  display: flex; flex-direction: column; gap: 0.4rem; flex: 1;
-}
-.slide-tag {
-  font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--teal);
-}
-.slide-title {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 800; font-size: 0.97rem;
-  color: var(--white); line-height: 1.3;
-}
-.slide-desc {
-  font-size: 0.82rem; color: rgba(255,255,255,0.5);
-  line-height: 1.6; flex: 1;
-}
-.slide-date {
-  font-size: 0.72rem; color: rgba(255,255,255,0.3);
-  margin-top: 0.5rem;
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.slide-date i { color: var(--teal); font-size: 0.65rem; }
-.sl-dots {
-  display: flex; justify-content: center; gap: 0.4rem;
-  margin-top: 1.5rem; padding: 0 3rem;
-}
-.sl-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  cursor: pointer; transition: all 0.2s; border: none;
-}
-.sl-dot.active { background: var(--teal); width: 20px; border-radius: 3px; }
-@media (max-width: 768px) {
-  .slide-card { flex: 0 0 calc(100% - 0rem); }
-  .slideshow-track-wrap { padding: 0 1.5rem; }
-  .slideshow-header { padding: 0 1.5rem 1.25rem; }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .slide-card { flex: 0 0 calc(50% - 0.625rem); }
-}
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 100%;
+      background: var(--teal-light);
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
 
-/* ─── FOOTER ───────────────────────────────────────── */
-footer {
-  background: var(--dark);
-  color: rgba(255,255,255,0.35);
-  padding: 2rem 3rem;
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.78rem;
-}
-.footer-logo {
-  font-family: 'Nunito Sans', sans-serif; font-weight: 900;
-  font-size: 1rem; color: var(--white);
-}
-.footer-logo span { color: var(--teal); }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { color: rgba(255,255,255,0.4); transition: color 0.2s; font-size: 1rem; }
-.footer-links a:hover { color: var(--teal); }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
 
-/* ─── YOUTUBE EMBED ────────────────────────────────── */
-.yt-wrap {
-  position: relative;
-  width: 100%; height: 100%;
-  background: #000;
-}
-.yt-wrap iframe {
-  position: absolute;
-  inset: 0; width: 100%; height: 100%;
-  border: none;
-}
-.yt-badge {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #FF0000;
-  margin-bottom: 0.5rem;
-}
-.yt-badge i { font-size: 0.95rem; }
+    .hero-label {
+      margin-bottom: 1.25rem;
+    }
 
-/* ─── SCROLL ANIMATIONS ────────────────────────────── */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
+    .hero-name {
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
 
-/* ─── RESPONSIVE ───────────────────────────────────── */
-@media (max-width: 1024px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .awards-grid { grid-template-columns: repeat(2, 1fr); }
-  .writing-grid { grid-template-columns: repeat(2, 1fr); }
-  .projects-row { grid-template-columns: repeat(2, 1fr); }
-  .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .exp-sticky { position: static; }
-  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  .container { padding: 0 1.5rem; }
-  section { padding: 4rem 0; }
-  #hero::before { display: none; }
-  .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-photo { order: -1; }
-  .photo-frame { width: 100%; height: 320px; }
-  .photo-badge, .photo-badge-2 { display: none; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .projects-featured { grid-template-columns: 1fr; }
-  .projects-row { grid-template-columns: 1fr; }
-  .awards-grid, .writing-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
-  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-  .nav-links, .nav-right { display: none; }
-  .hamburger { display: flex; }
-  footer { flex-direction: column; gap: 1rem; text-align: center; }
-}
-</style>
+    .hero-name .accent {
+      color: var(--teal);
+    }
+
+    .hero-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .role-chip {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.3rem 0.85rem;
+      border-radius: 20px;
+      border: 1.5px solid var(--border-md);
+      color: var(--gray-7);
+      background: var(--white);
+      white-space: nowrap;
+    }
+
+    .role-chip.teal {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--white);
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: var(--gray-5);
+      max-width: 44ch;
+      margin-bottom: 2.25rem;
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .btn-teal:hover {
+      background: var(--teal-dark);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--border-md);
+      color: var(--gray-7);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .hero-photo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-frame {
+      width: 420px;
+      height: 500px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--teal-mid);
+      position: relative;
+    }
+
+    /* ── PHOTO PLACEHOLDER — remove when real photo added ── */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, var(--teal-mid) 0%, var(--teal-light) 100%);
+    }
+
+    .photo-placeholder i {
+      font-size: 4rem;
+      color: var(--teal);
+      opacity: 0.5;
+    }
+
+    .photo-placeholder p {
+      font-size: 0.8rem;
+      color: var(--teal-dark);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    /* ── Actual photo ── */
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .photo-badge {
+      position: absolute;
+      bottom: -1rem;
+      left: -1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 0.9rem 1.25rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .badge-num {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: var(--teal);
+      line-height: 1;
+    }
+
+    .badge-label {
+      font-size: 0.72rem;
+      color: var(--gray-5);
+      font-weight: 500;
+    }
+
+    .photo-badge-2 {
+      position: absolute;
+      top: 1.5rem;
+      right: -1.5rem;
+      background: var(--dark);
+      border-radius: var(--radius-lg);
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .photo-badge-2 .badge-num {
+      color: var(--teal);
+    }
+
+    .photo-badge-2 .badge-label {
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* hero stats strip */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-top: 4rem;
+    }
+
+    .hero-stat {
+      padding: 1.75rem 2rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .hero-stat:last-child {
+      border-right: none;
+    }
+
+    .stat-n {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-n span {
+      color: var(--teal);
+    }
+
+    .stat-l {
+      font-size: 0.78rem;
+      color: var(--gray-5);
+      font-weight: 500;
+    }
+
+    /* ─── ABOUT ────────────────────────────────────────── */
+    #about {
+      background: var(--dark-2);
+      color: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    #about .label {
+      color: var(--teal);
+    }
+
+    #about .h-section {
+      color: var(--white);
+    }
+
+    .about-headline {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      color: var(--white);
+      margin: 1rem 0 1.5rem;
+    }
+
+    .about-intro {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.65);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    .about-intro strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .about-intro a {
+      color: var(--teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .what-i-do {
+      margin-top: 2.5rem;
+    }
+
+    .what-i-do-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.6rem;
+    }
+
+    .pillar {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 0.75rem 0.6rem;
+      transition: border-color 0.2s;
+    }
+
+    .pillar-icon {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+      color: var(--teal);
+    }
+
+    .pillar-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .pillar-desc {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 1.45;
+    }
+
+    .about-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .info-card-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .info-list li {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+      padding-left: 0.9rem;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .info-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .info-list li strong {
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+    }
+
+    .info-list li a {
+      color: var(--teal);
+    }
+
+    .connect-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .connect-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: rgba(255, 255, 255, 0.7);
+      transition: all 0.2s;
+    }
+
+    .connect-pill:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .connect-pill i {
+      font-size: 0.85rem;
+    }
+
+    /* ─── PROJECTS ─────────────────────────────────────── */
+    #projects {
+      background: var(--white);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+    }
+
+    .section-header-text {
+      max-width: 50ch;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--gray-5);
+      font-weight: 400;
+      margin-top: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .projects-featured {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .projects-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .proj-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+      background: var(--white);
+    }
+
+    .proj-card:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .proj-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: var(--teal-light);
+      position: relative;
+    }
+
+    .proj-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .proj-card:hover .proj-img img {
+      transform: scale(1.04);
+    }
+
+    /* placeholder when no image */
+    .proj-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--teal-light);
+      color: var(--teal);
+    }
+
+    .proj-img-placeholder i {
+      font-size: 2.5rem;
+      opacity: 0.5;
+    }
+
+    .proj-img-placeholder span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+
+    .proj-card.featured .proj-img {
+      height: 280px;
+    }
+
+    .proj-badge {
+      position: absolute;
+      top: 0.9rem;
+      left: 0.9rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+    }
+
+    .proj-badge.award {
+      background: #B8860B;
+    }
+
+    .proj-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-type {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .proj-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--dark);
+      line-height: 1.25;
+      margin-bottom: 0.6rem;
+    }
+
+    .proj-card.featured .proj-title {
+      font-size: 1.4rem;
+    }
+
+    .proj-desc {
+      font-size: 0.88rem;
+      color: var(--gray-5);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .proj-footer {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .proj-tags {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    .proj-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      background: var(--gray-1);
+      color: var(--gray-5);
+    }
+
+    .proj-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      white-space: nowrap;
+    }
+
+    .proj-link:hover {
+      text-decoration: underline;
+    }
+
+    .proj-award-strip {
+      margin: 0.75rem 0 0;
+      padding: 0.6rem 0.9rem;
+      background: var(--teal-light);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--teal-dark);
+    }
+
+    /* ─── EXPERIENCE ───────────────────────────────────── */
+    #experience {
+      background: var(--gray-1);
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .exp-sticky {
+      position: sticky;
+      top: calc(var(--nav-h) + 2rem);
+    }
+
+    .exp-sticky .section-subtitle {
+      margin-top: 0.75rem;
+    }
+
+    .exp-actions {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .tl-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .tl-item::after {
+      content: '';
+      position: absolute;
+      left: calc(90px + 1.5rem + 6px);
+      top: 14px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border-md);
+    }
+
+    .tl-item:last-child::after {
+      display: none;
+    }
+
+    .tl-date {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gray-3);
+      text-align: right;
+      padding-top: 3px;
+      line-height: 1.4;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: calc(90px + 1.5rem);
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--border-md);
+      z-index: 1;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .tl-item:hover .tl-dot {
+      border-color: var(--teal);
+      background: var(--teal-light);
+    }
+
+    .tl-content {
+      padding-left: 1.75rem;
+    }
+
+    .tl-role {
+      font-weight: 600;
+      font-size: 0.97rem;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+      line-height: 1.3;
+    }
+
+    .tl-org {
+      font-size: 0.82rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .tl-desc {
+      font-size: 0.85rem;
+      color: var(--gray-5);
+      line-height: 1.65;
+    }
+
+    .tl-pill {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+    }
+
+    .tl-pill.gold {
+      background: #FFF3CD;
+      color: #856404;
+    }
+
+    /* ─── AWARDS ───────────────────────────────────────── */
+    #awards {
+      background: var(--white);
+    }
+
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 2.5rem;
+    }
+
+    .award-cell {
+      background: var(--white);
+      padding: 2rem;
+      transition: background 0.2s;
+    }
+
+    .award-cell:hover {
+      background: var(--teal-light);
+    }
+
+    .award-year {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-3);
+      margin-bottom: 0.5rem;
+    }
+
+    .award-name {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .award-by {
+      font-size: 0.82rem;
+      color: var(--gray-5);
+      line-height: 1.5;
+    }
+
+    .certs-wrap {
+      margin-top: 4rem;
+    }
+
+    .certs-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray-5);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .certs-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .cert-tag {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1.5px solid var(--border-md);
+      color: var(--gray-7);
+      background: var(--white);
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .cert-tag:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      background: var(--teal-light);
+    }
+
+    /* ─── THESIS SUBSECTION ────────────────────────────── */
+    .thesis-block {
+      margin-top: 2.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .thesis-block .thesis-inner-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    .thesis-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(13, 155, 126, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .thesis-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .thesis-icon i {
+      color: var(--white);
+      font-size: 1rem;
+    }
+
+    .thesis-header-text {}
+
+    .thesis-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.2rem;
+    }
+
+    .thesis-title-short {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .thesis-body {
+      padding: 1.5rem;
+    }
+
+    .thesis-full-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--white);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .thesis-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .thesis-meta-chip {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .thesis-meta-chip.gold {
+      background: rgba(184, 134, 11, 0.15);
+      color: #D4A820;
+      border-color: rgba(184, 134, 11, 0.25);
+    }
+
+    .thesis-abstract-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+
+    .thesis-abstract {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .thesis-findings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .finding-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius);
+      padding: 0.75rem 1rem;
+    }
+
+    .finding-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.3rem;
+    }
+
+    .finding-val {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.45;
+    }
+
+    .thesis-footer {
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .thesis-uni {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .thesis-uni-icon {
+      font-size: 1.1rem;
+      color: var(--teal);
+    }
+
+    .thesis-uni-name {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .thesis-uni-name strong {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 500;
+    }
+
+    .thesis-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius);
+      background: var(--teal);
+      color: var(--white);
+      transition: background 0.2s;
+    }
+
+    .thesis-download:hover {
+      background: var(--teal-dark);
+    }
+
+    /* ─── WRITING ──────────────────────────────────────── */
+    #writing {
+      background: var(--dark-2);
+      color: var(--white);
+    }
+
+    #writing .label {
+      color: var(--teal);
+    }
+
+    #writing .h-section {
+      color: var(--white);
+    }
+
+    #writing .section-subtitle {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 2.5rem;
+    }
+
+    .write-card {
+      background: var(--dark-2);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: background 0.2s;
+      border-bottom: 3px solid transparent;
+    }
+
+    .write-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-bottom-color: var(--teal);
+    }
+
+    .write-cat {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
+
+    .write-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--white);
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+    }
+
+    .write-excerpt {
+      font-size: 0.83rem;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .write-meta {
+      margin-top: 1rem;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .write-meta::before {
+      content: '';
+      display: block;
+      width: 1rem;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .speaking-wrap {
+      margin-top: 3rem;
+    }
+
+    .speaking-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .speaking-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .speak-pill {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.6);
+      transition: all 0.2s;
+    }
+
+    .speak-pill:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    /* ─── SKILLS ───────────────────────────────────────── */
+    #skills {
+      background: var(--white);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .skill-col {}
+
+    .skill-col-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 0.88rem;
+      color: var(--dark);
+      padding: 0.6rem 0;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-col-title i {
+      color: var(--teal);
+      font-size: 0.9rem;
+    }
+
+    .skill-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .skill-items li {
+      font-size: 0.85rem;
+      color: var(--gray-5);
+      padding-left: 0.85rem;
+      position: relative;
+      line-height: 1.4;
+    }
+
+    .skill-items li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    /* ─── CONTACT ──────────────────────────────────────── */
+    #contact {
+      background: var(--gray-1);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .contact-link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.15rem 1.5rem;
+      background: var(--white);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .contact-link-row:hover {
+      background: var(--teal-light);
+    }
+
+    .cl-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .cl-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-3);
+    }
+
+    .cl-val {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .cl-arrow {
+      color: var(--teal);
+      font-size: 0.85rem;
+    }
+
+    .contact-right {}
+
+    .services-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+
+    .service-row {
+      background: var(--white);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .service-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: var(--teal-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-icon i {
+      font-size: 0.85rem;
+      color: var(--teal);
+    }
+
+    .service-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: var(--gray-5);
+      margin-top: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* ─── AWARDS PHOTO ROW ─────────────────────────────── */
+    .awards-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      margin-bottom: 1.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .awards-photos img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s;
+    }
+
+    .awards-photos img:hover {
+      transform: scale(1.02);
+    }
+
+    /* ─── WRITING PHOTO STRIP ──────────────────────────── */
+    .writing-photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      margin-bottom: 4px;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      overflow: hidden;
+    }
+
+    .writing-photo-strip img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      filter: brightness(0.7) saturate(0.8);
+      transition: filter 0.3s;
+    }
+
+    .writing-photo-strip img:hover {
+      filter: brightness(0.9) saturate(1);
+    }
+
+    /* ─── TIMELINE PHOTO ───────────────────────────────── */
+    .tl-photo {
+      width: 100%;
+      height: 160px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 0.85rem;
+    }
+
+    .tl-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s;
+    }
+
+    .tl-item:hover .tl-photo img {
+      transform: scale(1.03);
+    }
+
+    /* ─── YOUTUBE EMBED ────────────────────────────────── */
+    .yt-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .yt-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: #FF0000;
+      color: #fff;
+      padding: 0.28rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ─── RECENT ACTIVITIES SLIDESHOW ─────────────────── */
+    .slideshow-section {
+      background: var(--dark);
+      padding: 2.5rem 0 2rem;
+      overflow: hidden;
+    }
+
+    .slideshow-header {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 3rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .slideshow-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .sl-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: transparent;
+      color: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .sl-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .sl-counter {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.35);
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .slideshow-track-wrap {
+      overflow: hidden;
+      padding: 0 3rem;
+      max-width: calc(var(--max) + 6rem);
+      margin: 0 auto;
+    }
+
+    .slideshow-track {
+      display: flex;
+      gap: 1.25rem;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      will-change: transform;
+    }
+
+    .slide-card {
+      flex: 0 0 calc(33.333% - 0.85rem);
+      min-width: 0;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s;
+    }
+
+    .slide-card:hover {
+      border-color: var(--teal);
+    }
+
+    .slide-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .slide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.4s;
+    }
+
+    .slide-card:hover .slide-img img {
+      transform: scale(1.04);
+    }
+
+    .slide-info {
+      padding: 1.25rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex: 1;
+    }
+
+    .slide-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    .slide-title {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 800;
+      font-size: 0.97rem;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .slide-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .slide-date {
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .slide-date i {
+      color: var(--teal);
+      font-size: 0.65rem;
+    }
+
+    .sl-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      padding: 0 3rem;
+    }
+
+    .sl-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .sl-dot.active {
+      background: var(--teal);
+      width: 20px;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      .slide-card {
+        flex: 0 0 calc(100% - 0rem);
+      }
+
+      .slideshow-track-wrap {
+        padding: 0 1.5rem;
+      }
+
+      .slideshow-header {
+        padding: 0 1.5rem 1.25rem;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .slide-card {
+        flex: 0 0 calc(50% - 0.625rem);
+      }
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: rgba(255, 255, 255, 0.35);
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+    }
+
+    .footer-logo {
+      font-family: 'Nunito Sans', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--white);
+    }
+
+    .footer-logo span {
+      color: var(--teal);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+      font-size: 1rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--teal);
+    }
+
+    /* ─── YOUTUBE EMBED ────────────────────────────────── */
+    .yt-wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    .yt-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #FF0000;
+      margin-bottom: 0.5rem;
+    }
+
+    .yt-badge i {
+      font-size: 0.95rem;
+    }
+
+    /* ─── SCROLL ANIMATIONS ────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    /* ─── RESPONSIVE ───────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .writing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .exp-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .exp-sticky {
+        position: static;
+      }
+
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+
+      #hero::before {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .photo-frame {
+        width: 100%;
+        height: 320px;
+      }
+
+      .photo-badge,
+      .photo-badge-2 {
+        display: none;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .projects-featured {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-row {
+        grid-template-columns: 1fr;
+      }
+
+      .awards-grid,
+      .writing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+
+      .nav-links,
+      .nav-right {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- ── NAV ─────────────────────────────────────── -->
-<nav>
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Frank<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit" target="_blank" class="nav-btn outline">CV</a>
-      <a href="#contact" class="nav-btn filled">Let's Talk</a>
-    </div>
-    <div class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
-
-<!-- ── HERO ────────────────────────────────────── -->
-<section id="hero">
-  <div class="container">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="label hero-label">Based in Accra, Ghana &nbsp;·&nbsp; Open to Global Collaboration</p>
-        <h1 class="h-display hero-name">Frank<br><span class="accent">Koomson</span></h1>
-        <div class="hero-roles">
-          <span class="role-chip teal">Sustainability Entrepreneur</span>
-          <span class="role-chip">GreenTech Innovator</span>
-          <span class="role-chip">Nonprofit Founder</span>
-          <span class="role-chip">Global Operations Leader</span>
-          <span class="role-chip">Web Developer</span>
-          <span class="role-chip">Youth Development Advocate</span>
-        </div>
-        <p class="hero-bio">Vision-driven leader building climate-resilient communities, scaling circular economy solutions, and empowering youth across Ghana and Africa — through technology, advocacy, and strategic leadership.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-teal"><i class="fas fa-briefcase"></i> See My Work</a>
-          <a href="#about" class="btn btn-outline"><i class="fas fa-user"></i> Learn More</a>
-        </div>
+  <!-- ── NAV ─────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Frank<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit" target="_blank"
+          class="nav-btn outline">CV</a>
+        <a href="#contact" class="nav-btn filled">Let's Talk</a>
       </div>
-
-      <div class="hero-photo">
-        <div class="photo-frame">
-          <img src="./images/Hero Section image.jpg" alt="Frank Koomson">
-        </div>
-        <div class="photo-badge">
-          <span class="badge-num">27</span>
-          <span class="badge-label">Country CEOs Led</span>
-        </div>
-        <div class="photo-badge-2">
-          <span class="badge-num">5+</span>
-          <span class="badge-label">Years of Impact</span>
-        </div>
+      <div class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- stats strip -->
-  <div class="hero-stats reveal">
-    <div class="hero-stat">
-      <div class="stat-n"><span>2nd</span></div>
-      <div class="stat-l">ACAIC 2022 — Seed Funding Won</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-n">10<span>+</span></div>
-      <div class="stat-l">Years of Leadership</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-n">27</div>
-      <div class="stat-l">Global CEOs Coordinated</div>
-    </div>
-    <div class="hero-stat">
-      <div class="stat-n">6<span>+</span></div>
-      <div class="stat-l">Active Roles Simultaneously</div>
-    </div>
-  </div>
-</section>
+  <!-- ── HERO ────────────────────────────────────── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="label hero-label">Based in Accra, Ghana &nbsp;·&nbsp; Open to Global Collaboration</p>
+          <h1 class="h-display hero-name">Frank<br><span class="accent">Koomson</span></h1>
+          <div class="hero-roles">
+            <span class="role-chip teal">Sustainability Entrepreneur</span>
+            <span class="role-chip">GreenTech Innovator</span>
+            <span class="role-chip">Nonprofit Founder</span>
+            <span class="role-chip">Global Operations Leader</span>
+            <span class="role-chip">Web Developer</span>
+            <span class="role-chip">Youth Development Advocate</span>
+          </div>
+          <p class="hero-bio">Vision-driven leader building climate-resilient communities, scaling circular economy
+            solutions, and empowering youth across Ghana and Africa — through technology, advocacy, and strategic
+            leadership.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-teal"><i class="fas fa-briefcase"></i> See My Work</a>
+            <a href="#about" class="btn btn-outline"><i class="fas fa-user"></i> Learn More</a>
+          </div>
+        </div>
 
-<!-- ── RECENT ACTIVITIES SLIDESHOW ──────────────── -->
-<div class="slideshow-section" id="activities">
-  <div class="slideshow-header">
-    <span class="label" style="color:var(--teal);">Recent Activities</span>
-    <div class="slideshow-controls">
-      <button class="sl-btn" id="sl-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-      <span class="sl-counter"><span id="sl-current">1</span> / <span id="sl-total">6</span></span>
-      <button class="sl-btn" id="sl-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </div>
-  <div class="slideshow-track-wrap">
-    <div class="slideshow-track" id="sl-track">
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/Youth Connekt Africa.jpg" alt="YouthConnekt Africa Summit, Kigali 2024"></div>
-        <div class="slide-info">
-          <span class="slide-tag">Delegate · Rwanda</span>
-          <div class="slide-title">YouthConnekt Africa Summit 2024</div>
-          <div class="slide-desc">Represented UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda — engaging continental leaders on youth governance, employment, and sustainable development.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2024</span>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="./images/Hero Section image.jpg" alt="Frank Koomson">
+          </div>
+          <div class="photo-badge">
+            <span class="badge-num">27</span>
+            <span class="badge-label">Country CEOs Led</span>
+          </div>
+          <div class="photo-badge-2">
+            <span class="badge-num">5+</span>
+            <span class="badge-label">Years of Impact</span>
+          </div>
         </div>
       </div>
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/Agribusiness eAcademy.jpg" alt="Agribusiness e-Academy Ambassador"></div>
-        <div class="slide-info">
-          <span class="slide-tag">Appointment · GIZ/EU-funded</span>
-          <div class="slide-title">Agribusiness e-Academy Ambassador</div>
-          <div class="slide-desc">Selected as an Agribusiness e-Academy Ambassador to mobilise youth across rural and urban Ghana in climate-smart agriculture and agribusiness digital learning.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> July 2025</span>
-        </div>
-      </div>
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/HuD Group.jpg" alt="The HuD Group"></div>
-        <div class="slide-info">
-          <span class="slide-tag">Global Operations · Active</span>
-          <div class="slide-title">Global Operations Associate — The HuD Group</div>
-          <div class="slide-desc">Coordinating a network of 27 Country CEOs worldwide, aligning strategic programs and driving cross-border operational excellence for The HuD Group Global.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> June 2024 — Present</span>
-        </div>
-      </div>
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/Advocacy.jpg" alt="Speaking at LCOY Ghana 2022"></div>
-        <div class="slide-info">
-          <span class="slide-tag">Speaking Engagement · GYEM</span>
-          <div class="slide-title">YouthOvaFashionWaste Campaign Speaker</div>
-          <div class="slide-desc">Spoke at the YouthOvaFashionWaste Campaign Webinar on Fashion Waste Policy, Frameworks & Governance — organised by Ghana Youth Environmental Movement (GYEM) and the Pulitzer Center.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2025</span>
-        </div>
-      </div>
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/Waste Gobb.jpg" alt="ACAIC Prize — Waste Gobbler Team"></div>
-        <div class="slide-info">
-          <span class="slide-tag">Award · Seed Funded</span>
-          <div class="slide-title">ACAIC 2022 — 2nd Place & Seed Funding</div>
-          <div class="slide-desc">The Waste Gobbler team won 2nd place and GHS 10,000 seed funding at the African Climate Adaptation and Innovation Challenge — for a solar-powered ocean waste interception system.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2022</span>
-        </div>
-      </div>
-
-      <div class="slide-card">
-        <div class="slide-img"><img src="./images/Community Engagement.jpg" alt="SWK Ghana Community Engagement"></div>
-        <div class="slide-info">
-          <span class="slide-tag">SWK Ghana · Community</span>
-          <div class="slide-title">SWK Ghana Community Engagement</div>
-          <div class="slide-desc">Field engagement with communities, local assemblies (MMDAs), and partners to drive sustainable development, green entrepreneurship, and circular economy awareness across Ghana.</div>
-          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2024 — Present</span>
-        </div>
-      </div>
-
     </div>
-  </div>
-  <div class="sl-dots" id="sl-dots"></div>
-</div>
 
-<!-- ── ABOUT ────────────────────────────────────── -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-left reveal">
-        <p class="label">About Me</p>
-        <h2 class="h-section about-headline">A multidimensional leader. One clear purpose.</h2>
-        <p class="about-intro">
-          I'm <strong>Frank Abeiku Koomson</strong> — a Ghanaian sustainability entrepreneur, GreenTech innovator, nonprofit founder, and youth development leader operating across multiple sectors with one unifying thread: turning ideas into lasting, scalable impact.
-        </p>
-        <p class="about-intro">
-          As <strong>Founder and Executive Director of <a href="https://www.swkghana.org" target="_blank">SWK Ghana</a></strong>, I lead a youth-focused nonprofit tackling environmental sustainability, circular economy, agribusiness, community development, and technology — with a vision to scale across Africa by 2035. My flagship GreenTech innovation, the <strong>SWK Taka Kipawa App</strong> (meaning "Waste is a Gift" in Swahili), is a digital waste management and upcycling marketplace connecting households, waste contractors, and recyclers.
-        </p>
-        <p class="about-intro">
-          Concurrently, I serve as <strong>Global Operations Associate at The HuD Group</strong>, overseeing a network of 27 Country CEOs worldwide. I'm also a <strong>Programs Coordinator at The Shadrach Fellowship</strong>, a <strong>Youth Mentor at the Emerging Young Corporate Leaders Fellowship (EYCLF)</strong>, and an <strong>Ambassador at the GIZ/EU-funded Agribusiness e-Academy</strong> — mobilising youth in climate-smart agriculture.
-        </p>
-        <p class="about-intro">
-          I hold a BA in Geography &amp; Resource Development with Political Science from the University of Ghana (GPA 3.63/4.00) and completed Backend Web Development training at <strong>MEST Africa</strong> in 2024, where I built the Taka Kipawa App during the GROW Program.
-        </p>
+    <!-- stats strip -->
+    <div class="hero-stats reveal">
+      <div class="hero-stat">
+        <div class="stat-n"><span>2nd</span></div>
+        <div class="stat-l">ACAIC 2022 — Seed Funding Won</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n">10<span>+</span></div>
+        <div class="stat-l">Years of Leadership</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n">27</div>
+        <div class="stat-l">Global CEOs Coordinated</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n">6<span>+</span></div>
+        <div class="stat-l">Active Roles Simultaneously</div>
+      </div>
+    </div>
+  </section>
 
-        <div class="what-i-do">
-          <p class="what-i-do-title">What I Do</p>
-          <div class="pillars-grid">
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-recycle"></i></div>
-              <div class="pillar-name">GreenTech & Circular Economy</div>
-              <div class="pillar-desc">Building digital tools and platforms that transform waste into opportunity</div>
+  <!-- ── RECENT ACTIVITIES SLIDESHOW ──────────────── -->
+  <div class="slideshow-section" id="activities">
+    <div class="slideshow-header">
+      <span class="label" style="color:var(--teal);">Recent Activities</span>
+      <div class="slideshow-controls">
+        <button class="sl-btn" id="sl-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <span class="sl-counter"><span id="sl-current">1</span> / <span id="sl-total">6</span></span>
+        <button class="sl-btn" id="sl-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <div class="slideshow-track-wrap">
+      <div class="slideshow-track" id="sl-track">
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/Youth Connekt Africa.jpg"
+              alt="YouthConnekt Africa Summit, Kigali 2024"></div>
+          <div class="slide-info">
+            <span class="slide-tag">Delegate · Rwanda</span>
+            <div class="slide-title">YouthConnekt Africa Summit 2024</div>
+            <div class="slide-desc">Represented UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda —
+              engaging continental leaders on youth governance, employment, and sustainable development.</div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2024</span>
+          </div>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/Agribusiness eAcademy.jpg" alt="Agribusiness e-Academy Ambassador">
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">Appointment · GIZ/EU-funded</span>
+            <div class="slide-title">Agribusiness e-Academy Ambassador</div>
+            <div class="slide-desc">Selected as an Agribusiness e-Academy Ambassador to mobilise youth across rural and
+              urban Ghana in climate-smart agriculture and agribusiness digital learning.</div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> July 2025</span>
+          </div>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/HuD Group.jpg" alt="The HuD Group"></div>
+          <div class="slide-info">
+            <span class="slide-tag">Global Operations · Active</span>
+            <div class="slide-title">Global Operations Associate — The HuD Group</div>
+            <div class="slide-desc">Coordinating a network of 27 Country CEOs worldwide, aligning strategic programs and
+              driving cross-border operational excellence for The HuD Group Global.</div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> June 2024 — Present</span>
+          </div>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/Advocacy.jpg" alt="Speaking at LCOY Ghana 2022"></div>
+          <div class="slide-info">
+            <span class="slide-tag">Speaking Engagement · GYEM</span>
+            <div class="slide-title">YouthOvaFashionWaste Campaign Speaker</div>
+            <div class="slide-desc">Spoke at the YouthOvaFashionWaste Campaign Webinar on Fashion Waste Policy,
+              Frameworks & Governance — organised by Ghana Youth Environmental Movement (GYEM) and the Pulitzer Center.
             </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-users"></i></div>
-              <div class="pillar-name">Youth Development</div>
-              <div class="pillar-desc">Leadership, entrepreneurship, and mentorship programs for young Africans</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-globe-africa"></i></div>
-              <div class="pillar-name">Policy Advocacy</div>
-              <div class="pillar-desc">Youth voice in climate governance, waste policy, and sustainable development</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-seedling"></i></div>
-              <div class="pillar-name">Agribusiness & Food Systems</div>
-              <div class="pillar-desc">Connecting youth to climate-smart agriculture, food security, and agri-tech</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-code"></i></div>
-              <div class="pillar-name">Web Development</div>
-              <div class="pillar-desc">React, Node.js, MongoDB — building platforms for social and environmental impact</div>
-            </div>
-            <div class="pillar">
-              <div class="pillar-icon"><i class="fas fa-cogs"></i></div>
-              <div class="pillar-name">Global Operations</div>
-              <div class="pillar-desc">Strategic coordination across 27-country networks and international programs</div>
-            </div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+          </div>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/Waste Gobb.jpg" alt="ACAIC Prize — Waste Gobbler Team"></div>
+          <div class="slide-info">
+            <span class="slide-tag">Award · Seed Funded</span>
+            <div class="slide-title">ACAIC 2022 — 2nd Place & Seed Funding</div>
+            <div class="slide-desc">The Waste Gobbler team won 2nd place and GHS 10,000 seed funding at the African
+              Climate Adaptation and Innovation Challenge — for a solar-powered ocean waste interception system.</div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2022</span>
+          </div>
+        </div>
+
+        <div class="slide-card">
+          <div class="slide-img"><img src="./images/Community Engagement.jpg" alt="SWK Ghana Community Engagement">
+          </div>
+          <div class="slide-info">
+            <span class="slide-tag">SWK Ghana · Community</span>
+            <div class="slide-title">SWK Ghana Community Engagement</div>
+            <div class="slide-desc">Field engagement with communities, local assemblies (MMDAs), and partners to drive
+              sustainable development, green entrepreneurship, and circular economy awareness across Ghana.</div>
+            <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2024 — Present</span>
           </div>
         </div>
 
       </div>
-
-      <div class="about-sidebar reveal reveal-delay-1">
-        <div class="info-card">
-          <div class="info-card-title">Current Roles</div>
-          <ul class="info-list">
-            <li><strong>Founder &amp; Executive Director</strong> — SWK Ghana</li>
-            <li><strong>Global Operations Associate</strong> — The HuD Group (27 Country CEOs)</li>
-            <li><strong>Programs Coordinator</strong> — The Shadrach Fellowship</li>
-            <li><strong>Ambassador</strong> — Agribusiness e-Academy (GIZ/EU-funded)</li>
-            <li><strong>Youth Mentor</strong> — Emerging Young Corporate Leaders Fellowship</li>
-            <li><strong>Consortium Member</strong> — YoGSEC (Young Green &amp; Sustainability Entrepreneurs)</li>
-            <li><strong>Aspiring Leader</strong> — GracedLife Leadership Centre (TGLC), Cohort 2028</li>
-          </ul>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card-title">Education</div>
-          <ul class="info-list">
-            <li><strong>BA Geography &amp; Resource Development + Political Science</strong> — University of Ghana (2017–2021), GPA: 3.63 / 4.00</li>
-            <li><strong>Backend Web Development</strong> — MEST Africa, Generation Ghana &amp; Mastercard Foundation (Sep–Nov 2024)</li>
-          </ul>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card-title">Connect With Me</div>
-          <div class="connect-row">
-            <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" class="connect-pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/Frank0751" target="_blank" class="connect-pill"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.swkghana.org" target="_blank" class="connect-pill"><i class="fas fa-globe"></i> SWK Ghana</a>
-            <a href="https://medium.com/@frank.koomson" target="_blank" class="connect-pill"><i class="fab fa-medium"></i> Medium</a>
-            <a href="https://x.com/FrankKoomson20" target="_blank" class="connect-pill"><i class="fab fa-x-twitter"></i> Twitter/X</a>
-            <a href="mailto:frank.koomson@localpathways.org" class="connect-pill"><i class="fas fa-envelope"></i> Email</a>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="info-card-title">Memberships &amp; Networks</div>
-          <ul class="info-list">
-            <li>YoGSEC Consortium — Young Green &amp; Sustainability Entrepreneurs</li>
-            <li>Youth Climate Council Ghana</li>
-            <li>YOUNGO (Youth Constituency, UNFCCC)</li>
-            <li>SDG7 Youth Constituency</li>
-            <li>Alliance for Empowering Rural Communities</li>
-          </ul>
-        </div>
-      </div>
     </div>
+    <div class="sl-dots" id="sl-dots"></div>
+  </div>
 
-    <!-- ── RESEARCH & ACADEMIC — full width below grid ── -->
-    <div class="thesis-block reveal" style="margin-top:2.5rem;">
-      <div class="thesis-header">
-        <div class="thesis-icon"><i class="fas fa-graduation-cap"></i></div>
-        <div class="thesis-header-text">
-          <div class="thesis-tag">Undergraduate Research &nbsp;·&nbsp; University of Ghana &nbsp;·&nbsp; 2021</div>
-          <div class="thesis-title-short">BA Dissertation — First Class Honours</div>
-        </div>
-      </div>
-      <div class="thesis-body">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
-          <div>
-            <div class="thesis-full-title">Crime Mapping and Hot-Spot Analysis of Prevalent Crimes in Amasaman, Ga West Municipality, Accra</div>
-            <div class="thesis-meta-row">
-              <span class="thesis-meta-chip gold">GPA: 3.63 / 4.00 &nbsp;·&nbsp; First Class Honours</span>
-              <span class="thesis-meta-chip">Geography &amp; Resource Development</span>
-              <span class="thesis-meta-chip">Political Science</span>
-              <span class="thesis-meta-chip">2021</span>
-            </div>
-            <div class="thesis-abstract-label">Abstract</div>
-            <p class="thesis-abstract">This dissertation assessed and mapped the spatial distribution of prevalent crimes in Amasaman, Ga West Municipality, using Geographic Information Systems (GIS) and crime hot-spot analysis techniques. The study examined crime patterns across residential, commercial, and peri-urban zones, identifying the geographic concentrations of criminal activity and the socio-environmental factors driving them. The research contributes an evidence-based spatial framework for informing community policing strategies, local government planning, and resource allocation in rapidly urbanising Ghanaian municipalities.</p>
-          </div>
-          <div>
-            <div class="thesis-findings" style="grid-template-columns:1fr 1fr;margin-bottom:1.5rem;">
-              <div class="finding-item">
-                <div class="finding-label">Methodology</div>
-                <div class="finding-val">GIS crime mapping, hot-spot analysis, field surveys, geographic coordinate collection</div>
+  <!-- ── ABOUT ────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <p class="label">About Me</p>
+          <h2 class="h-section about-headline">A multidimensional leader. One clear purpose.</h2>
+          <p class="about-intro">
+            I'm <strong>Frank Abeiku Koomson</strong> — a Ghanaian sustainability entrepreneur, GreenTech innovator,
+            nonprofit founder, and youth development leader operating across multiple sectors with one unifying thread:
+            turning ideas into lasting, scalable impact.
+          </p>
+          <p class="about-intro">
+            As <strong>Founder and Executive Director of <a href="https://www.swkghana.org" target="_blank">SWK
+                Ghana</a></strong>, I lead a youth-focused nonprofit tackling environmental sustainability, circular
+            economy, agribusiness, community development, and technology — with a vision to scale across Africa by 2035.
+            My flagship GreenTech innovation, the <strong>SWK Taka Kipawa App</strong> (meaning "Waste is a Gift" in
+            Swahili), is a digital waste management and upcycling marketplace connecting households, waste contractors,
+            and recyclers.
+          </p>
+          <p class="about-intro">
+            Concurrently, I serve as <strong>Global Operations Associate at The HuD Group</strong>, overseeing a network
+            of 27 Country CEOs worldwide. I'm also a <strong>Programs Coordinator at The Shadrach Fellowship</strong>, a
+            <strong>Youth Mentor at the Emerging Young Corporate Leaders Fellowship (EYCLF)</strong>, and an
+            <strong>Ambassador at the GIZ/EU-funded Agribusiness e-Academy</strong> — mobilising youth in climate-smart
+            agriculture.
+          </p>
+          <p class="about-intro">
+            I hold a BA in Geography &amp; Resource Development with Political Science from the University of Ghana (GPA
+            3.63/4.00) and completed Backend Web Development training at <strong>MEST Africa</strong> in 2024, where I
+            built the Taka Kipawa App during the GROW Program.
+          </p>
+
+          <div class="what-i-do">
+            <p class="what-i-do-title">What I Do</p>
+            <div class="pillars-grid">
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-recycle"></i></div>
+                <div class="pillar-name">GreenTech & Circular Economy</div>
+                <div class="pillar-desc">Building digital tools and platforms that transform waste into opportunity
+                </div>
               </div>
-              <div class="finding-item">
-                <div class="finding-label">Study Area</div>
-                <div class="finding-val">Amasaman, Ga West Municipality, Greater Accra Region, Ghana</div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-users"></i></div>
+                <div class="pillar-name">Youth Development</div>
+                <div class="pillar-desc">Leadership, entrepreneurship, and mentorship programs for young Africans</div>
               </div>
-              <div class="finding-item">
-                <div class="finding-label">Key Tools</div>
-                <div class="finding-val">Remote sensing, spatial data analysis, crime hot-spot mapping, community surveys</div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-globe-africa"></i></div>
+                <div class="pillar-name">Policy Advocacy</div>
+                <div class="pillar-desc">Youth voice in climate governance, waste policy, and sustainable development
+                </div>
               </div>
-              <div class="finding-item">
-                <div class="finding-label">Application</div>
-                <div class="finding-val">Urban planning, community policing strategy, local government resource allocation</div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-seedling"></i></div>
+                <div class="pillar-name">Agribusiness & Food Systems</div>
+                <div class="pillar-desc">Connecting youth to climate-smart agriculture, food security, and agri-tech
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-code"></i></div>
+                <div class="pillar-name">Web Development</div>
+                <div class="pillar-desc">React, Node.js, MongoDB — building platforms for social and environmental
+                  impact</div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon"><i class="fas fa-cogs"></i></div>
+                <div class="pillar-name">Global Operations</div>
+                <div class="pillar-desc">Strategic coordination across 27-country networks and international programs
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-        <div class="thesis-footer">
-          <div class="thesis-uni">
-            <span class="thesis-uni-icon"><i class="fas fa-university"></i></span>
-            <span class="thesis-uni-name"><strong>University of Ghana</strong>, Legon &nbsp;·&nbsp; Dept. of Geography &amp; Resource Development</span>
+
+        <div class="about-sidebar reveal reveal-delay-1">
+          <div class="info-card">
+            <div class="info-card-title">Current Roles</div>
+            <ul class="info-list">
+              <li><strong>Founder &amp; Executive Director</strong> — SWK Ghana</li>
+              <li><strong>Global Operations Associate</strong> — The HuD Group (27 Country CEOs)</li>
+              <li><strong>Programs Coordinator</strong> — The Shadrach Fellowship</li>
+              <li><strong>Ambassador</strong> — Agribusiness e-Academy (GIZ/EU-funded)</li>
+              <li><strong>Youth Mentor</strong> — Emerging Young Corporate Leaders Fellowship</li>
+              <li><strong>Consortium Member</strong> — YoGSEC (Young Green &amp; Sustainability Entrepreneurs)</li>
+              <li><strong>Aspiring Leader</strong> — GracedLife Leadership Centre (TGLC), Cohort 2028</li>
+            </ul>
           </div>
-          <a href="https://drive.google.com/file/d/1k-kzsUjwKYNUejB2nR0rhaVkSXLkDNc8/view?usp=sharing" target="_blank" class="thesis-download">
-            <i class="fas fa-file-pdf"></i> Read Thesis
-          </a>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</section>
-
-<!-- ── PROJECTS ─────────────────────────────────── -->
-<section id="projects">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-header-text">
-        <p class="label">Projects & Portfolio</p>
-        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Built, deployed, and creating impact.</h2>
-        <p class="section-subtitle">Spanning GreenTech, community platforms, backend systems, and nonprofit digital infrastructure.</p>
-      </div>
-      <a href="https://github.com/Frank0751" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> All on GitHub</a>
-    </div>
-
-    <!-- Featured row -->
-    <div class="projects-featured reveal">
-
-      <!-- FEATURED: Taka Kipawa -->
-      <div class="proj-card featured">
-        <div class="proj-img">
-          <div class="yt-wrap">
-            <iframe src="https://www.youtube.com/embed/mqVJMGlINt4" title="SWK Taka Kipawa App Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="info-card">
+            <div class="info-card-title">Education</div>
+            <ul class="info-list">
+              <li><strong>BA Geography &amp; Resource Development + Political Science</strong> — University of Ghana
+                (2017–2021), GPA: 3.63 / 4.00</li>
+              <li><strong>Backend Web Development</strong> — MEST Africa, Generation Ghana &amp; Mastercard Foundation
+                (Sep–Nov 2024)</li>
+            </ul>
           </div>
-          <span class="proj-badge">Flagship Innovation</span>
-        </div>
-        <div class="proj-body">
-          <span class="yt-badge"><i class="fab fa-youtube"></i> Live Demo on YouTube</span>
-          <p class="proj-type">GreenTech · Circular Economy · Marketplace</p>
-          <h3 class="proj-title">SWK Taka Kipawa App</h3>
-          <p class="proj-desc">A digital waste management and upcycling marketplace. "Taka Kipawa" means Waste is a Gift in Swahili. Connects households, waste contractors, and recyclers — with smart collection scheduling, a circular economy marketplace, and an educational sustainability hub. Built during the GROW Program by MEST Africa, Generation Ghana, and Mastercard Foundation.</p>
-          <div class="proj-award-strip"><i class="fas fa-star"></i> Built at GROW Program — MEST Africa, Generation Ghana &amp; Mastercard Foundation · Piloting in Ga West, Ghana</div>
-          <div class="proj-footer">
-            <div class="proj-tags">
-              <span class="proj-tag">Node.js</span>
-              <span class="proj-tag">MongoDB</span>
-              <span class="proj-tag">Express</span>
-              <span class="proj-tag">GreenTech</span>
+
+          <div class="info-card">
+            <div class="info-card-title">Connect With Me</div>
+            <div class="connect-row">
+              <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank"
+                class="connect-pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <a href="https://github.com/Frank0751" target="_blank" class="connect-pill"><i class="fab fa-github"></i>
+                GitHub</a>
+              <a href="https://www.swkghana.org" target="_blank" class="connect-pill"><i class="fas fa-globe"></i> SWK
+                Ghana</a>
+              <a href="https://medium.com/@frank.koomson" target="_blank" class="connect-pill"><i
+                  class="fab fa-medium"></i> Medium</a>
+              <a href="https://x.com/FrankKoomson20" target="_blank" class="connect-pill"><i
+                  class="fab fa-x-twitter"></i> Twitter/X</a>
+              <a href="mailto:frank.koomson@localpathways.org" class="connect-pill"><i class="fas fa-envelope"></i>
+                Email</a>
             </div>
-            <a href="https://github.com/Frank0751" target="_blank" class="proj-link">GitHub <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-title">Memberships &amp; Networks</div>
+            <ul class="info-list">
+              <li>YoGSEC Consortium — Young Green &amp; Sustainability Entrepreneurs</li>
+              <li>Youth Climate Council Ghana</li>
+              <li>YOUNGO (Youth Constituency, UNFCCC)</li>
+              <li>SDG7 Youth Constituency</li>
+              <li>Alliance for Empowering Rural Communities</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- SWK Ghana Website -->
-      <div class="proj-card">
-        <div class="proj-img" style="background:#f8fdf8;display:flex;align-items:center;justify-content:center;padding:2rem;">
-          <img src="./images/SWK Ghana Logo.jpg" alt="SWK Ghana" style="height:120px;width:auto;object-fit:contain;border-radius:0;">
+      <!-- ── RESEARCH & ACADEMIC — full width below grid ── -->
+      <div class="thesis-block reveal" style="margin-top:2.5rem;">
+        <div class="thesis-header">
+          <div class="thesis-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="thesis-header-text">
+            <div class="thesis-tag">Undergraduate Research &nbsp;·&nbsp; University of Ghana &nbsp;·&nbsp; 2021</div>
+            <div class="thesis-title-short">BA Dissertation — First Class Honours</div>
+          </div>
         </div>
+        <div class="thesis-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+            <div>
+              <div class="thesis-full-title">Crime Mapping and Hot-Spot Analysis of Prevalent Crimes in Amasaman, Ga
+                West Municipality, Accra</div>
+              <div class="thesis-meta-row">
+                <span class="thesis-meta-chip gold">GPA: 3.63 / 4.00 &nbsp;·&nbsp; First Class Honours</span>
+                <span class="thesis-meta-chip">Geography &amp; Resource Development</span>
+                <span class="thesis-meta-chip">Political Science</span>
+                <span class="thesis-meta-chip">2021</span>
+              </div>
+              <div class="thesis-abstract-label">Abstract</div>
+              <p class="thesis-abstract">This dissertation assessed and mapped the spatial distribution of prevalent
+                crimes in Amasaman, Ga West Municipality, using Geographic Information Systems (GIS) and crime hot-spot
+                analysis techniques. The study examined crime patterns across residential, commercial, and peri-urban
+                zones, identifying the geographic concentrations of criminal activity and the socio-environmental
+                factors driving them. The research contributes an evidence-based spatial framework for informing
+                community policing strategies, local government planning, and resource allocation in rapidly urbanising
+                Ghanaian municipalities.</p>
+            </div>
+            <div>
+              <div class="thesis-findings" style="grid-template-columns:1fr 1fr;margin-bottom:1.5rem;">
+                <div class="finding-item">
+                  <div class="finding-label">Methodology</div>
+                  <div class="finding-val">GIS crime mapping, hot-spot analysis, field surveys, geographic coordinate
+                    collection</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-label">Study Area</div>
+                  <div class="finding-val">Amasaman, Ga West Municipality, Greater Accra Region, Ghana</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-label">Key Tools</div>
+                  <div class="finding-val">Remote sensing, spatial data analysis, crime hot-spot mapping, community
+                    surveys</div>
+                </div>
+                <div class="finding-item">
+                  <div class="finding-label">Application</div>
+                  <div class="finding-val">Urban planning, community policing strategy, local government resource
+                    allocation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="thesis-footer">
+            <div class="thesis-uni">
+              <span class="thesis-uni-icon"><i class="fas fa-university"></i></span>
+              <span class="thesis-uni-name"><strong>University of Ghana</strong>, Legon &nbsp;·&nbsp; Dept. of Geography
+                &amp; Resource Development</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1k-kzsUjwKYNUejB2nR0rhaVkSXLkDNc8/view?usp=sharing" target="_blank"
+              class="thesis-download">
+              <i class="fas fa-file-pdf"></i> Read Thesis
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ─────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-text">
+          <p class="label">Projects & Portfolio</p>
+          <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Built,
+            deployed, and creating impact.</h2>
+          <p class="section-subtitle">Spanning GreenTech, community platforms, backend systems, and nonprofit digital
+            infrastructure.</p>
+        </div>
+        <a href="https://github.com/Frank0751" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> All
+          on GitHub</a>
+      </div>
+
+      <!-- Featured row -->
+      <div class="projects-featured reveal">
+
+        <!-- FEATURED: Taka Kipawa -->
+        <div class="proj-card featured">
+          <div class="proj-img">
+            <div class="yt-wrap">
+              <iframe src="https://www.youtube.com/embed/mqVJMGlINt4" title="SWK Taka Kipawa App Demo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+            <span class="proj-badge">Flagship Innovation</span>
+          </div>
+          <div class="proj-body">
+            <span class="yt-badge"><i class="fab fa-youtube"></i> Live Demo on YouTube</span>
+            <p class="proj-type">GreenTech · Circular Economy · Marketplace</p>
+            <h3 class="proj-title">SWK Taka Kipawa App</h3>
+            <p class="proj-desc">A digital waste management and upcycling marketplace. "Taka Kipawa" means Waste is a
+              Gift in Swahili. Connects households, waste contractors, and recyclers — with smart collection scheduling,
+              a circular economy marketplace, and an educational sustainability hub. Built during the GROW Program by
+              MEST Africa, Generation Ghana, and Mastercard Foundation.</p>
+            <div class="proj-award-strip"><i class="fas fa-star"></i> Built at GROW Program — MEST Africa, Generation
+              Ghana &amp; Mastercard Foundation · Piloting in Ga West, Ghana</div>
+            <div class="proj-footer">
+              <div class="proj-tags">
+                <span class="proj-tag">Node.js</span>
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">Express</span>
+                <span class="proj-tag">GreenTech</span>
+              </div>
+              <a href="https://github.com/Frank0751" target="_blank" class="proj-link">GitHub <i
+                  class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SWK Ghana Website -->
+        <div class="proj-card">
+          <div class="proj-img"
+            style="background:#f8fdf8;display:flex;align-items:center;justify-content:center;padding:2rem;">
+            <img src="./images/SWK Ghana Logo.jpg" alt="SWK Ghana"
+              style="height:120px;width:auto;object-fit:contain;border-radius:0;">
+          </div>
           <span class="proj-badge">Live Platform</span>
         </div>
         <div class="proj-body">
           <p class="proj-type">React · Nonprofit Platform</p>
           <h3 class="proj-title">SWK Ghana Website</h3>
-          <p class="proj-desc">Full React/Vite web platform for SWK Ghana deployed on Vercel. Includes SWK Marketplace for young green entrepreneurs, YouTube integration, Cloudinary photo gallery, blog, and Paystack donation integration.</p>
+          <p class="proj-desc">Full React/Vite web platform for SWK Ghana deployed on Vercel. Includes SWK Marketplace
+            for young green entrepreneurs, YouTube integration, Cloudinary photo gallery, blog, and Paystack donation
+            integration.</p>
           <div class="proj-footer">
             <div class="proj-tags">
               <span class="proj-tag">React</span>
               <span class="proj-tag">Vite</span>
               <span class="proj-tag">Vercel</span>
             </div>
-            <a href="https://www.swkghana.org" target="_blank" class="proj-link">Visit Site <i class="fas fa-arrow-right"></i></a>
+            <a href="https://www.swkghana.org" target="_blank" class="proj-link">Visit Site <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -1442,21 +2512,25 @@ footer {
           <!-- ══ ADD IMAGE: Waste Gobbler project photo ══
                <img src="./images/Waste Gobb.jpg" alt="Waste Gobbler Project">
           ═══════════════════════════════════════════════════════════════ -->
-          <img src="./images/Waste Gobb.jpg" alt="Waste Gobbler Project" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="proj-img-placeholder" style="display:none"><i class="fas fa-water"></i><span>Waste Gobbler</span></div>
+          <img src="./images/Waste Gobb.jpg" alt="Waste Gobbler Project"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="proj-img-placeholder" style="display:none"><i class="fas fa-water"></i><span>Waste Gobbler</span>
+          </div>
           <span class="proj-badge award">2nd Place · Seed Funded</span>
         </div>
         <div class="proj-body">
           <p class="proj-type">Climate Innovation · Renewable Energy</p>
           <h3 class="proj-title">The Waste Gobbler Project</h3>
-          <p class="proj-desc">Solar-powered ocean waste interception system retrieving 10,000+ metric tonnes of municipal solid waste from the Korle Lagoon annually. Won 2nd place and seed funding at ACAIC 2022.</p>
+          <p class="proj-desc">Solar-powered ocean waste interception system retrieving 10,000+ metric tonnes of
+            municipal solid waste from the Korle Lagoon annually. Won 2nd place and seed funding at ACAIC 2022.</p>
           <div class="proj-footer">
             <div class="proj-tags">
               <span class="proj-tag">Solar</span>
               <span class="proj-tag">Ocean Waste</span>
               <span class="proj-tag">ACAIC</span>
             </div>
-            <a href="https://wastegobbler.org" target="_blank" class="proj-link">View <i class="fas fa-arrow-right"></i></a>
+            <a href="https://wastegobbler.org" target="_blank" class="proj-link">View <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -1472,14 +2546,16 @@ footer {
         <div class="proj-body">
           <p class="proj-type">Web Development</p>
           <h3 class="proj-title">Personal Portfolio Website</h3>
-          <p class="proj-desc">Modern, responsive portfolio site with smooth animations, dark mode, and an editorial layout. Built with HTML5, CSS3, and JavaScript.</p>
+          <p class="proj-desc">Modern, responsive portfolio site with smooth animations, dark mode, and an editorial
+            layout. Built with HTML5, CSS3, and JavaScript.</p>
           <div class="proj-footer">
             <div class="proj-tags">
               <span class="proj-tag">HTML</span>
               <span class="proj-tag">CSS</span>
               <span class="proj-tag">JavaScript</span>
             </div>
-            <a href="https://github.com/Frank0751/Portfolio-for-Demo" target="_blank" class="proj-link">GitHub <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/Frank0751/Portfolio-for-Demo" target="_blank" class="proj-link">GitHub <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -1495,551 +2571,653 @@ footer {
         <div class="proj-body">
           <p class="proj-type">Backend Development</p>
           <h3 class="proj-title">RESTful API Platform</h3>
-          <p class="proj-desc">A backend API project demonstrating RESTful architecture and database integration. Features authentication, data modelling, and MongoDB integration built on Node.js and Express.</p>
+          <p class="proj-desc">A backend API project demonstrating RESTful architecture and database integration.
+            Features authentication, data modelling, and MongoDB integration built on Node.js and Express.</p>
           <div class="proj-footer">
             <div class="proj-tags">
               <span class="proj-tag">Node.js</span>
               <span class="proj-tag">Express</span>
               <span class="proj-tag">MongoDB</span>
             </div>
-            <a href="https://github.com/Frank0751/API-Web" target="_blank" class="proj-link">GitHub <i class="fas fa-arrow-right"></i></a>
+            <a href="https://github.com/Frank0751/API-Web" target="_blank" class="proj-link">GitHub <i
+                class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- ── EXPERIENCE ───────────────────────────────── -->
-<section id="experience">
-  <div class="container">
-    <div class="exp-grid">
-      <div class="exp-sticky reveal">
-        <p class="label">Experience</p>
-        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">A decade of leadership across sectors.</h2>
-        <p class="section-subtitle" style="color:var(--gray-5);">From community governance to global operations — a track record built on commitment, results, and cross-sector experience.</p>
-        <div class="exp-actions">
-          <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit" target="_blank" class="btn btn-teal"><i class="fas fa-file-alt"></i> Download Full CV</a>
-          <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view" target="_blank" class="btn btn-outline"><i class="fas fa-file"></i> Download Resume</a>
-        </div>
-      </div>
-
-      <div class="timeline reveal reveal-delay-1">
-
-        <div class="tl-item">
-          <div class="tl-date">2024<br>— Now</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Founder & Executive Director</div>
-            <div class="tl-org">SWK Ghana</div>
-            <div class="tl-desc">Founded and lead a youth-focused nonprofit driving sustainable development, green entrepreneurship, agribusiness, and community empowerment across Ghana, with a vision to scale across Africa by 2035. Built and launched the SWK Taka Kipawa App and the SWK Marketplace for young green entrepreneurs.</div>
-            <span class="tl-pill">Active</span>
+  <!-- ── EXPERIENCE ───────────────────────────────── -->
+  <section id="experience">
+    <div class="container">
+      <div class="exp-grid">
+        <div class="exp-sticky reveal">
+          <p class="label">Experience</p>
+          <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">A decade
+            of leadership across sectors.</h2>
+          <p class="section-subtitle" style="color:var(--gray-5);">From community governance to global operations — a
+            track record built on commitment, results, and cross-sector experience.</p>
+          <div class="exp-actions">
+            <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit"
+              target="_blank" class="btn btn-teal"><i class="fas fa-file-alt"></i> Download Full CV</a>
+            <a href="https://drive.google.com/file/d/1gAW9WyGiK6UEbLpq_mNWcyM3i1xr75BP/view" target="_blank"
+              class="btn btn-outline"><i class="fas fa-file"></i> Download Resume</a>
           </div>
         </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2024<br>— Now</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Global Operations Associate</div>
-            <div class="tl-org">The HuD Group</div>
-            <div class="tl-desc">Overseeing and coordinating a network of 27 Country CEOs worldwide. Ensuring operational efficiency and executing strategic programs in close collaboration with the Global CEO.</div>
-            <div class="tl-photo"><img src="./images/HuD Group.jpg" alt="Frank in The HuD Group uniform"></div>
-            <span class="tl-pill">Active</span>
-          </div>
-        </div>
+        <div class="timeline reveal reveal-delay-1">
 
-        <div class="tl-item">
-          <div class="tl-date">2025<br>— Now</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Ambassador</div>
-            <div class="tl-org">Agribusiness e-Academy (GIZ/EU-funded)</div>
-            <div class="tl-desc">Mobilising rural and urban youth to access free climate-smart agriculture and agribusiness courses. Alongside Ernestina Gyamfi (SWK Programme Coordinator), championing digital learning and practical application across communities.</div>
-            <div class="tl-photo"><img src="./images/Agribusiness eAcademy.jpg" alt="Frank Koomson — Agribusiness e-Academy Ambassador"></div>
-            <span class="tl-pill">Active</span>
+          <div class="tl-item">
+            <div class="tl-date">2024<br>— Now</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Founder & Executive Director</div>
+              <div class="tl-org">SWK Ghana</div>
+              <div class="tl-desc">Founded and lead a youth-focused nonprofit driving sustainable development, green
+                entrepreneurship, agribusiness, and community empowerment across Ghana, with a vision to scale across
+                Africa by 2035. Built and launched the SWK Taka Kipawa App and the SWK Marketplace for young green
+                entrepreneurs.</div>
+              <span class="tl-pill">Active</span>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2023<br>— 2025</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Youth Sounding Board Member</div>
-            <div class="tl-org">UNDP Ghana</div>
-            <div class="tl-desc">Advised UNDP Ghana on youth engagement in sustainable development programs. Represented Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda (2024).</div>
-            <div class="tl-photo"><img src="./images/Youth Connekt Africa.jpg" alt="Frank at YouthConnekt Africa Summit, Kigali Convention Centre, Rwanda 2024"></div>
+          <div class="tl-item">
+            <div class="tl-date">2024<br>— Now</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Global Operations Associate</div>
+              <div class="tl-org">The HuD Group</div>
+              <div class="tl-desc">Overseeing and coordinating a network of 27 Country CEOs worldwide. Ensuring
+                operational efficiency and executing strategic programs in close collaboration with the Global CEO.
+              </div>
+              <div class="tl-photo"><img src="./images/HuD Group.jpg" alt="Frank in The HuD Group uniform"></div>
+              <span class="tl-pill">Active</span>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2024<br>— 2025</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Local Pathways Fellow</div>
-            <div class="tl-org">UN Sustainable Development Solutions Network (SDSN)</div>
-            <div class="tl-desc">Global youth-led sustainable development network, strengthening local climate and SDG action in Ghana.</div>
+          <div class="tl-item">
+            <div class="tl-date">2025<br>— Now</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Ambassador</div>
+              <div class="tl-org">Agribusiness e-Academy (GIZ/EU-funded)</div>
+              <div class="tl-desc">Mobilising rural and urban youth to access free climate-smart agriculture and
+                agribusiness courses. Alongside Ernestina Gyamfi (SWK Programme Coordinator), championing digital
+                learning and practical application across communities.</div>
+              <div class="tl-photo"><img src="./images/Agribusiness eAcademy.jpg"
+                  alt="Frank Koomson — Agribusiness e-Academy Ambassador"></div>
+              <span class="tl-pill">Active</span>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2022<br>— 2023</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Program Coordinator</div>
-            <div class="tl-org">B. Inspired with Stories from Africa (B.ISA)</div>
-            <div class="tl-desc">Grew LinkedIn following by 300% (1,000 to 3,000+) and YouTube from 318 to 1,900+ subscribers. Coordinated 5 major events including climate storytelling competitions and webinars.</div>
-            <div class="tl-photo"><img src="./images/Storytelling.jpg" alt="Frank filming with Canon camera at B.ISA event"></div>
+          <div class="tl-item">
+            <div class="tl-date">2023<br>— 2025</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Youth Sounding Board Member</div>
+              <div class="tl-org">UNDP Ghana</div>
+              <div class="tl-desc">Advised UNDP Ghana on youth engagement in sustainable development programs.
+                Represented Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda (2024).</div>
+              <div class="tl-photo"><img src="./images/Youth Connekt Africa.jpg"
+                  alt="Frank at YouthConnekt Africa Summit, Kigali Convention Centre, Rwanda 2024"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2022<br>— 2023</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Stakeholder Engagement Officer</div>
-            <div class="tl-org">Waste Gobbler Project / UNIYIA</div>
-            <div class="tl-desc">Led community and stakeholder engagement for Ghana's ACAIC prize-winning solar-powered ocean waste interception project. Engaged EPA on permits and mobilised Ablekuma South Sub-Metro communities.</div>
-            <div class="tl-photo"><img src="./images/Waste Gobb.jpg" alt="Waste Gobbler team with ACAIC prize cheque — GHS 10,000 seed funding"></div>
-            <span class="tl-pill gold">2nd Place — ACAIC 2022</span>
+          <div class="tl-item">
+            <div class="tl-date">2024<br>— 2025</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Local Pathways Fellow</div>
+              <div class="tl-org">UN Sustainable Development Solutions Network (SDSN)</div>
+              <div class="tl-desc">Global youth-led sustainable development network, strengthening local climate and SDG
+                action in Ghana.</div>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2022<br>— 2023</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">President</div>
-            <div class="tl-org">Ghana National Service Personnel Association (NASPA), Ga West</div>
-            <div class="tl-desc">Led a multi-university association of national service personnel. Organised financial literacy and Microsoft Excel training programs. Partnered with YVLG for International Youth Day impacting 100+ youth. Donated computer and internet infrastructure to the National Service Secretariat.</div>
-            <div class="tl-photo"><img src="./images/NSS.jpg" alt="NASPA Ga West team in national service uniform"></div>
+          <div class="tl-item">
+            <div class="tl-date">2022<br>— 2023</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Program Coordinator</div>
+              <div class="tl-org">B. Inspired with Stories from Africa (B.ISA)</div>
+              <div class="tl-desc">Grew LinkedIn following by 300% (1,000 to 3,000+) and YouTube from 318 to 1,900+
+                subscribers. Coordinated 5 major events including climate storytelling competitions and webinars.</div>
+              <div class="tl-photo"><img src="./images/Storytelling.jpg"
+                  alt="Frank filming with Canon camera at B.ISA event"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="tl-item">
-          <div class="tl-date">2021<br>— 2022</div>
-          <div class="tl-dot"></div>
-          <div class="tl-content">
-            <div class="tl-role">Development Control Officer (National Service)</div>
-            <div class="tl-org">Ga West Municipal Assembly</div>
-            <div class="tl-desc">Served at the Physical Planning Department, assessing development applications and assisting in the development permit issuance process.</div>
+          <div class="tl-item">
+            <div class="tl-date">2022<br>— 2023</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Stakeholder Engagement Officer</div>
+              <div class="tl-org">Waste Gobbler Project / UNIYIA</div>
+              <div class="tl-desc">Led community and stakeholder engagement for Ghana's ACAIC prize-winning
+                solar-powered ocean waste interception project. Engaged EPA on permits and mobilised Ablekuma South
+                Sub-Metro communities.</div>
+              <div class="tl-photo"><img src="./images/Waste Gobb.jpg"
+                  alt="Waste Gobbler team with ACAIC prize cheque — GHS 10,000 seed funding"></div>
+              <span class="tl-pill gold">2nd Place — ACAIC 2022</span>
+            </div>
           </div>
-        </div>
 
+          <div class="tl-item">
+            <div class="tl-date">2022<br>— 2023</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">President</div>
+              <div class="tl-org">Ghana National Service Personnel Association (NASPA), Ga West</div>
+              <div class="tl-desc">Led a multi-university association of national service personnel. Organised financial
+                literacy and Microsoft Excel training programs. Partnered with YVLG for International Youth Day
+                impacting 100+ youth. Donated computer and internet infrastructure to the National Service Secretariat.
+              </div>
+              <div class="tl-photo"><img src="./images/NSS.jpg" alt="NASPA Ga West team in national service uniform">
+              </div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-date">2021<br>— 2022</div>
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <div class="tl-role">Development Control Officer (National Service)</div>
+              <div class="tl-org">Ga West Municipal Assembly</div>
+              <div class="tl-desc">Served at the Physical Planning Department, assessing development applications and
+                assisting in the development permit issuance process.</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── AWARDS ───────────────────────────────────── -->
-<section id="awards">
-  <div class="container">
-    <div class="reveal">
-      <p class="label">Awards & Recognition</p>
-      <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Internationally recognised.<br>Community-rooted.</h2>
+  <!-- ── AWARDS ───────────────────────────────────── -->
+  <section id="awards">
+    <div class="container">
+      <div class="reveal">
+        <p class="label">Awards & Recognition</p>
+        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">
+          Internationally recognised.<br>Community-rooted.</h2>
+      </div>
+
+      <div class="awards-photos reveal">
+        <img src="./images/Waste Gobb.jpg"
+          alt="ACAIC 2022 prize — Waste Gobbler team with GHS 10,000 seed funding cheque">
+        <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana — Youth Sounding Board">
+        <img src="./images/CRL.jpg" alt="Frank at international sustainability conference">
+      </div>
+
+      <div class="awards-grid reveal">
+        <div class="award-cell">
+          <div class="award-year">2022</div>
+          <div class="award-name">2nd Runner-Up & Seed Funding Winner</div>
+          <div class="award-by">African Climate Adaptation and Innovation Challenge (ACAIC), 3 E's 4 Africa e.V. — Waste
+            Gobbler Project team</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2024–2025</div>
+          <div class="award-name">Local Pathways Fellowship</div>
+          <div class="award-by">UN Sustainable Development Solutions Network (SDSN)</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2025</div>
+          <div class="award-name">Aspire Leaders Program</div>
+          <div class="award-by">Aspire Institute — Harvard Business School</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2023–2025</div>
+          <div class="award-name">Youth Sounding Board Member</div>
+          <div class="award-by">UNDP Ghana — Youth policy advisory role</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2024</div>
+          <div class="award-name">YouthConnekt Africa Delegate</div>
+          <div class="award-by">Kigali, Rwanda — representing UNDP Ghana</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2024</div>
+          <div class="award-name">GROW Program Graduate</div>
+          <div class="award-by">MEST Africa, Generation Ghana & Mastercard Foundation — Taka Kipawa App</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2023</div>
+          <div class="award-name">Global Youth Climate Training (Net Zero)</div>
+          <div class="award-by">Global Youth Coalition & Oxford University</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2024</div>
+          <div class="award-name">Cohort 8 President</div>
+          <div class="award-by">Aequitas Experience, Aequitas Foundation</div>
+        </div>
+        <div class="award-cell">
+          <div class="award-year">2024</div>
+          <div class="award-name">Web Development Excellence Award</div>
+          <div class="award-by">MEST Africa & Generation Ghana (Mastercard Foundation)</div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="certs-wrap reveal">
+        <div class="certs-label">Certifications & Courses</div>
+        <div class="certs-cloud">
+          <a href="https://drive.google.com/file/d/1ghkQftL0hlzpR2DPLKYW7enyZqSxqpFa/view" target="_blank"
+            class="cert-tag">Global Energy & Climate Policy</a>
+          <a href="https://drive.google.com/file/d/1DiJ2VhzPUkBlNdb-t7tBGIDvxrOPd66j/view" target="_blank"
+            class="cert-tag">Global Youth Climate Training (Oxford)</a>
+          <a href="https://drive.google.com/file/d/1YFv6Q9h5VO3yk7rS8781KPAYPp9Yl2zS/view" target="_blank"
+            class="cert-tag">Green Digital Skills — INCO Academy</a>
+          <a href="https://drive.google.com/file/d/1VVdNR6DIQANyiAbfWpzPspVDU0InqTUs/view" target="_blank"
+            class="cert-tag">Junior Web Developer Certificate</a>
+          <a href="https://drive.google.com/file/d/1PiCUSmA8biu4zwatlq7xX9iV6OxTupqP/view" target="_blank"
+            class="cert-tag">Web Development Fundamentals</a>
+          <a href="https://drive.google.com/file/d/1UMaeY7vG7nOayR2UEpx13rdTZs_jTE-E/view" target="_blank"
+            class="cert-tag">Entrepreneurship & Innovation: Web Dev</a>
+          <a href="https://drive.google.com/file/d/15RrCWnLuMlE0FUe3wcOoMaBxmWRmJ12T/view" target="_blank"
+            class="cert-tag">Data Analysis — Microsoft Excel (Coursera)</a>
+          <a href="https://drive.google.com/file/d/1O-hS0_Sjz1P7N4VFk3se_DY9bJDW_CHL/view" target="_blank"
+            class="cert-tag">Agile Project Management (Coursera)</a>
+          <a href="https://drive.google.com/file/d/1yVnUTG6iVFt9fLgdbBTmSpm4TtuGhMuZ/view" target="_blank"
+            class="cert-tag">Project Management Certificate</a>
+          <a href="https://drive.google.com/file/d/1XoNAkReaWG9OQH3FiuctGYJVxosuO_eb/view" target="_blank"
+            class="cert-tag">Program Evaluation for Nonprofits</a>
+          <a href="https://drive.google.com/file/d/1c17OUxxl5WS-QNG57ixk7KtBsp56dcfU/view" target="_blank"
+            class="cert-tag">Storytelling & Influencing (Coursera)</a>
+          <a href="https://drive.google.com/file/d/1njYQhjt6d7M832UUASqoTDIgPKIum7gN/view" target="_blank"
+            class="cert-tag">Global Diplomacy (Coursera)</a>
+          <a href="https://drive.google.com/file/d/1vlbxh1VJHp9P3dHVu8ww1qXmvgld3tSo/view" target="_blank"
+            class="cert-tag">Climate Leader Certificate</a>
+          <a href="https://drive.google.com/file/d/1coVJWxKAy_hkB5qsn9rli5usB9Ja6Jj1/view" target="_blank"
+            class="cert-tag">Research Methods (Coursera)</a>
+          <a href="https://drive.google.com/file/d/1FFyznttfLptpmnmHgHdG_tEVCeRDd5iZ/view" target="_blank"
+            class="cert-tag">MEST x GROW Award Certificate</a>
+          <a href="https://drive.google.com/file/d/1wEnLos2KTnWdd7-aErWpFiV1Qn45PsxR/view" target="_blank"
+            class="cert-tag">UN Certificate</a>
+          <a href="https://drive.google.com/file/d/1yX9fCdai72QYAbFpc_-OC4uwQNklQNBs/view" target="_blank"
+            class="cert-tag">Nestlé Sustainability E-Learning</a>
+          <span class="cert-tag">AI Career Essentials — ALX</span>
+          <span class="cert-tag">Generative AI for Project Managers (PMI)</span>
+          <span class="cert-tag">Innovation, Creativity & Entrepreneurship — NBSSI</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="awards-photos reveal">
-      <img src="./images/Waste Gobb.jpg" alt="ACAIC 2022 prize — Waste Gobbler team with GHS 10,000 seed funding cheque">
-      <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana — Youth Sounding Board">
-      <img src="./images/CRL.jpg" alt="Frank at international sustainability conference">
-    </div>
+  <!-- ── WRITING ──────────────────────────────────── -->
+  <section id="writing">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-header-text">
+          <p class="label">Writing & Speaking</p>
+          <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-top:0.5rem;">
+            Shifting narratives across Africa.</h2>
+          <p class="section-subtitle">Published on LinkedIn, Medium, and the Pulitzer Center. Speaker at GYEM, LCOY, and
+            continental youth conferences.</p>
+        </div>
+      </div>
 
-    <div class="awards-grid reveal">
-      <div class="award-cell">
-        <div class="award-year">2022</div>
-        <div class="award-name">2nd Runner-Up & Seed Funding Winner</div>
-        <div class="award-by">African Climate Adaptation and Innovation Challenge (ACAIC), 3 E's 4 Africa e.V. — Waste Gobbler Project team</div>
+      <!-- Speaking photo strip -->
+      <div class="writing-photo-strip reveal">
+        <img src="./images/Advocacy.jpg" alt="Frank speaking at LCOY Ghana 2022">
+        <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana">
+        <img src="./images/Community Engagement.jpg" alt="Frank with community team">
+        <img src="./images/CRL.jpg" alt="Frank at international conference">
       </div>
-      <div class="award-cell">
-        <div class="award-year">2024–2025</div>
-        <div class="award-name">Local Pathways Fellowship</div>
-        <div class="award-by">UN Sustainable Development Solutions Network (SDSN)</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2025</div>
-        <div class="award-name">Aspire Leaders Program</div>
-        <div class="award-by">Aspire Institute — Harvard Business School</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2023–2025</div>
-        <div class="award-name">Youth Sounding Board Member</div>
-        <div class="award-by">UNDP Ghana — Youth policy advisory role</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2024</div>
-        <div class="award-name">YouthConnekt Africa Delegate</div>
-        <div class="award-by">Kigali, Rwanda — representing UNDP Ghana</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2024</div>
-        <div class="award-name">GROW Program Graduate</div>
-        <div class="award-by">MEST Africa, Generation Ghana & Mastercard Foundation — Taka Kipawa App</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2023</div>
-        <div class="award-name">Global Youth Climate Training (Net Zero)</div>
-        <div class="award-by">Global Youth Coalition & Oxford University</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2024</div>
-        <div class="award-name">Cohort 8 President</div>
-        <div class="award-by">Aequitas Experience, Aequitas Foundation</div>
-      </div>
-      <div class="award-cell">
-        <div class="award-year">2024</div>
-        <div class="award-name">Web Development Excellence Award</div>
-        <div class="award-by">MEST Africa & Generation Ghana (Mastercard Foundation)</div>
-      </div>
-    </div>
 
-    <!-- Certifications -->
-    <div class="certs-wrap reveal">
-      <div class="certs-label">Certifications & Courses</div>
-      <div class="certs-cloud">
-        <a href="https://drive.google.com/file/d/1ghkQftL0hlzpR2DPLKYW7enyZqSxqpFa/view" target="_blank" class="cert-tag">Global Energy & Climate Policy</a>
-        <a href="https://drive.google.com/file/d/1DiJ2VhzPUkBlNdb-t7tBGIDvxrOPd66j/view" target="_blank" class="cert-tag">Global Youth Climate Training (Oxford)</a>
-        <a href="https://drive.google.com/file/d/1YFv6Q9h5VO3yk7rS8781KPAYPp9Yl2zS/view" target="_blank" class="cert-tag">Green Digital Skills — INCO Academy</a>
-        <a href="https://drive.google.com/file/d/1VVdNR6DIQANyiAbfWpzPspVDU0InqTUs/view" target="_blank" class="cert-tag">Junior Web Developer Certificate</a>
-        <a href="https://drive.google.com/file/d/1PiCUSmA8biu4zwatlq7xX9iV6OxTupqP/view" target="_blank" class="cert-tag">Web Development Fundamentals</a>
-        <a href="https://drive.google.com/file/d/1UMaeY7vG7nOayR2UEpx13rdTZs_jTE-E/view" target="_blank" class="cert-tag">Entrepreneurship & Innovation: Web Dev</a>
-        <a href="https://drive.google.com/file/d/15RrCWnLuMlE0FUe3wcOoMaBxmWRmJ12T/view" target="_blank" class="cert-tag">Data Analysis — Microsoft Excel (Coursera)</a>
-        <a href="https://drive.google.com/file/d/1O-hS0_Sjz1P7N4VFk3se_DY9bJDW_CHL/view" target="_blank" class="cert-tag">Agile Project Management (Coursera)</a>
-        <a href="https://drive.google.com/file/d/1yVnUTG6iVFt9fLgdbBTmSpm4TtuGhMuZ/view" target="_blank" class="cert-tag">Project Management Certificate</a>
-        <a href="https://drive.google.com/file/d/1XoNAkReaWG9OQH3FiuctGYJVxosuO_eb/view" target="_blank" class="cert-tag">Program Evaluation for Nonprofits</a>
-        <a href="https://drive.google.com/file/d/1c17OUxxl5WS-QNG57ixk7KtBsp56dcfU/view" target="_blank" class="cert-tag">Storytelling & Influencing (Coursera)</a>
-        <a href="https://drive.google.com/file/d/1njYQhjt6d7M832UUASqoTDIgPKIum7gN/view" target="_blank" class="cert-tag">Global Diplomacy (Coursera)</a>
-        <a href="https://drive.google.com/file/d/1vlbxh1VJHp9P3dHVu8ww1qXmvgld3tSo/view" target="_blank" class="cert-tag">Climate Leader Certificate</a>
-        <a href="https://drive.google.com/file/d/1coVJWxKAy_hkB5qsn9rli5usB9Ja6Jj1/view" target="_blank" class="cert-tag">Research Methods (Coursera)</a>
-        <a href="https://drive.google.com/file/d/1FFyznttfLptpmnmHgHdG_tEVCeRDd5iZ/view" target="_blank" class="cert-tag">MEST x GROW Award Certificate</a>
-        <a href="https://drive.google.com/file/d/1wEnLos2KTnWdd7-aErWpFiV1Qn45PsxR/view" target="_blank" class="cert-tag">UN Certificate</a>
-        <a href="https://drive.google.com/file/d/1yX9fCdai72QYAbFpc_-OC4uwQNklQNBs/view" target="_blank" class="cert-tag">Nestlé Sustainability E-Learning</a>
-        <span class="cert-tag">AI Career Essentials — ALX</span>
-        <span class="cert-tag">Generative AI for Project Managers (PMI)</span>
-        <span class="cert-tag">Innovation, Creativity & Entrepreneurship — NBSSI</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WRITING ──────────────────────────────────── -->
-<section id="writing">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="section-header-text">
-        <p class="label">Writing & Speaking</p>
-        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-top:0.5rem;">Shifting narratives across Africa.</h2>
-        <p class="section-subtitle">Published on LinkedIn, Medium, and the Pulitzer Center. Speaker at GYEM, LCOY, and continental youth conferences.</p>
-      </div>
-    </div>
-
-    <!-- Speaking photo strip -->
-    <div class="writing-photo-strip reveal">
-      <img src="./images/Advocacy.jpg" alt="Frank speaking at LCOY Ghana 2022">
-      <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana">
-      <img src="./images/Community Engagement.jpg" alt="Frank with community team">
-      <img src="./images/CRL.jpg" alt="Frank at international conference">
-    </div>
-
-    <div class="writing-grid reveal">
-      <a href="https://drive.google.com/file/d/1X8f34o5xdtcyOi8ZO9FY4lmJCNdhTCML/view?usp=sharing" target="_blank" class="write-card" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;inset:0;background-image:url('./images/Youth Connekt Africa.jpg');background-size:cover;background-position:center top;opacity:0.12;border-radius:inherit;"></div>
-        <p class="write-cat" style="position:relative;">Field Report · Rwanda</p>
-        <h3 class="write-title" style="position:relative;">YouthConnekt Africa Summit 2024 — Delegate Report</h3>
-        <p class="write-excerpt" style="position:relative;">A full delegate report from representing UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda — covering strategies, continental collaboration, youth governance, and key takeaways for Ghana's development agenda.</p>
-        <div class="write-meta" style="position:relative;">Google Drive Report &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; <i class="fas fa-file-pdf" style="color:var(--teal);"></i> PDF</div>
-      </a>
+      <div class="writing-grid reveal">
+        <a href="https://drive.google.com/file/d/1X8f34o5xdtcyOi8ZO9FY4lmJCNdhTCML/view?usp=sharing" target="_blank"
+          class="write-card" style="position:relative;overflow:hidden;">
+          <div
+            style="position:absolute;inset:0;background-image:url('./images/Youth Connekt Africa.jpg');background-size:cover;background-position:center top;opacity:0.12;border-radius:inherit;">
+          </div>
+          <p class="write-cat" style="position:relative;">Field Report · Rwanda</p>
+          <h3 class="write-title" style="position:relative;">YouthConnekt Africa Summit 2024 — Delegate Report</h3>
+          <p class="write-excerpt" style="position:relative;">A full delegate report from representing UNDP Ghana at the
+            YouthConnekt Africa Summit in Kigali, Rwanda — covering strategies, continental collaboration, youth
+            governance, and key takeaways for Ghana's development agenda.</p>
+          <div class="write-meta" style="position:relative;">Google Drive Report &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; <i
+              class="fas fa-file-pdf" style="color:var(--teal);"></i> PDF</div>
+        </a>
         <p class="write-cat">Circular Economy</p>
         <h3 class="write-title">Turning Fashion Waste into Opportunity: A Path to Sustainable Solutions in Ghana</h3>
-        <p class="write-excerpt">How Ghana's fashion industry waste can be redirected into economic opportunity through circular design, EPR, and youth entrepreneurship.</p>
+        <p class="write-excerpt">How Ghana's fashion industry waste can be redirected into economic opportunity through
+          circular design, EPR, and youth entrepreneurship.</p>
         <div class="write-meta">Medium — 2025</div>
-      </a>
-      <a href="https://www.linkedin.com/pulse/from-paris-agreement-cop28-why-we-need-demand-action-net-koomson/" target="_blank" class="write-card">
-        <p class="write-cat">Climate Policy</p>
-        <h3 class="write-title">From the Paris Agreement to COP28: Why We Need to Demand Action on Net Zero</h3>
-        <p class="write-excerpt">Exploring the urgent shift in climate policy from stabilising greenhouse gas concentrations to balancing emissions and removals.</p>
-        <div class="write-meta">LinkedIn Article — 2023</div>
-      </a>
-      <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_recycling-circulareconomy-share-activity-7179773753805967360-BiM3" target="_blank" class="write-card">
-        <p class="write-cat">Circular Economy</p>
-        <h3 class="write-title">6 Myths About the Circular Economy — Busted</h3>
-        <p class="write-excerpt">Common misconceptions about circular economy — highlighting how it goes beyond recycling to product design, reuse, repair, and systemic transformation.</p>
-        <div class="write-meta">LinkedIn — 2023</div>
-      </a>
-      <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_acaic-activity-7176199593947193344-8MjW" target="_blank" class="write-card">
-        <p class="write-cat">Youth Empowerment</p>
-        <h3 class="write-title">7 Reasons Why the Circular Economy is a Perfect Fit for Ghanaian Youth</h3>
-        <p class="write-excerpt">From resource efficiency and job creation to technological innovation — how the circular economy is Ghana's golden opportunity for youth.</p>
-        <div class="write-meta">LinkedIn — 2023</div>
-      </a>
-      <a href="https://www.linkedin.com/pulse/breathing-life-our-planet-significance-forests-climate-frank-koomson/" target="_blank" class="write-card">
-        <p class="write-cat">Climate Science</p>
-        <h3 class="write-title">Breathing Life into Our Planet: Forests and Afforestation in Climate Action</h3>
-        <p class="write-excerpt">Examining the crucial role of forests and afforestation in combating climate change and why we must act with urgency.</p>
-        <div class="write-meta">LinkedIn Article — 2023</div>
-      </a>
-      <a href="https://medium.com/@frank.koomson/usaids-withdrawal-a-wake-up-call-for-ghana-and-africa-s-self-reliance-677e84964e22" target="_blank" class="write-card">
-        <p class="write-cat">Development Policy</p>
-        <h3 class="write-title">USAID's Withdrawal: A Wake-Up Call for Ghana and Africa's Self-Reliance</h3>
-        <p class="write-excerpt">The opportunity USAID's exit presents for African nations to strengthen domestic development strategies and break aid dependency.</p>
-        <div class="write-meta">Medium — 2024</div>
-      </a>
-    </div>
+        </a>
+        <a href="https://www.linkedin.com/pulse/from-paris-agreement-cop28-why-we-need-demand-action-net-koomson/"
+          target="_blank" class="write-card">
+          <p class="write-cat">Climate Policy</p>
+          <h3 class="write-title">From the Paris Agreement to COP28: Why We Need to Demand Action on Net Zero</h3>
+          <p class="write-excerpt">Exploring the urgent shift in climate policy from stabilising greenhouse gas
+            concentrations to balancing emissions and removals.</p>
+          <div class="write-meta">LinkedIn Article — 2023</div>
+        </a>
+        <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_recycling-circulareconomy-share-activity-7179773753805967360-BiM3"
+          target="_blank" class="write-card">
+          <p class="write-cat">Circular Economy</p>
+          <h3 class="write-title">6 Myths About the Circular Economy — Busted</h3>
+          <p class="write-excerpt">Common misconceptions about circular economy — highlighting how it goes beyond
+            recycling to product design, reuse, repair, and systemic transformation.</p>
+          <div class="write-meta">LinkedIn — 2023</div>
+        </a>
+        <a href="https://www.linkedin.com/posts/frank-koomson-b227901ba_acaic-activity-7176199593947193344-8MjW"
+          target="_blank" class="write-card">
+          <p class="write-cat">Youth Empowerment</p>
+          <h3 class="write-title">7 Reasons Why the Circular Economy is a Perfect Fit for Ghanaian Youth</h3>
+          <p class="write-excerpt">From resource efficiency and job creation to technological innovation — how the
+            circular economy is Ghana's golden opportunity for youth.</p>
+          <div class="write-meta">LinkedIn — 2023</div>
+        </a>
+        <a href="https://www.linkedin.com/pulse/breathing-life-our-planet-significance-forests-climate-frank-koomson/"
+          target="_blank" class="write-card">
+          <p class="write-cat">Climate Science</p>
+          <h3 class="write-title">Breathing Life into Our Planet: Forests and Afforestation in Climate Action</h3>
+          <p class="write-excerpt">Examining the crucial role of forests and afforestation in combating climate change
+            and why we must act with urgency.</p>
+          <div class="write-meta">LinkedIn Article — 2023</div>
+        </a>
+        <a href="https://medium.com/@frank.koomson/usaids-withdrawal-a-wake-up-call-for-ghana-and-africa-s-self-reliance-677e84964e22"
+          target="_blank" class="write-card">
+          <p class="write-cat">Development Policy</p>
+          <h3 class="write-title">USAID's Withdrawal: A Wake-Up Call for Ghana and Africa's Self-Reliance</h3>
+          <p class="write-excerpt">The opportunity USAID's exit presents for African nations to strengthen domestic
+            development strategies and break aid dependency.</p>
+          <div class="write-meta">Medium — 2024</div>
+        </a>
+      </div>
 
-    <div class="speaking-wrap reveal">
-      <div class="speaking-title">Speaking Engagements</div>
-      <div class="speaking-pills">
-        <span class="speak-pill">YouthOvaFashionWaste Campaign — GYEM & Pulitzer Center, 2025</span>
-        <span class="speak-pill">Co-Host, African Youth Conference on Natural Resources & Environmental Governance, SYND Ghana, 2025</span>
-        <span class="speak-pill">Rapporteur, African Youth Conference on Natural Resources & Environmental Governance, 2024</span>
-        <span class="speak-pill">LCOY Ghana Side Events — M&E Officer & Organiser, 2021–2023</span>
-        <span class="speak-pill">Youth in Natural Resources & Environmental Governance (YouthNREG) — Climate & Forestry Presentation, 2022</span>
-        <span class="speak-pill">B.ISA Storytelling Webinar Series — 2022–2023</span>
+      <div class="speaking-wrap reveal">
+        <div class="speaking-title">Speaking Engagements</div>
+        <div class="speaking-pills">
+          <span class="speak-pill">YouthOvaFashionWaste Campaign — GYEM & Pulitzer Center, 2025</span>
+          <span class="speak-pill">Co-Host, African Youth Conference on Natural Resources & Environmental Governance,
+            SYND Ghana, 2025</span>
+          <span class="speak-pill">Rapporteur, African Youth Conference on Natural Resources & Environmental Governance,
+            2024</span>
+          <span class="speak-pill">LCOY Ghana Side Events — M&E Officer & Organiser, 2021–2023</span>
+          <span class="speak-pill">Youth in Natural Resources & Environmental Governance (YouthNREG) — Climate &
+            Forestry Presentation, 2022</span>
+          <span class="speak-pill">B.ISA Storytelling Webinar Series — 2022–2023</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── SKILLS ───────────────────────────────────── -->
-<section id="skills">
-  <div class="container">
-    <div class="reveal">
-      <p class="label">Skills & Expertise</p>
-      <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Where sustainability meets technology and leadership.</h2>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="skill-col">
-        <div class="skill-col-title"><i class="fas fa-code"></i> Technical</div>
-        <ul class="skill-items">
-          <li>HTML5, CSS3, JavaScript</li>
-          <li>React / Vite</li>
-          <li>Node.js / Express.js</li>
-          <li>MongoDB</li>
-          <li>REST API Development</li>
-          <li>Git & GitHub</li>
-          <li>Vercel, Cloudinary</li>
-          <li>Paystack, Formspree</li>
-          <li>AI Tools for Social Impact</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-title"><i class="fas fa-leaf"></i> Sustainability</div>
-        <ul class="skill-items">
-          <li>Circular Economy</li>
-          <li>Climate Policy & Advocacy</li>
-          <li>Environmental Governance</li>
-          <li>Natural Resource Management</li>
-          <li>GreenTech Innovation</li>
-          <li>Agribusiness & Food Systems</li>
-          <li>Waste Management</li>
-          <li>SDGs & UNFCCC Frameworks</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-title"><i class="fas fa-chart-line"></i> Leadership</div>
-        <ul class="skill-items">
-          <li>Strategic Planning</li>
-          <li>Program & Project Management</li>
-          <li>Global Operations</li>
-          <li>Stakeholder Engagement</li>
-          <li>Monitoring & Evaluation</li>
-          <li>Community Development</li>
-          <li>Fundraising & Pitching</li>
-          <li>Youth Mentorship</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-title"><i class="fas fa-pen-nib"></i> Creative</div>
-        <ul class="skill-items">
-          <li>Digital Storytelling</li>
-          <li>Content Strategy</li>
-          <li>Public Speaking</li>
-          <li>Videography & Photography</li>
-          <li>Graphic Design</li>
-          <li>Social Media Management</li>
-          <li>ESG Content Writing</li>
-          <li>Research & Report Writing</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CONTACT ──────────────────────────────────── -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
+  <!-- ── SKILLS ───────────────────────────────────── -->
+  <section id="skills">
+    <div class="container">
       <div class="reveal">
-        <p class="label">Contact</p>
-        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Let's build something meaningful.</h2>
-        <p class="section-subtitle" style="color:var(--gray-5);margin-top:0.75rem;">Open to partnerships, speaking invitations, consulting, and collaboration — especially where sustainability, technology, and youth empowerment intersect.</p>
-
-        <div class="contact-links">
-          <a href="mailto:frank.koomson@localpathways.org" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">Email</span>
-              <span class="cl-val">frank.koomson@localpathways.org</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-          <a href="tel:+233206634459" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">Phone</span>
-              <span class="cl-val">+233 (0) 206 634 459</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">LinkedIn</span>
-              <span class="cl-val">linkedin.com/in/frank-koomson</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-          <a href="https://github.com/Frank0751" target="_blank" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">GitHub</span>
-              <span class="cl-val">github.com/Frank0751</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-          <a href="https://www.swkghana.org" target="_blank" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">SWK Ghana</span>
-              <span class="cl-val">swkghana.org</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-          <a href="https://medium.com/@frank.koomson" target="_blank" class="contact-link-row">
-            <div class="cl-left">
-              <span class="cl-label">Medium</span>
-              <span class="cl-val">medium.com/@frank.koomson</span>
-            </div>
-            <i class="fas fa-arrow-right cl-arrow"></i>
-          </a>
-        </div>
+        <p class="label">Skills & Expertise</p>
+        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Where
+          sustainability meets technology and leadership.</h2>
       </div>
-
-      <div class="contact-right reveal reveal-delay-1">
-        <p class="label" style="margin-bottom:1.5rem;">Services Available</p>
-        <div class="services-list">
-          <div class="service-row"><div class="service-icon"><i class="fas fa-leaf"></i></div><span class="service-name">ESG & Sustainability Writing and Consulting</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-recycle"></i></div><span class="service-name">GreenTech Product Development</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-users"></i></div><span class="service-name">Youth Leadership Programme Design</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-tasks"></i></div><span class="service-name">Program & Operations Management</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-code"></i></div><span class="service-name">Web Development (React, Node.js, MongoDB)</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-bullhorn"></i></div><span class="service-name">Digital Storytelling & Campaign Strategy</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-microphone"></i></div><span class="service-name">Speaking Engagements & Panel Sessions</span></div>
-          <div class="service-row"><div class="service-icon"><i class="fas fa-globe-africa"></i></div><span class="service-name">Policy Advocacy & Research</span></div>
+      <div class="skills-grid reveal">
+        <div class="skill-col">
+          <div class="skill-col-title"><i class="fas fa-code"></i> Technical</div>
+          <ul class="skill-items">
+            <li>HTML5, CSS3, JavaScript</li>
+            <li>React / Vite</li>
+            <li>Node.js / Express.js</li>
+            <li>MongoDB</li>
+            <li>REST API Development</li>
+            <li>Git & GitHub</li>
+            <li>Vercel, Cloudinary</li>
+            <li>Paystack, Formspree</li>
+            <li>AI Tools for Social Impact</li>
+          </ul>
         </div>
-        <p class="contact-note">Based in Accra, Ghana. Available for remote collaboration globally and in-person across West Africa. Timezone: GMT+0.</p>
-        <div style="margin-top:1.5rem;">
-          <a href="mailto:frank.koomson@localpathways.org" class="btn btn-teal"><i class="fas fa-paper-plane"></i> Send an Email</a>
+        <div class="skill-col">
+          <div class="skill-col-title"><i class="fas fa-leaf"></i> Sustainability</div>
+          <ul class="skill-items">
+            <li>Circular Economy</li>
+            <li>Climate Policy & Advocacy</li>
+            <li>Environmental Governance</li>
+            <li>Natural Resource Management</li>
+            <li>GreenTech Innovation</li>
+            <li>Agribusiness & Food Systems</li>
+            <li>Waste Management</li>
+            <li>SDGs & UNFCCC Frameworks</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title"><i class="fas fa-chart-line"></i> Leadership</div>
+          <ul class="skill-items">
+            <li>Strategic Planning</li>
+            <li>Program & Project Management</li>
+            <li>Global Operations</li>
+            <li>Stakeholder Engagement</li>
+            <li>Monitoring & Evaluation</li>
+            <li>Community Development</li>
+            <li>Fundraising & Pitching</li>
+            <li>Youth Mentorship</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title"><i class="fas fa-pen-nib"></i> Creative</div>
+          <ul class="skill-items">
+            <li>Digital Storytelling</li>
+            <li>Content Strategy</li>
+            <li>Public Speaking</li>
+            <li>Videography & Photography</li>
+            <li>Graphic Design</li>
+            <li>Social Media Management</li>
+            <li>ESG Content Writing</li>
+            <li>Research & Report Writing</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ── FOOTER ───────────────────────────────────── -->
-<footer>
-  <span class="footer-logo">Frank<span>.</span></span>
-  <span>© 2025 Frank Koomson · Accra, Ghana</span>
-  <div class="footer-links">
-    <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/Frank0751" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-    <a href="https://medium.com/@frank.koomson" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
-    <a href="https://x.com/FrankKoomson20" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
-    <a href="https://www.swkghana.org" target="_blank" title="SWK Ghana"><i class="fas fa-globe"></i></a>
-  </div>
-</footer>
+  <!-- ── CONTACT ──────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="label">Contact</p>
+          <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Let's
+            build something meaningful.</h2>
+          <p class="section-subtitle" style="color:var(--gray-5);margin-top:0.75rem;">Open to partnerships, speaking
+            invitations, consulting, and collaboration — especially where sustainability, technology, and youth
+            empowerment intersect.</p>
 
-<script>
-// ── Scroll reveal ──────────────────────────────────────────────────────────
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+          <div class="contact-links">
+            <a href="mailto:frank.koomson@localpathways.org" class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">Email</span>
+                <span class="cl-val">frank.koomson@localpathways.org</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="tel:+233206634459" class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">Phone</span>
+                <span class="cl-val">+233 (0) 206 634 459</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank"
+              class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-val">linkedin.com/in/frank-koomson</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://github.com/Frank0751" target="_blank" class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-val">github.com/Frank0751</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://www.swkghana.org" target="_blank" class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">SWK Ghana</span>
+                <span class="cl-val">swkghana.org</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+            <a href="https://medium.com/@frank.koomson" target="_blank" class="contact-link-row">
+              <div class="cl-left">
+                <span class="cl-label">Medium</span>
+                <span class="cl-val">medium.com/@frank.koomson</span>
+              </div>
+              <i class="fas fa-arrow-right cl-arrow"></i>
+            </a>
+          </div>
+        </div>
 
-// ── Slideshow ──────────────────────────────────────────────────────────────
-(function() {
-  const track = document.getElementById('sl-track');
-  const cards = track ? Array.from(track.querySelectorAll('.slide-card')) : [];
-  if (!cards.length) return;
+        <div class="contact-right reveal reveal-delay-1">
+          <p class="label" style="margin-bottom:1.5rem;">Services Available</p>
+          <div class="services-list">
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-leaf"></i></div><span class="service-name">ESG & Sustainability
+                Writing and Consulting</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-recycle"></i></div><span class="service-name">GreenTech Product
+                Development</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-users"></i></div><span class="service-name">Youth Leadership
+                Programme Design</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-tasks"></i></div><span class="service-name">Program &
+                Operations Management</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-code"></i></div><span class="service-name">Web Development
+                (React, Node.js, MongoDB)</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-bullhorn"></i></div><span class="service-name">Digital
+                Storytelling & Campaign Strategy</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-microphone"></i></div><span class="service-name">Speaking
+                Engagements & Panel Sessions</span>
+            </div>
+            <div class="service-row">
+              <div class="service-icon"><i class="fas fa-globe-africa"></i></div><span class="service-name">Policy
+                Advocacy & Research</span>
+            </div>
+          </div>
+          <p class="contact-note">Based in Accra, Ghana. Available for remote collaboration globally and in-person
+            across West Africa. Timezone: GMT+0.</p>
+          <div style="margin-top:1.5rem;">
+            <a href="mailto:frank.koomson@localpathways.org" class="btn btn-teal"><i class="fas fa-paper-plane"></i>
+              Send an Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  let current = 0;
-  let perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-  const total = cards.length;
-  const maxIndex = total - perView;
+  <!-- ── FOOTER ───────────────────────────────────── -->
+  <footer>
+    <span class="footer-logo">Frank<span>.</span></span>
+    <span>© 2025 Frank Koomson · Accra, Ghana</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank"
+        title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Frank0751" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://medium.com/@frank.koomson" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+      <a href="https://x.com/FrankKoomson20" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.swkghana.org" target="_blank" title="SWK Ghana"><i class="fas fa-globe"></i></a>
+    </div>
+  </footer>
 
-  // Build dots
-  const dotsEl = document.getElementById('sl-dots');
-  const totalDots = maxIndex + 1;
-  document.getElementById('sl-total').textContent = total;
+  <script>
+    // ── Scroll reveal ──────────────────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  for (let i = 0; i <= maxIndex; i++) {
-    const d = document.createElement('button');
-    d.className = 'sl-dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', `Slide ${i + 1}`);
-    d.addEventListener('click', () => goTo(i));
-    dotsEl.appendChild(d);
-  }
+    // ── Slideshow ──────────────────────────────────────────────────────────────
+    (function () {
+      const track = document.getElementById('sl-track');
+      const cards = track ? Array.from(track.querySelectorAll('.slide-card')) : [];
+      if (!cards.length) return;
 
-  function getCardWidth() {
-    if (!cards[0]) return 0;
-    const gap = 20;
-    return cards[0].offsetWidth + gap;
-  }
+      let current = 0;
+      let perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+      const total = cards.length;
+      const maxIndex = total - perView;
 
-  function goTo(idx) {
-    current = Math.max(0, Math.min(idx, maxIndex));
-    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
-    document.getElementById('sl-current').textContent = current + 1;
-    document.querySelectorAll('.sl-dot').forEach((d, i) => d.classList.toggle('active', i === current));
-  }
+      // Build dots
+      const dotsEl = document.getElementById('sl-dots');
+      const totalDots = maxIndex + 1;
+      document.getElementById('sl-total').textContent = total;
 
-  document.getElementById('sl-prev').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('sl-next').addEventListener('click', () => goTo(current + 1));
+      for (let i = 0; i <= maxIndex; i++) {
+        const d = document.createElement('button');
+        d.className = 'sl-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', `Slide ${i + 1}`);
+        d.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(d);
+      }
 
-  // Auto-advance every 5s
-  let timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000);
-  track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
-  track.parentElement.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000); });
+      function getCardWidth() {
+        if (!cards[0]) return 0;
+        const gap = 20;
+        return cards[0].offsetWidth + gap;
+      }
 
-  // Touch / swipe support
-  let startX = 0;
-  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = startX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
-  });
+      function goTo(idx) {
+        current = Math.max(0, Math.min(idx, maxIndex));
+        track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+        document.getElementById('sl-current').textContent = current + 1;
+        document.querySelectorAll('.sl-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      }
 
-  // Recalculate on resize
-  window.addEventListener('resize', () => {
-    perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-    goTo(Math.min(current, total - perView));
-  });
-})();
+      document.getElementById('sl-prev').addEventListener('click', () => goTo(current - 1));
+      document.getElementById('sl-next').addEventListener('click', () => goTo(current + 1));
+
+      // Auto-advance every 5s
+      let timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000);
+      track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
+      track.parentElement.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000); });
+
+      // Touch / swipe support
+      let startX = 0;
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      });
+
+      // Recalculate on resize
+      window.addEventListener('resize', () => {
+        perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+        goTo(Math.min(current, total - perView));
+      });
+    })();
 
 
-const sections = document.querySelectorAll('section[id]');
-const navAs = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-  navAs.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
-  });
-}, { passive: true });
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+      navAs.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+      });
+    }, { passive: true });
 
-// ── Hamburger (mobile) ─────────────────────────────────────────────────────
-document.getElementById('hamburger').addEventListener('click', function() {
-  const links = document.querySelector('.nav-links');
-  const show = links.style.display === 'flex';
-  links.style.cssText = show ? '' : 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#fff;padding:1.5rem 2rem;gap:1.25rem;border-bottom:1px solid #eee;z-index:199;';
-});
-</script>
+    // ── Hamburger (mobile) ─────────────────────────────────────────────────────
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const links = document.querySelector('.nav-links');
+      const show = links.style.display === 'flex';
+      links.style.cssText = show ? '' : 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#fff;padding:1.5rem 2rem;gap:1.25rem;border-bottom:1px solid #eee;z-index:199;';
+    });
+  </script>
 
 </body>
+
 </html>
