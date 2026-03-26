@@ -310,14 +310,14 @@ nav {
 }
 .pillars-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
 }
 .pillar {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1rem;
   transition: border-color 0.2s;
 }
 .pillar:hover { border-color: var(--teal); }
@@ -1021,6 +1021,7 @@ footer {
   .projects-row { grid-template-columns: repeat(2, 1fr); }
   .exp-grid { grid-template-columns: 1fr; gap: 3rem; }
   .exp-sticky { position: static; }
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
   .container { padding: 0 1.5rem; }
@@ -1036,6 +1037,7 @@ footer {
   .projects-row { grid-template-columns: 1fr; }
   .awards-grid, .writing-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
   .section-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
   .nav-links, .nav-right { display: none; }
   .hamburger { display: flex; }
@@ -1091,7 +1093,7 @@ footer {
 
       <div class="hero-photo">
         <div class="photo-frame">
-          <img src="./images/Hero.png" alt="Frank Koomson">
+          <img src="./images/Hero Section image.jpg" alt="Frank Koomson">
         </div>
         <div class="photo-badge">
           <span class="badge-num">27</span>
@@ -1140,7 +1142,7 @@ footer {
     <div class="slideshow-track" id="sl-track">
 
       <div class="slide-card">
-        <div class="slide-img"><img src="./images/Youth_Connekt_Rwanda.jpg" alt="YouthConnekt Africa Summit, Kigali 2024"></div>
+        <div class="slide-img"><img src="./images/Youth Connekt Africa.jpg" alt="YouthConnekt Africa Summit, Kigali 2024"></div>
         <div class="slide-info">
           <span class="slide-tag">Delegate · Rwanda</span>
           <div class="slide-title">YouthConnekt Africa Summit 2024</div>
@@ -1150,7 +1152,7 @@ footer {
       </div>
 
       <div class="slide-card">
-        <div class="slide-img"><img src="./images/Agribusiness_Ambassador.jpg" alt="Agribusiness e-Academy Ambassador"></div>
+        <div class="slide-img"><img src="./images/Agribusiness eAcademy.jpg" alt="Agribusiness e-Academy Ambassador"></div>
         <div class="slide-info">
           <span class="slide-tag">Appointment · GIZ/EU-funded</span>
           <div class="slide-title">Agribusiness e-Academy Ambassador</div>
@@ -1160,7 +1162,7 @@ footer {
       </div>
 
       <div class="slide-card">
-        <div class="slide-img"><img src="./images/HuD_Group.jpg" alt="The HuD Group"></div>
+        <div class="slide-img"><img src="./images/HuD Group.jpg" alt="The HuD Group"></div>
         <div class="slide-info">
           <span class="slide-tag">Global Operations · Active</span>
           <div class="slide-title">Global Operations Associate — The HuD Group</div>
@@ -1411,7 +1413,7 @@ footer {
       <!-- SWK Ghana Website -->
       <div class="proj-card">
         <div class="proj-img" style="background:#f8fdf8;display:flex;align-items:center;justify-content:center;padding:2rem;">
-          <img src="./images/SWK_Logo.jpg" alt="SWK Ghana" style="height:120px;width:auto;object-fit:contain;border-radius:0;">
+          <img src="./images/SWK Ghana Logo.jpg" alt="SWK Ghana" style="height:120px;width:auto;object-fit:contain;border-radius:0;">
         </div>
           <span class="proj-badge">Live Platform</span>
         </div>
@@ -1543,7 +1545,7 @@ footer {
             <div class="tl-role">Global Operations Associate</div>
             <div class="tl-org">The HuD Group</div>
             <div class="tl-desc">Overseeing and coordinating a network of 27 Country CEOs worldwide. Ensuring operational efficiency and executing strategic programs in close collaboration with the Global CEO.</div>
-            <div class="tl-photo"><img src="./images/HuD_Group.jpg" alt="Frank in The HuD Group uniform"></div>
+            <div class="tl-photo"><img src="./images/HuD Group.jpg" alt="Frank in The HuD Group uniform"></div>
             <span class="tl-pill">Active</span>
           </div>
         </div>
@@ -1555,7 +1557,7 @@ footer {
             <div class="tl-role">Ambassador</div>
             <div class="tl-org">Agribusiness e-Academy (GIZ/EU-funded)</div>
             <div class="tl-desc">Mobilising rural and urban youth to access free climate-smart agriculture and agribusiness courses. Alongside Ernestina Gyamfi (SWK Programme Coordinator), championing digital learning and practical application across communities.</div>
-            <div class="tl-photo"><img src="./images/Agribusiness_Ambassador.jpg" alt="Frank Koomson — Agribusiness e-Academy Ambassador"></div>
+            <div class="tl-photo"><img src="./images/Agribusiness eAcademy.jpg" alt="Frank Koomson — Agribusiness e-Academy Ambassador"></div>
             <span class="tl-pill">Active</span>
           </div>
         </div>
@@ -1567,7 +1569,7 @@ footer {
             <div class="tl-role">Youth Sounding Board Member</div>
             <div class="tl-org">UNDP Ghana</div>
             <div class="tl-desc">Advised UNDP Ghana on youth engagement in sustainable development programs. Represented Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda (2024).</div>
-            <div class="tl-photo"><img src="./images/Youth_Connekt_Rwanda.jpg" alt="Frank at YouthConnekt Africa Summit, Kigali Convention Centre, Rwanda 2024"></div>
+            <div class="tl-photo"><img src="./images/Youth Connekt Africa.jpg" alt="Frank at YouthConnekt Africa Summit, Kigali Convention Centre, Rwanda 2024"></div>
           </div>
         </div>
 
@@ -1742,7 +1744,7 @@ footer {
 
     <div class="writing-grid reveal">
       <a href="https://drive.google.com/file/d/1X8f34o5xdtcyOi8ZO9FY4lmJCNdhTCML/view?usp=sharing" target="_blank" class="write-card" style="position:relative;overflow:hidden;">
-        <div style="position:absolute;inset:0;background-image:url('./images/Youth_Connekt_Rwanda.jpg');background-size:cover;background-position:center top;opacity:0.12;border-radius:inherit;"></div>
+        <div style="position:absolute;inset:0;background-image:url('./images/Youth Connekt Africa.jpg');background-size:cover;background-position:center top;opacity:0.12;border-radius:inherit;"></div>
         <p class="write-cat" style="position:relative;">Field Report · Rwanda</p>
         <h3 class="write-title" style="position:relative;">YouthConnekt Africa Summit 2024 — Delegate Report</h3>
         <p class="write-excerpt" style="position:relative;">A full delegate report from representing UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda — covering strategies, continental collaboration, youth governance, and key takeaways for Ghana's development agenda.</p>
