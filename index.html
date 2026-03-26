@@ -589,6 +589,114 @@ nav {
 }
 .cert-tag:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
 
+/* ─── THESIS SUBSECTION ────────────────────────────── */
+.thesis-block {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.thesis-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(13,155,126,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.thesis-icon {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  background: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.thesis-icon i { color: var(--white); font-size: 1rem; }
+.thesis-header-text {}
+.thesis-tag {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.2rem;
+}
+.thesis-title-short {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800; font-size: 0.95rem;
+  color: var(--white); line-height: 1.3;
+}
+.thesis-body { padding: 1.5rem; }
+.thesis-full-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800; font-size: 1.05rem;
+  color: var(--white); line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.thesis-meta-row {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.thesis-meta-chip {
+  font-size: 0.7rem; font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.thesis-meta-chip.gold {
+  background: rgba(184,134,11,0.15);
+  color: #D4A820;
+  border-color: rgba(184,134,11,0.25);
+}
+.thesis-abstract-label {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.6rem;
+}
+.thesis-abstract {
+  font-size: 0.85rem; color: rgba(255,255,255,0.55);
+  line-height: 1.75; margin-bottom: 1.25rem;
+}
+.thesis-findings {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.6rem; margin-bottom: 1.5rem;
+}
+.finding-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+}
+.finding-label {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 0.3rem;
+}
+.finding-val {
+  font-size: 0.82rem; color: rgba(255,255,255,0.65);
+  line-height: 1.45;
+}
+.thesis-footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.thesis-uni {
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.thesis-uni-icon { font-size: 1.1rem; color: var(--teal); }
+.thesis-uni-name { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+.thesis-uni-name strong { color: rgba(255,255,255,0.8); font-weight: 500; }
+.thesis-download {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.78rem; font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--teal); color: var(--white);
+  transition: background 0.2s;
+}
+.thesis-download:hover { background: var(--teal-dark); }
+
 /* ─── WRITING ──────────────────────────────────────── */
 #writing { background: var(--dark-2); color: var(--white); }
 #writing .label { color: var(--teal); }
@@ -685,6 +793,78 @@ nav {
 
 .contact-note { font-size: 0.85rem; color: var(--gray-5); margin-top: 1.5rem; line-height: 1.7; }
 
+/* ─── AWARDS PHOTO ROW ─────────────────────────────── */
+.awards-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.awards-photos img {
+  width: 100%; height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s;
+}
+.awards-photos img:hover { transform: scale(1.02); }
+
+/* ─── WRITING PHOTO STRIP ──────────────────────────── */
+.writing-photo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
+}
+.writing-photo-strip img {
+  width: 100%; height: 200px;
+  object-fit: cover;
+  filter: brightness(0.7) saturate(0.8);
+  transition: filter 0.3s;
+}
+.writing-photo-strip img:hover { filter: brightness(0.9) saturate(1); }
+
+/* ─── TIMELINE PHOTO ───────────────────────────────── */
+.tl-photo {
+  width: 100%; height: 160px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 0.85rem;
+}
+.tl-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s;
+}
+.tl-item:hover .tl-photo img { transform: scale(1.03); }
+
+/* ─── YOUTUBE EMBED ────────────────────────────────── */
+.yt-wrap {
+  position: relative;
+  width: 100%; padding-top: 56.25%;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  background: #000;
+}
+.yt-wrap iframe {
+  position: absolute;
+  inset: 0; width: 100%; height: 100%;
+  border: none;
+}
+.yt-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: #FF0000; color: #fff;
+  padding: 0.28rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
 /* ─── FOOTER ───────────────────────────────────────── */
 footer {
   background: var(--dark);
@@ -701,6 +881,26 @@ footer {
 .footer-links { display: flex; gap: 1.5rem; }
 .footer-links a { color: rgba(255,255,255,0.4); transition: color 0.2s; font-size: 1rem; }
 .footer-links a:hover { color: var(--teal); }
+
+/* ─── YOUTUBE EMBED ────────────────────────────────── */
+.yt-wrap {
+  position: relative;
+  width: 100%; height: 100%;
+  background: #000;
+}
+.yt-wrap iframe {
+  position: absolute;
+  inset: 0; width: 100%; height: 100%;
+  border: none;
+}
+.yt-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #FF0000;
+  margin-bottom: 0.5rem;
+}
+.yt-badge i { font-size: 0.95rem; }
 
 /* ─── SCROLL ANIMATIONS ────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
@@ -787,15 +987,7 @@ footer {
 
       <div class="hero-photo">
         <div class="photo-frame">
-          <!-- ══════════════════════════════════════════════════════════════
-               PHOTO GOES HERE — replace the div below with:
-               <img src="./images/YOUR_PHOTO.jpg" alt="Frank Koomson">
-               Best size: 600×720px, portrait orientation, face near top
-          ═══════════════════════════════════════════════════════════════ -->
-          <div class="photo-placeholder">
-            <i class="fas fa-user-circle"></i>
-            <p>Add your photo here<br><small>./images/Hero.png</small></p>
-          </div>
+          <img src="./images/Hero.png" alt="Frank Koomson">
         </div>
         <div class="photo-badge">
           <span class="badge-num">27</span>
@@ -885,6 +1077,55 @@ footer {
             </div>
           </div>
         </div>
+
+        <!-- ── RESEARCH & ACADEMIC ───────────────────── -->
+        <div class="thesis-block reveal">
+          <div class="thesis-header">
+            <div class="thesis-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="thesis-header-text">
+              <div class="thesis-tag">Undergraduate Research &nbsp;·&nbsp; University of Ghana &nbsp;·&nbsp; 2021</div>
+              <div class="thesis-title-short">BA Dissertation — First Class Honours</div>
+            </div>
+          </div>
+          <div class="thesis-body">
+            <div class="thesis-full-title">Crime Mapping and Hot-Spot Analysis of Prevalent Crimes in Amasaman, Ga West Municipality, Accra</div>
+            <div class="thesis-meta-row">
+              <span class="thesis-meta-chip gold">GPA: 3.63 / 4.00 &nbsp;·&nbsp; First Class Honours</span>
+              <span class="thesis-meta-chip">Geography &amp; Resource Development</span>
+              <span class="thesis-meta-chip">Political Science</span>
+              <span class="thesis-meta-chip">2021</span>
+            </div>
+            <div class="thesis-abstract-label">Abstract</div>
+            <p class="thesis-abstract">This dissertation assessed and mapped the spatial distribution of prevalent crimes in Amasaman, Ga West Municipality, using Geographic Information Systems (GIS) and crime hot-spot analysis techniques. The study examined crime patterns across residential, commercial, and peri-urban zones, identifying the geographic concentrations of criminal activity and the socio-environmental factors driving them. The research contributes an evidence-based spatial framework for informing community policing strategies, local government planning, and resource allocation in rapidly urbanising Ghanaian municipalities.</p>
+            <div class="thesis-findings">
+              <div class="finding-item">
+                <div class="finding-label">Methodology</div>
+                <div class="finding-val">GIS crime mapping, hot-spot analysis, field surveys, geographic coordinate collection</div>
+              </div>
+              <div class="finding-item">
+                <div class="finding-label">Study Area</div>
+                <div class="finding-val">Amasaman, Ga West Municipality, Greater Accra Region, Ghana</div>
+              </div>
+              <div class="finding-item">
+                <div class="finding-label">Key Tools</div>
+                <div class="finding-val">Remote sensing, spatial data analysis, crime hot-spot mapping, community surveys</div>
+              </div>
+              <div class="finding-item">
+                <div class="finding-label">Application</div>
+                <div class="finding-val">Urban planning, community policing strategy, local government resource allocation</div>
+              </div>
+            </div>
+            <div class="thesis-footer">
+              <div class="thesis-uni">
+                <span class="thesis-uni-icon"><i class="fas fa-university"></i></span>
+                <span class="thesis-uni-name"><strong>University of Ghana</strong>, Legon &nbsp;·&nbsp; Dept. of Geography &amp; Resource Development</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1k-kzsUjwKYNUejB2nR0rhaVkSXLkDNc8/view?usp=sharing" target="_blank" class="thesis-download">
+                <i class="fas fa-file-pdf"></i> Read Thesis
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="about-sidebar reveal reveal-delay-1">
@@ -954,14 +1195,13 @@ footer {
       <!-- FEATURED: Taka Kipawa -->
       <div class="proj-card featured">
         <div class="proj-img">
-          <!-- ══ ADD IMAGE: Taka Kipawa App screenshot or related photo ══
-               Suggested: a screenshot of the app UI, or a waste management photo
-               <img src="./images/taka-kipawa.jpg" alt="SWK Taka Kipawa App">
-          ═══════════════════════════════════════════════════════════════ -->
-          <div class="proj-img-placeholder"><i class="fas fa-recycle"></i><span>Add App Screenshot</span></div>
+          <div class="yt-wrap">
+            <iframe src="https://www.youtube.com/embed/mqVJMGlINt4" title="SWK Taka Kipawa App Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
           <span class="proj-badge">Flagship Innovation</span>
         </div>
         <div class="proj-body">
+          <span class="yt-badge"><i class="fab fa-youtube"></i> Live Demo on YouTube</span>
           <p class="proj-type">GreenTech · Circular Economy · Marketplace</p>
           <h3 class="proj-title">SWK Taka Kipawa App</h3>
           <p class="proj-desc">A digital waste management and upcycling marketplace. "Taka Kipawa" means Waste is a Gift in Swahili. Connects households, waste contractors, and recyclers — with smart collection scheduling, a circular economy marketplace, and an educational sustainability hub. Built during the GROW Program by MEST Africa, Generation Ghana, and Mastercard Foundation.</p>
@@ -984,7 +1224,7 @@ footer {
           <!-- ══ ADD IMAGE: screenshot of swkghana.org ══
                <img src="./images/swk-website.jpg" alt="SWK Ghana Website">
           ═══════════════════════════════════════════════════════════════ -->
-          <div class="proj-img-placeholder"><i class="fas fa-globe"></i><span>Add Website Screenshot</span></div>
+          <img src="./images/Mest.jpg" alt="Frank Koomson at MEST Africa — where SWK Ghana Website was built">
           <span class="proj-badge">Live Platform</span>
         </div>
         <div class="proj-body">
@@ -1037,7 +1277,7 @@ footer {
           <!-- ══ ADD IMAGE: Screenshot of your portfolio site ══
                <img src="./images/portfolio-screenshot.jpg" alt="Portfolio Website">
           ═══════════════════════════════════════════════════════════════ -->
-          <div class="proj-img-placeholder"><i class="fas fa-laptop-code"></i><span>Portfolio Screenshot</span></div>
+          <img src="./images/Storytelling.jpg" alt="Frank Koomson — Videography & Digital Storytelling">
         </div>
         <div class="proj-body">
           <p class="proj-type">Web Development</p>
@@ -1060,7 +1300,7 @@ footer {
           <!-- ══ ADD IMAGE: code/backend themed image ══
                <img src="./images/api-project.jpg" alt="API Project">
           ═══════════════════════════════════════════════════════════════ -->
-          <div class="proj-img-placeholder"><i class="fas fa-server"></i><span>Backend Project</span></div>
+          <img src="./images/pexels-cookiecutter-1148820.jpg" alt="RESTful API Project">
         </div>
         <div class="proj-body">
           <p class="proj-type">Backend Development</p>
@@ -1137,6 +1377,7 @@ footer {
             <div class="tl-role">Youth Sounding Board Member</div>
             <div class="tl-org">UNDP Ghana</div>
             <div class="tl-desc">Advised UNDP Ghana on youth engagement in sustainable development programs. Represented Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda (2024).</div>
+            <div class="tl-photo"><img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana with SDGs backdrop"></div>
           </div>
         </div>
 
@@ -1157,6 +1398,7 @@ footer {
             <div class="tl-role">Program Coordinator</div>
             <div class="tl-org">B. Inspired with Stories from Africa (B.ISA)</div>
             <div class="tl-desc">Grew LinkedIn following by 300% (1,000 to 3,000+) and YouTube from 318 to 1,900+ subscribers. Coordinated 5 major events including climate storytelling competitions and webinars.</div>
+            <div class="tl-photo"><img src="./images/Storytelling.jpg" alt="Frank filming with Canon camera at B.ISA event"></div>
           </div>
         </div>
 
@@ -1167,6 +1409,7 @@ footer {
             <div class="tl-role">Stakeholder Engagement Officer</div>
             <div class="tl-org">Waste Gobbler Project / UNIYIA</div>
             <div class="tl-desc">Led community and stakeholder engagement for Ghana's ACAIC prize-winning solar-powered ocean waste interception project. Engaged EPA on permits and mobilised Ablekuma South Sub-Metro communities.</div>
+            <div class="tl-photo"><img src="./images/Waste Gobb.jpg" alt="Waste Gobbler team with ACAIC prize cheque — GHS 10,000 seed funding"></div>
             <span class="tl-pill gold">2nd Place — ACAIC 2022</span>
           </div>
         </div>
@@ -1178,6 +1421,7 @@ footer {
             <div class="tl-role">President</div>
             <div class="tl-org">Ghana National Service Personnel Association (NASPA), Ga West</div>
             <div class="tl-desc">Led a multi-university association of national service personnel. Organised financial literacy and Microsoft Excel training programs. Partnered with YVLG for International Youth Day impacting 100+ youth. Donated computer and internet infrastructure to the National Service Secretariat.</div>
+            <div class="tl-photo"><img src="./images/NSS.jpg" alt="NASPA Ga West team in national service uniform"></div>
           </div>
         </div>
 
@@ -1202,6 +1446,12 @@ footer {
     <div class="reveal">
       <p class="label">Awards & Recognition</p>
       <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--dark);margin-top:0.5rem;">Internationally recognised.<br>Community-rooted.</h2>
+    </div>
+
+    <div class="awards-photos reveal">
+      <img src="./images/Waste Gobb.jpg" alt="ACAIC 2022 prize — Waste Gobbler team with GHS 10,000 seed funding cheque">
+      <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana — Youth Sounding Board">
+      <img src="./images/CRL.jpg" alt="Frank at international sustainability conference">
     </div>
 
     <div class="awards-grid reveal">
@@ -1290,6 +1540,14 @@ footer {
         <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-top:0.5rem;">Shifting narratives across Africa.</h2>
         <p class="section-subtitle">Published on LinkedIn, Medium, and the Pulitzer Center. Speaker at GYEM, LCOY, and continental youth conferences.</p>
       </div>
+    </div>
+
+    <!-- Speaking photo strip -->
+    <div class="writing-photo-strip reveal">
+      <img src="./images/Advocacy.jpg" alt="Frank speaking at LCOY Ghana 2022">
+      <img src="./images/UNDP.jpg" alt="Frank at UNDP Ghana">
+      <img src="./images/Community Engagement.jpg" alt="Frank with community team">
+      <img src="./images/CRL.jpg" alt="Frank at international conference">
     </div>
 
     <div class="writing-grid reveal">
