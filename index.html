@@ -1729,8 +1729,11 @@ footer {
       <div class="section-header-text">
         <p class="label">Writing & Speaking</p>
         <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-top:0.5rem;">Shifting narratives across Africa.</h2>
-        <p class="section-subtitle">Published on LinkedIn, Medium, and the Pulitzer Center. Speaker at GYEM, LCOY, and continental youth conferences.</p>
+        <p class="section-subtitle">Published on Medium, LinkedIn, and the Pulitzer Center. Speaker at GYEM, LCOY, and continental youth conferences.</p>
       </div>
+      <a href="https://medium.com/@frank.koomson" target="_blank" class="btn btn-outline" style="border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);white-space:nowrap;">
+        <i class="fab fa-medium"></i> View all on Medium
+      </a>
     </div>
 
     <!-- Speaking photo strip -->
@@ -1741,19 +1744,32 @@ footer {
       <img src="./images/CRL.jpg" alt="Frank at international conference">
     </div>
 
+    <!-- Medium articles label -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin:2.5rem 0 1.25rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <i class="fab fa-medium" style="font-size:1.1rem;color:var(--teal);"></i>
+        <span style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:0.95rem;color:var(--white);">Latest from Medium</span>
+        <span id="medium-status" style="font-size:0.7rem;color:rgba(255,255,255,0.3);font-style:italic;">Loading...</span>
+      </div>
+      <div id="medium-loading" style="width:18px;height:18px;border:2px solid rgba(255,255,255,0.08);border-top-color:var(--teal);border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+    </div>
+
+    <!-- Dynamic Medium grid — populated by JS -->
+    <div class="writing-grid reveal" id="medium-grid"></div>
+
+    <!-- Static non-Medium articles -->
+    <div style="display:flex;align-items:center;gap:0.75rem;margin:3rem 0 1.25rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <i class="fab fa-linkedin" style="font-size:1.1rem;color:var(--teal);"></i>
+      <span style="font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:0.95rem;color:var(--white);">LinkedIn Articles &amp; Reports</span>
+    </div>
+
     <div class="writing-grid reveal">
       <a href="https://drive.google.com/file/d/1X8f34o5xdtcyOi8ZO9FY4lmJCNdhTCML/view?usp=sharing" target="_blank" class="write-card" style="position:relative;overflow:hidden;">
         <div style="position:absolute;inset:0;background-image:url('./images/Youth Connekt Africa.jpg');background-size:cover;background-position:center top;opacity:0.12;border-radius:inherit;"></div>
         <p class="write-cat" style="position:relative;">Field Report · Rwanda</p>
         <h3 class="write-title" style="position:relative;">YouthConnekt Africa Summit 2024 — Delegate Report</h3>
-        <p class="write-excerpt" style="position:relative;">A full delegate report from representing UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda — covering strategies, continental collaboration, youth governance, and key takeaways for Ghana's development agenda.</p>
-        <div class="write-meta" style="position:relative;">Google Drive Report &nbsp;·&nbsp; 2024 &nbsp;·&nbsp; <i class="fas fa-file-pdf" style="color:var(--teal);"></i> PDF</div>
-      </a>
-      <a href="https://medium.com/@frank.koomson/turning-fashion-waste-into-opportunity-a-path-to-sustainable-solutions-in-ghana-679f651c50ce" target="_blank" class="write-card">
-        <p class="write-cat">Circular Economy</p>
-        <h3 class="write-title">Turning Fashion Waste into Opportunity: A Path to Sustainable Solutions in Ghana</h3>
-        <p class="write-excerpt">How Ghana's fashion industry waste can be redirected into economic opportunity through circular design, EPR, and youth entrepreneurship.</p>
-        <div class="write-meta">Medium — 2025</div>
+        <p class="write-excerpt" style="position:relative;">A full delegate report from representing UNDP Ghana at the YouthConnekt Africa Summit in Kigali, Rwanda — strategies, continental collaboration, youth governance, and key takeaways.</p>
+        <div class="write-meta" style="position:relative;">Google Drive · 2024 · <i class="fas fa-file-pdf" style="color:var(--teal);"></i> PDF</div>
       </a>
       <a href="https://www.linkedin.com/pulse/from-paris-agreement-cop28-why-we-need-demand-action-net-koomson/" target="_blank" class="write-card">
         <p class="write-cat">Climate Policy</p>
@@ -1778,12 +1794,6 @@ footer {
         <h3 class="write-title">Breathing Life into Our Planet: Forests and Afforestation in Climate Action</h3>
         <p class="write-excerpt">Examining the crucial role of forests and afforestation in combating climate change and why we must act with urgency.</p>
         <div class="write-meta">LinkedIn Article — 2023</div>
-      </a>
-      <a href="https://medium.com/@frank.koomson/usaids-withdrawal-a-wake-up-call-for-ghana-and-africa-s-self-reliance-677e84964e22" target="_blank" class="write-card">
-        <p class="write-cat">Development Policy</p>
-        <h3 class="write-title">USAID's Withdrawal: A Wake-Up Call for Ghana and Africa's Self-Reliance</h3>
-        <p class="write-excerpt">The opportunity USAID's exit presents for African nations to strengthen domestic development strategies and break aid dependency.</p>
-        <div class="write-meta">Medium — 2024</div>
       </a>
     </div>
 
@@ -1956,7 +1966,74 @@ footer {
 </footer>
 
 <script>
-// ── Scroll reveal ──────────────────────────────────────────────────────────
+// ── MEDIUM RSS FEED ────────────────────────────────────────────────────────
+(function() {
+  const MEDIUM_USER = 'frank.koomson';
+  const FEED_URL = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USER}&api_key=public&count=6`;
+  const grid = document.getElementById('medium-grid');
+  const status = document.getElementById('medium-status');
+  const loader = document.getElementById('medium-loading');
+
+  if (!grid) return;
+
+  fetch(FEED_URL)
+    .then(r => r.json())
+    .then(data => {
+      loader.style.display = 'none';
+      if (!data.items || !data.items.length) {
+        status.textContent = 'No articles found';
+        return;
+      }
+      status.textContent = `${data.items.length} articles · auto-updates when you publish`;
+      grid.innerHTML = data.items.map(item => {
+        // Extract thumbnail from content
+        const div = document.createElement('div');
+        div.innerHTML = item.content || '';
+        const img = div.querySelector('img');
+        const thumb = item.thumbnail || (img ? img.src : '');
+
+        // Clean excerpt
+        const text = div.textContent || div.innerText || '';
+        const excerpt = text.replace(/\s+/g, ' ').trim().slice(0, 160) + '...';
+
+        // Format date
+        const date = new Date(item.pubDate);
+        const dateStr = date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+        // Extract categories
+        const cat = (item.categories && item.categories.length) ? item.categories[0] : 'Medium';
+
+        return `
+          <a href="${item.link}" target="_blank" class="write-card" style="${thumb ? `background-image:url('${thumb}');background-size:cover;background-position:center;position:relative;overflow:hidden;` : ''}">
+            ${thumb ? `<div style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(17,17,17,0.3) 0%,rgba(17,17,17,0.97) 55%);"></div>` : ''}
+            <p class="write-cat" style="position:relative;"><i class="fab fa-medium" style="margin-right:0.3rem;opacity:0.7;"></i>${cat}</p>
+            <h3 class="write-title" style="position:relative;">${item.title}</h3>
+            <p class="write-excerpt" style="position:relative;">${excerpt}</p>
+            <div class="write-meta" style="position:relative;">Medium · ${dateStr}</div>
+          </a>`;
+      }).join('');
+    })
+    .catch(() => {
+      loader.style.display = 'none';
+      status.textContent = 'Could not load — view on Medium';
+      // Fallback: show static Medium articles
+      grid.innerHTML = `
+        <a href="https://medium.com/@frank.koomson/turning-fashion-waste-into-opportunity-a-path-to-sustainable-solutions-in-ghana-679f651c50ce" target="_blank" class="write-card">
+          <p class="write-cat"><i class="fab fa-medium" style="margin-right:0.3rem;opacity:0.7;"></i>Circular Economy</p>
+          <h3 class="write-title">Turning Fashion Waste into Opportunity: A Path to Sustainable Solutions in Ghana</h3>
+          <p class="write-excerpt">How Ghana's fashion industry waste can be redirected into economic opportunity through circular design, EPR, and youth entrepreneurship.</p>
+          <div class="write-meta">Medium — 2025</div>
+        </a>
+        <a href="https://medium.com/@frank.koomson/usaids-withdrawal-a-wake-up-call-for-ghana-and-africa-s-self-reliance-677e84964e22" target="_blank" class="write-card">
+          <p class="write-cat"><i class="fab fa-medium" style="margin-right:0.3rem;opacity:0.7;"></i>Development Policy</p>
+          <h3 class="write-title">USAID's Withdrawal: A Wake-Up Call for Ghana and Africa's Self-Reliance</h3>
+          <p class="write-excerpt">The opportunity USAID's exit presents for African nations to strengthen domestic development strategies and break aid dependency.</p>
+          <div class="write-meta">Medium — 2024</div>
+        </a>`;
+    });
+})();
+
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
 }, { threshold: 0.08 });
