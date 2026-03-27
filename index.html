@@ -882,33 +882,34 @@ nav {
   display: flex; align-items: center; gap: 0.75rem;
 }
 .sl-btn {
-  width: 34px; height: 34px;
-  border-radius: 50%;
+  width: 36px; height: 36px; border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.15);
-  background: transparent;
-  color: rgba(255,255,255,0.6);
-  cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.75rem;
-  transition: all 0.2s;
+  background: transparent; color: rgba(255,255,255,0.6);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; transition: all 0.2s; flex-shrink: 0;
 }
 .sl-btn:hover { border-color: var(--teal); color: var(--teal); }
 .sl-counter { font-size: 0.78rem; color: rgba(255,255,255,0.35); min-width: 40px; text-align: center; }
+
+/* The outer wrapper clips the track */
 .slideshow-track-wrap {
   overflow: hidden;
   padding: 0 3rem;
-  max-width: calc(var(--max) + 6rem);
-  margin: 0 auto;
 }
+
+/* The track holds all cards in a row and slides via transform */
 .slideshow-track {
   display: flex;
   gap: 1.25rem;
   transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
+  /* Do NOT set width here — it must be natural (wider than viewport) */
 }
+
+/* Each card is a fixed fraction of the wrap width */
 .slide-card {
-  flex: 0 0 calc(33.333% - 0.85rem);
-  min-width: 0;
+  flex: 0 0 calc((100% - 2 * 1.25rem) / 3);
+  min-width: 240px;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--radius-lg);
@@ -931,8 +932,7 @@ nav {
 }
 .slide-tag {
   font-size: 0.65rem; font-weight: 700;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--teal);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal);
 }
 .slide-title {
   font-family: 'Nunito Sans', sans-serif;
@@ -940,32 +940,30 @@ nav {
   color: var(--white); line-height: 1.3;
 }
 .slide-desc {
-  font-size: 0.82rem; color: rgba(255,255,255,0.5);
-  line-height: 1.6; flex: 1;
+  font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; flex: 1;
 }
 .slide-date {
   font-size: 0.72rem; color: rgba(255,255,255,0.3);
-  margin-top: 0.5rem;
-  display: flex; align-items: center; gap: 0.4rem;
+  margin-top: 0.5rem; display: flex; align-items: center; gap: 0.4rem;
 }
 .slide-date i { color: var(--teal); font-size: 0.65rem; }
 .sl-dots {
   display: flex; justify-content: center; gap: 0.4rem;
-  margin-top: 1.5rem; padding: 0 3rem;
+  margin-top: 1.5rem; padding: 0 3rem; flex-wrap: wrap;
 }
 .sl-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: rgba(255,255,255,0.2);
-  cursor: pointer; transition: all 0.2s; border: none;
+  cursor: pointer; transition: all 0.2s; border: none; flex-shrink: 0;
 }
 .sl-dot.active { background: var(--teal); width: 20px; border-radius: 3px; }
+
 @media (max-width: 768px) {
-  .slide-card { flex: 0 0 calc(100% - 0rem); }
-  .slideshow-track-wrap { padding: 0 1.5rem; }
-  .slideshow-header { padding: 0 1.5rem 1.25rem; }
+  .slide-card { flex: 0 0 calc(100% - 0px); }
+  .slideshow-track-wrap, .slideshow-header { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .slide-card { flex: 0 0 calc(50% - 0.625rem); }
+  .slide-card { flex: 0 0 calc((100% - 1.25rem) / 2); }
 }
 
 /* ─── SOCIAL MEDIA SECTION ─────────────────────────── */
@@ -1051,6 +1049,30 @@ footer {
 }
 .yt-badge i { font-size: 0.95rem; }
 
+/* ─── HERO SOCIAL ICONS ────────────────────────────── */
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+.hero-social-icon {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-md);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray-5);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.hero-social-icon:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--teal-light);
+  transform: translateY(-2px);
+}
+
 /* ─── SCROLL ANIMATIONS ────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: none; }
@@ -1135,6 +1157,31 @@ footer {
         <div class="hero-actions">
           <a href="#projects" class="btn btn-teal"><i class="fas fa-briefcase"></i> See My Work</a>
           <a href="#about" class="btn btn-outline"><i class="fas fa-user"></i> Learn More</a>
+        </div>
+
+        <!-- Social icons -->
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" class="hero-social-icon" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/frank_abeiku_koomson" target="_blank" class="hero-social-icon" aria-label="Instagram" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://x.com/frankkoomson20" target="_blank" class="hero-social-icon" aria-label="X / Twitter" title="X (Twitter)">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/FrKoomson" target="_blank" class="hero-social-icon" aria-label="Facebook" title="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://medium.com/@frank.koomson" target="_blank" class="hero-social-icon" aria-label="Medium" title="Medium">
+            <i class="fab fa-medium-m"></i>
+          </a>
+          <a href="https://github.com/Frank0751" target="_blank" class="hero-social-icon" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.swkghana.org" target="_blank" class="hero-social-icon" aria-label="SWK Ghana" title="SWK Ghana Website">
+            <i class="fas fa-globe"></i>
+          </a>
         </div>
       </div>
 
@@ -2245,64 +2292,79 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ── Slideshow ──────────────────────────────────────────────────────────────
-(function() {
-  const track = document.getElementById('sl-track');
-  const cards = track ? Array.from(track.querySelectorAll('.slide-card')) : [];
-  if (!cards.length) return;
+window.addEventListener('load', function () {
+  var track = document.getElementById('sl-track');
+  if (!track) return;
+  var wrap = track.parentElement;
+  var cards = Array.from(track.querySelectorAll('.slide-card'));
+  var total = cards.length;
+  if (!total) return;
 
-  let current = 0;
-  let perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-  const total = cards.length;
-  const maxIndex = total - perView;
+  var current = 0;
+  var GAP = 20; // must match CSS gap (1.25rem ≈ 20px)
 
-  // Build dots
-  const dotsEl = document.getElementById('sl-dots');
-  const totalDots = maxIndex + 1;
+  function pv() {
+    return window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
+  }
+  function max() { return Math.max(0, total - pv()); }
+
+  // Update counter
   document.getElementById('sl-total').textContent = total;
 
-  for (let i = 0; i <= maxIndex; i++) {
-    const d = document.createElement('button');
-    d.className = 'sl-dot' + (i === 0 ? ' active' : '');
-    d.setAttribute('aria-label', `Slide ${i + 1}`);
-    d.addEventListener('click', () => goTo(i));
-    dotsEl.appendChild(d);
-  }
-
-  function getCardWidth() {
-    if (!cards[0]) return 0;
-    const gap = 20;
-    return cards[0].offsetWidth + gap;
+  // Build dots — one per slide
+  var dotsEl = document.getElementById('sl-dots');
+  dotsEl.innerHTML = '';
+  for (var i = 0; i < total; i++) {
+    (function (idx) {
+      var d = document.createElement('button');
+      d.className = 'sl-dot' + (idx === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Slide ' + (idx + 1));
+      d.addEventListener('click', function () { goTo(idx); });
+      dotsEl.appendChild(d);
+    })(i);
   }
 
   function goTo(idx) {
-    current = Math.max(0, Math.min(idx, maxIndex));
-    track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+    current = Math.max(0, Math.min(idx, max()));
+    // Card width = (wrapper width - gaps between visible cards) / perView
+    var wrapW = wrap.clientWidth - 96; // subtract left+right padding (3rem each)
+    var p = pv();
+    var cardW = (wrapW - GAP * (p - 1)) / p;
+    var offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
     document.getElementById('sl-current').textContent = current + 1;
-    document.querySelectorAll('.sl-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    var dots = document.querySelectorAll('.sl-dot');
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
   }
 
-  document.getElementById('sl-prev').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('sl-next').addEventListener('click', () => goTo(current + 1));
+  document.getElementById('sl-prev').addEventListener('click', function () { goTo(current - 1); });
+  document.getElementById('sl-next').addEventListener('click', function () { goTo(current + 1); });
 
-  // Auto-advance every 5s
-  let timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000);
-  track.parentElement.addEventListener('mouseenter', () => clearInterval(timer));
-  track.parentElement.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current < maxIndex ? current + 1 : 0), 5000); });
+  // Auto-advance
+  var timer = setInterval(function () { goTo(current < max() ? current + 1 : 0); }, 5000);
+  wrap.addEventListener('mouseenter', function () { clearInterval(timer); });
+  wrap.addEventListener('mouseleave', function () {
+    clearInterval(timer);
+    timer = setInterval(function () { goTo(current < max() ? current + 1 : 0); }, 5000);
+  });
 
-  // Touch / swipe support
-  let startX = 0;
-  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener('touchend', e => {
-    const diff = startX - e.changedTouches[0].clientX;
+  // Touch swipe
+  var startX = 0;
+  track.addEventListener('touchstart', function (e) { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function (e) {
+    var diff = startX - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
   });
 
-  // Recalculate on resize
-  window.addEventListener('resize', () => {
-    perView = window.innerWidth <= 768 ? 1 : window.innerWidth <= 1024 ? 2 : 3;
-    goTo(Math.min(current, total - perView));
+  // Resize
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { goTo(Math.min(current, max())); }, 100);
   });
-})();
+
+  goTo(0);
+});
 
 
 const sections = document.querySelectorAll('section[id]');
