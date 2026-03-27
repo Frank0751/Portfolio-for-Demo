@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Frank Koomson</title>
+<meta name="description" content="Photo gallery of Frank Koomson's impact — speaking engagements, conferences, community work, and sustainability activism across Ghana and Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #111; color: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+:root {
+  --teal: #0D9B7E; --teal-dark: #077A63; --teal-light: #E6F7F4;
+  --dark: #111; --dark-2: #1E1E1E; --white: #fff;
+  --border: rgba(255,255,255,0.08); --nav-h: 64px; --max: 1300px;
+}
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: var(--nav-h); background: rgba(17,17,17,0.96); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); display: flex; align-items: center; }
+.nav-inner { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 1.15rem; color: var(--white); }
+.nav-logo span { color: var(--teal); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 0.83rem; font-weight: 500; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--teal); }
+.nav-btn { font-size: 0.78rem; font-weight: 600; padding: 0.5rem 1.25rem; border-radius: 4px; background: var(--teal); color: var(--white); transition: background 0.2s; }
+.nav-btn:hover { background: var(--teal-dark); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+
+/* PAGE HEADER */
+.page-header { padding: calc(var(--nav-h) + 4rem) 0 3rem; background: var(--dark-2); border-bottom: 1px solid var(--border); }
+.page-header .inner { max-width: var(--max); margin: 0 auto; padding: 0 3rem; }
+.page-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.page-label::before { content: ''; display: block; width: 1.5rem; height: 1px; background: var(--teal); }
+.page-title { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.03em; color: var(--white); margin-bottom: 1rem; }
+.page-title span { color: var(--teal); }
+.page-subtitle { font-size: 1rem; color: rgba(255,255,255,0.45); font-weight: 300; max-width: 55ch; }
+.page-stats { display: flex; gap: 2.5rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.stat-n { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 1.75rem; color: var(--teal); line-height: 1; margin-bottom: 0.2rem; }
+.stat-l { font-size: 0.75rem; color: rgba(255,255,255,0.4); font-weight: 500; }
+
+/* TAB BAR */
+.tab-bar { position: sticky; top: var(--nav-h); z-index: 100; background: rgba(17,17,17,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.tab-inner { max-width: var(--max); margin: 0 auto; padding: 0 3rem; display: flex; overflow-x: auto; scrollbar-width: none; }
+.tab-inner::-webkit-scrollbar { display: none; }
+.tab-btn { flex-shrink: 0; font-size: 0.82rem; font-weight: 500; padding: 1.1rem 1.5rem; background: none; border: none; border-bottom: 2px solid transparent; color: rgba(255,255,255,0.4); cursor: pointer; transition: all 0.2s; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; }
+.tab-btn:hover { color: rgba(255,255,255,0.8); }
+.tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
+.tab-btn i { font-size: 0.8rem; }
+
+/* CONTENT */
+.gallery-section { padding: 4rem 0 6rem; background: var(--dark); }
+.inner { max-width: var(--max); margin: 0 auto; padding: 0 3rem; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* SECTION BLOCK */
+.sec-block { margin-bottom: 5rem; }
+.sec-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.sec-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.4rem; }
+.sec-name { font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--white); margin-bottom: 0.5rem; }
+.sec-desc { font-size: 0.88rem; color: rgba(255,255,255,0.45); max-width: 60ch; line-height: 1.65; }
+.sec-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(13,155,126,0.12); border: 1px solid rgba(13,155,126,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.sec-icon i { color: var(--teal); font-size: 1.2rem; }
+
+/* CLOUDINARY EMBED */
+.cld-wrap { width: 100%; border-radius: 10px; overflow: hidden; background: var(--dark-2); border: 1px solid var(--border); position: relative; }
+.cld-wrap iframe { width: 100%; height: 650px; border: none; display: block; }
+.cld-loading { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; background: var(--dark-2); transition: opacity 0.5s; pointer-events: none; }
+.cld-loading.gone { opacity: 0; }
+.spinner { width: 36px; height: 36px; border: 2px solid rgba(255,255,255,0.08); border-top-color: var(--teal); border-radius: 50%; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.cld-loading p { font-size: 0.82rem; color: rgba(255,255,255,0.3); }
+
+/* MASONRY */
+.masonry { columns: 4; column-gap: 12px; margin-top: 0; }
+.m-item { break-inside: avoid; margin-bottom: 12px; border-radius: 8px; overflow: hidden; cursor: pointer; position: relative; background: var(--dark-2); transition: transform 0.25s, box-shadow 0.25s; }
+.m-item:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+.m-item img { width: 100%; height: auto; display: block; transition: transform 0.4s; }
+.m-item:hover img { transform: scale(1.03); }
+.m-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%); opacity: 0; transition: opacity 0.3s; display: flex; flex-direction: column; justify-content: flex-end; padding: 1rem; }
+.m-item:hover .m-overlay { opacity: 1; }
+.m-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem; }
+.m-cap { font-size: 0.82rem; color: var(--white); font-weight: 500; line-height: 1.4; }
+.m-zoom { position: absolute; top: 0.75rem; right: 0.75rem; width: 30px; height: 30px; border-radius: 50%; background: rgba(0,0,0,0.5); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; opacity: 0; transition: opacity 0.3s; }
+.m-item:hover .m-zoom { opacity: 1; }
+
+/* LIGHTBOX */
+.lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; padding: 2rem; }
+.lightbox.open { display: flex; }
+.lb-inner { position: relative; max-width: 900px; max-height: 90vh; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.lb-img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 8px; }
+.lb-cap { margin-top: 1rem; text-align: center; font-size: 0.88rem; color: rgba(255,255,255,0.6); }
+.lb-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.3rem; }
+.lb-close { position: absolute; top: -2.5rem; right: 0; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: var(--white); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.lb-close:hover { background: var(--teal); }
+.lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none; color: var(--white); font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.lb-nav:hover { background: var(--teal); }
+.lb-prev { left: -3.5rem; } .lb-next { right: -3.5rem; }
+.lb-count { position: absolute; bottom: -2rem; font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+/* BACK TO TOP */
+.btt { position: fixed; bottom: 2rem; right: 2rem; z-index: 100; width: 44px; height: 44px; border-radius: 50%; background: var(--teal); color: var(--white); border: none; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(10px); transition: all 0.3s; box-shadow: 0 4px 16px rgba(13,155,126,0.4); }
+.btt.visible { opacity: 1; transform: none; }
+.btt:hover { background: var(--teal-dark); }
+
+/* FOOTER */
+footer { background: #0A0A0A; color: rgba(255,255,255,0.3); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; border-top: 1px solid var(--border); }
+.f-logo { font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 1rem; color: var(--white); }
+.f-logo span { color: var(--teal); }
+.f-links { display: flex; gap: 1.5rem; }
+.f-links a { color: rgba(255,255,255,0.4); transition: color 0.2s; font-size: 1rem; }
+.f-links a:hover { color: var(--teal); }
+
+/* RESPONSIVE */
+@media (max-width: 1200px) { .masonry { columns: 3; } }
+@media (max-width: 900px) { .masonry { columns: 2; } .cld-wrap iframe { height: 500px; } }
+@media (max-width: 600px) {
+  .masonry { columns: 1; }
+  .inner, .nav-inner, .tab-inner, .page-header .inner { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .lb-prev { left: -1rem; } .lb-next { right: -1rem; }
+  .cld-wrap iframe { height: 380px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Frank<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#awards">Awards</a></li>
+      <li><a href="index.html#writing">Writing</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-btn">Let's Talk</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="inner">
+    <p class="page-label">Visual Story</p>
+    <h1 class="page-title">Moments of <span>Impact</span></h1>
+    <p class="page-subtitle">A visual record of conferences, speaking engagements, community work, and sustainability activism across Ghana and Africa.</p>
+    <div class="page-stats">
+      <div><div class="stat-n">50+</div><div class="stat-l">Photos</div></div>
+      <div><div class="stat-n">3</div><div class="stat-l">Collections</div></div>
+      <div><div class="stat-n">5+</div><div class="stat-l">Countries</div></div>
+      <div><div class="stat-n">2021</div><div class="stat-l">Since</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <div class="tab-inner">
+    <button class="tab-btn active" data-tab="all"><i class="fas fa-th"></i> All</button>
+    <button class="tab-btn" data-tab="ayc"><i class="fas fa-microphone"></i> AYC 2026</button>
+    <button class="tab-btn" data-tab="fashion"><i class="fas fa-recycle"></i> YouthOvaFashionWaste</button>
+    <button class="tab-btn" data-tab="general"><i class="fas fa-images"></i> General Gallery</button>
+    <button class="tab-btn" data-tab="archive"><i class="fas fa-camera"></i> Archive</button>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery-section">
+  <div class="inner">
+
+    <!-- ALL TAB -->
+    <div class="tab-panel active" id="tab-all">
+
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">African Youth Conference · Co-hosting · 2026</div>
+            <div class="sec-name">AYC 2026 — Co-hosting</div>
+            <div class="sec-desc">Frank as Co-host of the African Youth Conference on Natural Resources &amp; Environmental Governance, organised by SYND Ghana.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-microphone"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l1"><div class="spinner"></div><p>Loading photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/996c38d0f52848784d1bbf87ffa524da" title="AYC 2026" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Speaking Engagement · GYEM &amp; Pulitzer Center · 2025</div>
+            <div class="sec-name">YouthOvaFashionWaste 2025</div>
+            <div class="sec-desc">Frank as speaker at the YouthOvaFashionWaste Campaign Webinar on Fashion Waste Policy, Frameworks &amp; Governance.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-recycle"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l2"><div class="spinner"></div><p>Loading photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/bf7cab078f6b7b12b3ab890cf87eae63" title="YouthOvaFashionWaste 2025" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Impact Gallery · Ghana &amp; Africa</div>
+            <div class="sec-name">General Gallery</div>
+            <div class="sec-desc">A broader visual record — UNDP, LCOY, community engagement, sustainability advocacy, agribusiness, and more moments of impact.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-images"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l3"><div class="spinner"></div><p>Loading photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/5cfb2bebe306916c8b0565efbc584316" title="General Gallery" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen" loading="lazy"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AYC TAB -->
+    <div class="tab-panel" id="tab-ayc">
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">African Youth Conference · SYND Ghana · 2026</div>
+            <div class="sec-name">AYC 2026 — Co-hosting</div>
+            <div class="sec-desc">Frank Koomson as Co-host of the African Youth Conference on Natural Resources &amp; Environmental Governance — bringing together youth leaders from across Africa to discuss policy, advocacy, and sustainable natural resource management.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-microphone"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l4"><div class="spinner"></div><p>Loading AYC 2026 photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/996c38d0f52848784d1bbf87ffa524da" title="AYC 2026 Co-hosting" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASHION WASTE TAB -->
+    <div class="tab-panel" id="tab-fashion">
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Speaking Engagement · GYEM &amp; Pulitzer Center · 2025</div>
+            <div class="sec-name">YouthOvaFashionWaste 2025</div>
+            <div class="sec-desc">Frank as speaker at the YouthOvaFashionWaste Campaign Webinar on Fashion Waste Policy, Frameworks &amp; Governance — exploring Extended Producer Responsibility, circular fashion, and youth entrepreneurship as pathways to sustainable fashion in Ghana.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-recycle"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l5"><div class="spinner"></div><p>Loading YouthOvaFashionWaste photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/bf7cab078f6b7b12b3ab890cf87eae63" title="YouthOvaFashionWaste 2025" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- GENERAL GALLERY TAB -->
+    <div class="tab-panel" id="tab-general">
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Impact Gallery · Ghana &amp; Africa</div>
+            <div class="sec-name">General Gallery</div>
+            <div class="sec-desc">A broader visual record of Frank's work across Ghana and Africa — UNDP, LCOY, community engagement, sustainability advocacy, agribusiness, beach clean-ups, and more.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-images"></i></div>
+        </div>
+        <div class="cld-wrap">
+          <div class="cld-loading" id="l6"><div class="spinner"></div><p>Loading gallery photos...</p></div>
+          <iframe src="https://collection.cloudinary.com/dh1gxbiuw/5cfb2bebe306916c8b0565efbc584316" title="General Gallery" onload="this.previousElementSibling.classList.add('gone')" allow="fullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARCHIVE TAB -->
+    <div class="tab-panel" id="tab-archive">
+      <div class="sec-block">
+        <div class="sec-head">
+          <div>
+            <div class="sec-tag">Portfolio · Archive</div>
+            <div class="sec-name">Archive — Earlier Moments</div>
+            <div class="sec-desc">Photos from LCOY Ghana, UNDP, Waste Gobbler, NASPA, B.ISA, GAYO, and other highlights from Frank's journey since 2021.</div>
+          </div>
+          <div class="sec-icon"><i class="fas fa-camera"></i></div>
+        </div>
+        <div class="masonry">
+          <div class="m-item"><img src="./images/Advocacy.jpg" alt="LCOY Ghana 2022"><div class="m-overlay"><div class="m-tag">LCOY Ghana · 2022</div><div class="m-cap">Speaking at Local Conference of Youth</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/UNDP.jpg" alt="UNDP Ghana"><div class="m-overlay"><div class="m-tag">UNDP Ghana</div><div class="m-cap">Youth Sounding Board Member</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/Youth Connekt Africa.jpg" alt="YouthConnekt Rwanda 2024"><div class="m-overlay"><div class="m-tag">Rwanda · 2024</div><div class="m-cap">YouthConnekt Africa Summit — Kigali</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/Waste Gobb.jpg" alt="ACAIC 2022"><div class="m-overlay"><div class="m-tag">ACAIC 2022 · 2nd Place</div><div class="m-cap">Waste Gobbler — Seed Funding Winner</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/BFFP.jpg" alt="BFFP Beach Clean-up"><div class="m-overlay"><div class="m-tag">GAYO · 2021</div><div class="m-cap">#BreakFreeFromPlastics — Labadi Beach</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/Mest.jpg" alt="MEST Africa"><div class="m-overlay"><div class="m-tag">MEST Africa · 2024</div><div class="m-cap">Backend Web Development — GROW Program</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/Community Engagement.jpg" alt="SWK Community"><div class="m-overlay"><div class="m-tag">SWK Ghana</div><div class="m-cap">Community Engagement — Field Team</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/HuD Group.jpg" alt="The HuD Group"><div class="m-overlay"><div class="m-tag">The HuD Group</div><div class="m-cap">Global Operations Associate</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/Storytelling.jpg" alt="B.ISA Storytelling"><div class="m-overlay"><div class="m-tag">B.ISA · Storytelling</div><div class="m-cap">Videography &amp; Content Production</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/NSS.jpg" alt="NASPA Ga West"><div class="m-overlay"><div class="m-tag">NASPA · 2022</div><div class="m-cap">Ghana National Service Personnel Association</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+          <div class="m-item"><img src="./images/CRL.jpg" alt="International Conference"><div class="m-overlay"><div class="m-tag">International Conference</div><div class="m-cap">Climate &amp; Sustainability Delegate</div></div><div class="m-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-inner">
+    <button class="lb-close" id="lb-close"><i class="fas fa-times"></i></button>
+    <button class="lb-nav lb-prev" id="lb-prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-nav lb-next" id="lb-next"><i class="fas fa-chevron-right"></i></button>
+    <img class="lb-img" id="lb-img" src="" alt="">
+    <div class="lb-cap"><div class="lb-tag" id="lb-tag"></div><div id="lb-caption"></div></div>
+    <div class="lb-count" id="lb-count"></div>
+  </div>
+</div>
+
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<footer>
+  <span class="f-logo">Frank<span>.</span></span>
+  <span>© 2025 Frank Koomson · Accra, Ghana</span>
+  <div class="f-links">
+    <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Frank0751" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://medium.com/@frank.koomson" target="_blank"><i class="fab fa-medium"></i></a>
+    <a href="https://x.com/FrankKoomson20" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://www.swkghana.org" target="_blank"><i class="fas fa-globe"></i></a>
+  </div>
+</footer>
+
+<script>
+// TABS
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    window.scrollTo({ top: document.querySelector('.tab-bar').offsetTop - 64, behavior: 'smooth' });
+  });
+});
+
+// LIGHTBOX
+let cur = 0;
+const getItems = () => Array.from(document.querySelectorAll('#tab-archive .m-item'));
+
+function openLB(el) {
+  cur = getItems().indexOf(el);
+  showLB(cur);
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function showLB(idx) {
+  const items = getItems();
+  cur = (idx + items.length) % items.length;
+  const el = items[cur];
+  document.getElementById('lb-img').src = el.querySelector('img').src;
+  document.getElementById('lb-img').alt = el.querySelector('img').alt;
+  document.getElementById('lb-tag').textContent = el.querySelector('.m-tag')?.textContent || '';
+  document.getElementById('lb-caption').textContent = el.querySelector('.m-cap')?.textContent || '';
+  document.getElementById('lb-count').textContent = `${cur + 1} / ${items.length}`;
+}
+function closeLB() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.m-item').forEach(el => el.addEventListener('click', () => openLB(el)));
+document.getElementById('lb-close').addEventListener('click', closeLB);
+document.getElementById('lb-prev').addEventListener('click', () => showLB(cur - 1));
+document.getElementById('lb-next').addEventListener('click', () => showLB(cur + 1));
+document.getElementById('lightbox').addEventListener('click', e => { if (e.target === e.currentTarget) closeLB(); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'ArrowLeft') showLB(cur - 1);
+  if (e.key === 'ArrowRight') showLB(cur + 1);
+  if (e.key === 'Escape') closeLB();
+});
+
+// BACK TO TOP
+window.addEventListener('scroll', () => document.getElementById('btt').classList.toggle('visible', scrollY > 400), { passive: true });
+
+// MOBILE NAV
+document.getElementById('hamburger').addEventListener('click', () => {
+  const l = document.querySelector('.nav-links');
+  const open = l.style.display === 'flex';
+  l.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#111;padding:1.5rem 2rem;gap:1.25rem;border-bottom:1px solid rgba(255,255,255,0.08);z-index:199;';
+});
+</script>
+</body>
+</html>
