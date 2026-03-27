@@ -968,6 +968,52 @@ nav {
   .slide-card { flex: 0 0 calc(50% - 0.625rem); }
 }
 
+/* ─── SOCIAL MEDIA SECTION ─────────────────────────── */
+.social-channels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.social-channel-card {
+  display: flex; align-items: center; gap: 1rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.social-channel-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+.sc-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  border: 1px solid;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1.2rem;
+}
+.sc-info { flex: 1; min-width: 0; }
+.sc-name { font-family: 'Nunito Sans', sans-serif; font-weight: 800; font-size: 0.92rem; color: var(--white); margin-bottom: 0.1rem; }
+.sc-handle { font-size: 0.72rem; color: var(--teal); font-weight: 500; margin-bottom: 0.35rem; }
+.sc-desc { font-size: 0.75rem; color: rgba(255,255,255,0.35); line-height: 1.4; }
+.sc-arrow { color: rgba(255,255,255,0.2); font-size: 0.75rem; flex-shrink: 0; transition: color 0.2s; }
+.social-channel-card:hover .sc-arrow { color: var(--teal); }
+.social-notice {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+.social-notice i { color: var(--teal); font-size: 0.85rem; margin-top: 0.2rem; flex-shrink: 0; }
+.social-notice p { font-size: 0.8rem; color: rgba(255,255,255,0.35); line-height: 1.6; }
+@media (max-width: 1024px) { .social-channels { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .social-channels { grid-template-columns: 1fr; } }
+
 /* ─── FOOTER ───────────────────────────────────────── */
 footer {
   background: var(--dark);
@@ -1055,9 +1101,10 @@ footer {
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#awards">Awards</a></li>
-      <li><a href="index.html#writing">Writing</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-right">
       <a href="https://docs.google.com/document/d/1DWr-3EifTcFDuo7m8WykRpXa9enPYP53vKPPAdahfKM/edit" target="_blank" class="nav-btn outline">CV</a>
@@ -1141,8 +1188,71 @@ footer {
   <div class="slideshow-track-wrap">
     <div class="slideshow-track" id="sl-track">
 
+      <!-- AYC 2026 — Slide 1 -->
       <div class="slide-card">
-        <div class="slide-img"><img src="./images/Youth Connekt Africa.jpg" alt="YouthConnekt Africa Summit, Kigali 2024"></div>
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573949/427A6501_zvoawm.jpg" alt="AYC 2026 Co-hosting"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Co-host · AYC 2026</span>
+          <div class="slide-title">African Youth Conference 2026 — Co-hosting</div>
+          <div class="slide-desc">Frank Koomson as Co-host of the African Youth Conference on Natural Resources &amp; Environmental Governance, organised by SYND Ghana — bringing together youth leaders across the continent.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+        </div>
+      </div>
+
+      <!-- AYC 2026 — Slide 2 -->
+      <div class="slide-card">
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573951/427A6469_p70ady.jpg" alt="AYC 2026 Youth Leaders"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Co-host · AYC 2026</span>
+          <div class="slide-title">AYC 2026 — Youth Leaders, Policy &amp; Governance</div>
+          <div class="slide-desc">Continental dialogue on natural resource governance, environmental policy, and youth leadership at the African Youth Conference 2026.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+        </div>
+      </div>
+
+      <!-- AYC 2026 — Slide 3 -->
+      <div class="slide-card">
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573952/427A6447_fpnrvc.jpg" alt="AYC 2026"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Co-host · AYC 2026</span>
+          <div class="slide-title">AYC 2026 — Environmental Governance</div>
+          <div class="slide-desc">Facilitating discussions on environmental governance, sustainable natural resource management, and youth-led policy advocacy across Africa.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+        </div>
+      </div>
+
+      <!-- AYC 2026 — Slide 4 -->
+      <div class="slide-card">
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573950/427A6482_oft2og.jpg" alt="AYC 2026"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Co-host · AYC 2026</span>
+          <div class="slide-title">AYC 2026 — Continental Youth Dialogue</div>
+          <div class="slide-desc">Bringing together African youth leaders to shape the future of natural resource governance and environmental sustainability on the continent.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2026</span>
+        </div>
+      </div>
+
+      <!-- YouthOvaFashionWaste — Slide 5 -->
+      <div class="slide-card">
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573969/YouthOvafashion_subjb7.png" alt="YouthOvaFashionWaste 2025"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Speaker · GYEM &amp; Pulitzer Center · 2025</span>
+          <div class="slide-title">YouthOvaFashionWaste 2025 — Speaking</div>
+          <div class="slide-desc">Frank as speaker at the YouthOvaFashionWaste Campaign Webinar on Fashion Waste Policy, Frameworks &amp; Governance — organised by Ghana Youth Environmental Movement and the Pulitzer Center.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+        </div>
+      </div>
+
+      <!-- YouthOvaFashionWaste — Slide 6 -->
+      <div class="slide-card">
+        <div class="slide-img"><img src="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573969/First_Session_Speaker_Email_Header_10_pcegdn.png" alt="YouthOvaFashionWaste Speaker"></div>
+        <div class="slide-info">
+          <span class="slide-tag">Speaker · Circular Fashion · 2025</span>
+          <div class="slide-title">Fashion Waste Policy — EPR &amp; Circular Solutions</div>
+          <div class="slide-desc">Advocating for Extended Producer Responsibility, circular fashion design, and youth entrepreneurship as pathways to sustainable fashion in Ghana.</div>
+          <span class="slide-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+        </div>
+      </div>
         <div class="slide-info">
           <span class="slide-tag">Delegate · Rwanda</span>
           <div class="slide-title">YouthConnekt Africa Summit 2024</div>
@@ -1873,6 +1983,101 @@ footer {
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL MEDIA ───────────────────────────────── -->
+<section id="social" style="background:var(--dark-2);padding:5rem 0;">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:3rem;">
+      <div class="section-header-text">
+        <p class="label">Social Media</p>
+        <h2 class="h-section" style="font-size:clamp(1.8rem,3vw,2.5rem);color:var(--white);margin-top:0.5rem;">Stay connected across platforms.</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.5);">Follow the journey — sustainability, leadership, GreenTech, and youth development from Accra to the world.</p>
+      </div>
+    </div>
+
+    <!-- Social channel cards -->
+    <div class="social-channels reveal">
+      <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(10,102,194,0.15);border-color:rgba(10,102,194,0.25);">
+          <i class="fab fa-linkedin" style="color:#0A66C2;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">LinkedIn</div>
+          <div class="sc-handle">frank-koomson</div>
+          <div class="sc-desc">Professional updates, sustainability insights, and leadership reflections</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://www.instagram.com/frank_abeiku_koomson" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(225,48,108,0.12);border-color:rgba(225,48,108,0.25);">
+          <i class="fab fa-instagram" style="color:#E1306C;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">Instagram</div>
+          <div class="sc-handle">@frank_abeiku_koomson</div>
+          <div class="sc-desc">Behind the scenes — events, community, and sustainability in action</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://x.com/frankkoomson20" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
+          <i class="fab fa-x-twitter" style="color:#fff;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">X (Twitter)</div>
+          <div class="sc-handle">@frankkoomson20</div>
+          <div class="sc-desc">Thoughts on climate, circular economy, youth, and GreenTech innovation</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://www.facebook.com/FrKoomson" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(24,119,242,0.12);border-color:rgba(24,119,242,0.25);">
+          <i class="fab fa-facebook" style="color:#1877F2;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">Facebook</div>
+          <div class="sc-handle">FrKoomson</div>
+          <div class="sc-desc">Community updates, SWK Ghana news, and sustainability advocacy</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://medium.com/@frank.koomson" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
+          <i class="fab fa-medium" style="color:#fff;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">Medium</div>
+          <div class="sc-handle">@frank.koomson</div>
+          <div class="sc-desc">In-depth articles on climate, circular economy, and youth development</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+
+      <a href="https://github.com/Frank0751" target="_blank" class="social-channel-card">
+        <div class="sc-icon" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);">
+          <i class="fab fa-github" style="color:#fff;"></i>
+        </div>
+        <div class="sc-info">
+          <div class="sc-name">GitHub</div>
+          <div class="sc-handle">Frank0751</div>
+          <div class="sc-desc">Open source projects — web apps, GreenTech tools, and portfolio code</div>
+        </div>
+        <div class="sc-arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+    </div>
+
+    <!-- Notice about live feeds -->
+    <div class="social-notice reveal">
+      <i class="fas fa-info-circle"></i>
+      <p>Live post feeds from LinkedIn, Instagram, X, and Facebook require platform API access — follow the channels above to see all posts in real time directly on each platform.</p>
+    </div>
+
   </div>
 </section>
 
