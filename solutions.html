@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solutions | Frank Koomson — Projects & Ventures</title>
-<meta name="description" content="Explore Frank Koomson's projects and ventures — from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
+<title>Solutions | Frank Koomson Projects & Ventures</title>
+<meta name="description" content="Explore Frank Koomson's projects and ventures from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
 <meta name="author" content="Frank Abeiku Koomson">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://frank.swkghana.org/solutions.html">
-<meta property="og:title" content="Solutions | Frank Koomson — Projects & Ventures">
-<meta property="og:description" content="Explore Frank Koomson's projects and ventures — from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
+<meta property="og:title" content="Solutions | Frank Koomson Projects & Ventures">
+<meta property="og:description" content="Explore Frank Koomson's projects and ventures from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
 <meta property="og:url" content="https://frank.swkghana.org/solutions.html">
 <meta property="og:image" content="https://res.cloudinary.com/dh1gxbiuw/image/upload/v1774573949/427A6501_zvoawm.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Solutions | Frank Koomson — Projects & Ventures">
-<meta name="twitter:description" content="Explore Frank Koomson's projects and ventures — from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
+<meta name="twitter:title" content="Solutions | Frank Koomson Projects & Ventures">
+<meta name="twitter:description" content="Explore Frank Koomson's projects and ventures from SWK Ghana and the Taka Kipawa App to KoomBei and the Waste Gobbler.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
@@ -131,7 +131,7 @@ nav {
 }
 .nav-btn.filled:hover { background: var(--teal-dark); }
 
-/* hamburger — mobile */
+/* hamburger mobile */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; transition: all 0.3s; }
 
@@ -1015,6 +1015,17 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
   .kb-packages { grid-template-columns: 1fr; }
 }
 
+/* ─── PROJECTS FEATURED 3-COL ──────────────────────── */
+.projects-featured-3 {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1024px) {
+  .projects-featured-3 { grid-template-columns: 1fr 1fr; }
+}
+
 /* ─── RESPONSIVE ───────────────────────────────────── */
 @media (max-width: 1024px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1040,10 +1051,25 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
   .awards-grid, .writing-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
   .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+  .section-header { flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
   .nav-links, .nav-right { display: none; }
   .hamburger { display: flex; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
+  /* ── mobile text centering ──────────────────────────── */
+  .label { display: block; text-align: center; }
+  .section-header-text { text-align: center; }
+  .section-subtitle { text-align: center; }
+  .hero-label, .hero-name, .hero-bio { text-align: center; }
+  .hero-roles, .hero-actions, .hero-socials { justify-content: center; }
+  .about-headline { text-align: center; }
+  .what-i-do-title { text-align: center; }
+  .connect-row { justify-content: center; }
+  .kb-eyebrow { justify-content: center; text-align: center; }
+  .kb-headline, .kb-motto, .kb-desc { text-align: center; }
+  .kb-actions { justify-content: center; }
+  .projects-featured-3 { grid-template-columns: 1fr; }
+  .awards-photos { grid-template-columns: 1fr; }
+  .writing-photo-strip { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 
@@ -1088,7 +1114,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
     </div>
 
     <!-- Featured row: now 3 columns -->
-    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;" class="reveal">
+    <div class="projects-featured-3 reveal">
 
       <!-- FEATURED: Taka Kipawa -->
       <div class="proj-card featured">
@@ -1103,7 +1129,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
           <p class="proj-type">GreenTech · Circular Economy · Marketplace</p>
           <h3 class="proj-title">SWK Taka Kipawa App</h3>
           <p class="proj-desc">A digital waste management and upcycling marketplace. "Taka Kipawa" means Waste is a Gift in Swahili. Connects households, waste contractors, and recyclers with smart collection scheduling, a circular economy marketplace, and an educational sustainability hub. Built during the GROW Program by MEST Africa, Generation Ghana, and Mastercard Foundation.</p>
-          <div class="proj-award-strip"><i class="fas fa-star"></i> Built at GROW Program — MEST Africa, Generation Ghana &amp; Mastercard Foundation · Piloting in Ga West, Ghana</div>
+          <div class="proj-award-strip"><i class="fas fa-star"></i> Built at GROW Program MEST Africa, Generation Ghana &amp; Mastercard Foundation · Piloting in Ga West, Ghana</div>
           <div class="proj-footer">
             <div class="proj-tags">
               <span class="proj-tag">Node.js</span>
@@ -1140,7 +1166,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
         </div>
       </div>
 
-      <!-- KoomBei — Featured -->
+      <!-- KoomBei Featured -->
       <div class="proj-card" style="border:2px solid rgba(199,160,3,0.35);">
         <div class="proj-img" style="position:relative;">
           <img src="https://res.cloudinary.com/dmyrmlj5z/image/upload/q_auto/f_auto/v1776426977/photo_2026-04-03_09-53-20_r4euw5.jpg" alt="KoomBei" style="width:100%;height:100%;object-fit:cover;">
@@ -1190,7 +1216,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
       <!-- Portfolio -->
       <div class="proj-card">
         <div class="proj-img">
-          <img src="./images/Storytelling.jpg" alt="Frank Koomson — Videography & Digital Storytelling">
+          <img src="./images/Storytelling.jpg" alt="Frank Koomson Videography & Digital Storytelling">
         </div>
         <div class="proj-body">
           <p class="proj-type">Web Development</p>
@@ -1283,10 +1309,10 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
         <div class="kb-clients-block">
           <p class="kb-clients-label">Recent client work</p>
           <div class="kb-client-list">
-            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>SWK Ghana</strong> — Full nonprofit website</span></div>
-            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>The Climate Sociologist</strong> — NGO website redesign</span></div>
-            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>Andrews Akoto-Addo</strong> — Professional portfolio</span></div>
-            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>Frank Koomson</strong> — Personal portfolio site</span></div>
+            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>SWK Ghana</strong> Full nonprofit website</span></div>
+            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>The Climate Sociologist</strong> NGO website redesign</span></div>
+            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>Andrews Akoto-Addo</strong> Professional portfolio</span></div>
+            <div class="kb-client-item"><div class="kb-client-dot"></div><span><strong>Frank Koomson</strong> Personal portfolio site</span></div>
           </div>
         </div>
 
@@ -1318,7 +1344,7 @@ footer { background: var(--dark); color: rgba(255,255,255,0.35); padding: 2rem 3
   <span class="footer-logo">Frank<span>.</span></span>
   <span>© 2026 Frank Koomson · Accra, Ghana</span>
   <div class="footer-links">
-    <a href="https://koombei.com" target="_blank" title="KoomBei — Web Services" style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:0.8rem;color:rgba(255,255,255,0.4);letter-spacing:0.03em;border:1px solid rgba(199,160,3,0.4);padding:0.2rem 0.6rem;border-radius:4px;transition:all 0.2s;" onmouseover="this.style.color='#C7A003';this.style.borderColor='#C7A003';" onmouseout="this.style.color='rgba(255,255,255,0.4)';this.style.borderColor='rgba(199,160,3,0.4)';">KoomBei</a>
+    <a href="https://koombei.com" target="_blank" title="KoomBei Web Services" style="font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:0.8rem;color:rgba(255,255,255,0.4);letter-spacing:0.03em;border:1px solid rgba(199,160,3,0.4);padding:0.2rem 0.6rem;border-radius:4px;transition:all 0.2s;" onmouseover="this.style.color='#C7A003';this.style.borderColor='#C7A003';" onmouseout="this.style.color='rgba(255,255,255,0.4)';this.style.borderColor='rgba(199,160,3,0.4)';">KoomBei</a>
     <a href="https://www.linkedin.com/in/frank-koomson-%F0%9F%87%AC%F0%9F%87%AD-b227901ba/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Frank0751" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
     <a href="https://medium.com/@frank.koomson" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
